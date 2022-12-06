@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373A3DA3293F43120083F74C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA2293F43120083F74C /* MainView.swift */; };
+		373A3DA5293F44FD0083F74C /* MainVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA4293F44FD0083F74C /* MainVModel.swift */; };
+		373A3DA8293F46770083F74C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA7293F46770083F74C /* CounterView.swift */; };
+		373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */; };
+		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
+		373A3DB0293F56300083F74C /* MainNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* MainNavbarView.swift */; };
+		373A3DB2293F596A0083F74C /* TapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB1293F596A0083F74C /* TapModel.swift */; };
+		373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
-		37B0C075293F427F00317132 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C074293F427F00317132 /* ContentView.swift */; };
 		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
 		37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C079293F428000317132 /* Preview Assets.xcassets */; };
 		37B0C084293F428000317132 /* CompteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C083293F428000317132 /* CompteTests.swift */; };
@@ -34,9 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		373A3DA2293F43120083F74C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		373A3DA4293F44FD0083F74C /* MainVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVModel.swift; sourceTree = "<group>"; };
+		373A3DA7293F46770083F74C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToUnlockView.swift; sourceTree = "<group>"; };
+		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
+		373A3DAF293F56300083F74C /* MainNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarView.swift; sourceTree = "<group>"; };
+		373A3DB1293F596A0083F74C /* TapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapModel.swift; sourceTree = "<group>"; };
+		373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarWrapper.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C072293F427F00317132 /* CompteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteApp.swift; sourceTree = "<group>"; };
-		37B0C074293F427F00317132 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37B0C076293F428000317132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B0C079293F428000317132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37B0C07F293F428000317132 /* CompteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +85,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		373A3D9E293F42E50083F74C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				373A3D9F293F42F10083F74C /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		373A3D9F293F42F10083F74C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				37B0C076293F428000317132 /* Assets.xcassets */,
+				37B0C078293F428000317132 /* Preview Content */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		373A3DA0293F42FB0083F74C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DA1293F43020083F74C /* Main */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		373A3DA1293F43020083F74C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DAB293F46CB0083F74C /* Domain */,
+				373A3DA6293F46610083F74C /* Subviews */,
+				373A3DA2293F43120083F74C /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		373A3DA6293F46610083F74C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DAE293F56200083F74C /* Navbar */,
+				373A3DA7293F46770083F74C /* CounterView.swift */,
+				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
+				373A3DAC293F48B60083F74C /* TapView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		373A3DAB293F46CB0083F74C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DA4293F44FD0083F74C /* MainVModel.swift */,
+				373A3DB1293F596A0083F74C /* TapModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		373A3DAE293F56200083F74C /* Navbar */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DAF293F56300083F74C /* MainNavbarView.swift */,
+				373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */,
+			);
+			path = Navbar;
+			sourceTree = "<group>";
+		};
 		37B0C066293F427F00317132 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				37B0C072293F427F00317132 /* CompteApp.swift */,
-				37B0C074293F427F00317132 /* ContentView.swift */,
-				37B0C076293F428000317132 /* Assets.xcassets */,
-				37B0C078293F428000317132 /* Preview Content */,
+				373A3DA0293F42FB0083F74C /* Views */,
+				373A3D9E293F42E50083F74C /* Resources */,
 			);
 			path = Compte;
 			sourceTree = "<group>";
@@ -257,8 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B0C075293F427F00317132 /* ContentView.swift in Sources */,
+				373A3DA3293F43120083F74C /* MainView.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
+				373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */,
+				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
+				373A3DB0293F56300083F74C /* MainNavbarView.swift in Sources */,
+				373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */,
+				373A3DA5293F44FD0083F74C /* MainVModel.swift in Sources */,
+				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,
+				373A3DB2293F596A0083F74C /* TapModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,15 +500,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Compte/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,15 +529,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Compte/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.Compte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

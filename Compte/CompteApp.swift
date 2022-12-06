@@ -11,7 +11,14 @@ import SwiftUI
 struct CompteApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let vmodel = buildMainViewVM()
+            MainView(vmodel: vmodel)
         }
+    }
+}
+
+private extension CompteApp {
+    func buildMainViewVM() -> MainVModel {
+        MainVModel()
     }
 }
