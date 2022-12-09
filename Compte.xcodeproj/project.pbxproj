@@ -12,15 +12,18 @@
 		373A3DA8293F46770083F74C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA7293F46770083F74C /* CounterView.swift */; };
 		373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */; };
 		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
-		373A3DB0293F56300083F74C /* MainNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* MainNavbarView.swift */; };
+		373A3DB0293F56300083F74C /* MainNavbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */; };
 		373A3DB2293F596A0083F74C /* TapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB1293F596A0083F74C /* TapModel.swift */; };
 		373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */; };
+		37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* MainViewListCell.swift */; };
+		37AE5FA72942173A00B96D2F /* MainNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE5FA62942173A00B96D2F /* MainNavbarView.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
 		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
 		37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C079293F428000317132 /* Preview Assets.xcassets */; };
 		37B0C084293F428000317132 /* CompteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C083293F428000317132 /* CompteTests.swift */; };
 		37B0C08E293F428000317132 /* CompteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08D293F428000317132 /* CompteUITests.swift */; };
 		37B0C090293F428000317132 /* CompteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */; };
+		37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30517294292BF003AADD6 /* VisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,9 +49,11 @@
 		373A3DA7293F46770083F74C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToUnlockView.swift; sourceTree = "<group>"; };
 		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
-		373A3DAF293F56300083F74C /* MainNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarView.swift; sourceTree = "<group>"; };
+		373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarButtonView.swift; sourceTree = "<group>"; };
 		373A3DB1293F596A0083F74C /* TapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapModel.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarWrapper.swift; sourceTree = "<group>"; };
+		37A69E342942643400129FB1 /* MainViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListCell.swift; sourceTree = "<group>"; };
+		37AE5FA62942173A00B96D2F /* MainNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarView.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C072293F427F00317132 /* CompteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteApp.swift; sourceTree = "<group>"; };
 		37B0C076293F428000317132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +63,7 @@
 		37B0C089293F428000317132 /* CompteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C08D293F428000317132 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
 		37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37F30517294292BF003AADD6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 		373A3DA0293F42FB0083F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37F30516294292AC003AADD6 /* Helpers */,
 				373A3DA1293F43020083F74C /* Main */,
 			);
 			path = Views;
@@ -123,10 +130,9 @@
 		373A3DA6293F46610083F74C /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				37A69E332942641000129FB1 /* Cell */,
+				37A69E322942640B00129FB1 /* Components */,
 				373A3DAE293F56200083F74C /* Navbar */,
-				373A3DA7293F46770083F74C /* CounterView.swift */,
-				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
-				373A3DAC293F48B60083F74C /* TapView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -143,10 +149,29 @@
 		373A3DAE293F56200083F74C /* Navbar */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DAF293F56300083F74C /* MainNavbarView.swift */,
 				373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */,
+				373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */,
+				37AE5FA62942173A00B96D2F /* MainNavbarView.swift */,
 			);
 			path = Navbar;
+			sourceTree = "<group>";
+		};
+		37A69E322942640B00129FB1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DA7293F46770083F74C /* CounterView.swift */,
+				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
+				373A3DAC293F48B60083F74C /* TapView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		37A69E332942641000129FB1 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				37A69E342942643400129FB1 /* MainViewListCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		37B0C066293F427F00317132 = {
@@ -202,6 +227,14 @@
 				37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */,
 			);
 			path = CompteUITests;
+			sourceTree = "<group>";
+		};
+		37F30516294292AC003AADD6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,10 +368,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				373A3DA3293F43120083F74C /* MainView.swift in Sources */,
+				37AE5FA72942173A00B96D2F /* MainNavbarView.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
 				373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
-				373A3DB0293F56300083F74C /* MainNavbarView.swift in Sources */,
+				37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */,
+				37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */,
+				373A3DB0293F56300083F74C /* MainNavbarButtonView.swift in Sources */,
 				373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* MainVModel.swift in Sources */,
 				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,

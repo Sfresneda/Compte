@@ -12,3 +12,5 @@ struct TapModel {
     var date: TimeInterval
     var tapNumber: Int
 }
+
+extension TapModel: Hashable {}

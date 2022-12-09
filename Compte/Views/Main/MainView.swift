@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 // MARK: - Lifecycle
 struct MainView: View {
@@ -15,30 +16,55 @@ struct MainView: View {
     
     // MARK: Body
     var body: some View {
-        NavigationView {
-            VStack {
-                Form {
-                    Section("Last Taps") {
-                        ForEach(vmodel.tapsCollection, id: \.id) { tap in
-                            Text(tap.id.uuidString)
+        ZStack {
+            MainNavbarView(name: $vmodel.name) {
+                VStack {
+                    ScrollViewReader { proxy in
+                        Form {
+                            Section("Last Taps") {
+                                ForEach(vmodel.tapsCollection, id: \.id) { tap in
+                                    MainViewListCell(model: tap)
+                                }
+                            }
+                        }
+                        .onChange(of: vmodel.numberOfTaps) { newValue in
+                            guard let firstId = vmodel
+                                .tapsCollection
+                                .first?
+                                .id else { return }
+                            
+                            withAnimation {
+                                proxy.scrollTo(firstId,
+                                               anchor: .bottom)
+                            }
                         }
                     }
-                }
-                VStack(alignment: .center) {
-                    CounterView(currentValue: $vmodel.numberOfTaps)
-                    TapView().actionOnComplete {
-                        vmodel.increaseTaps()
+                    VStack {
+                        HStack {
+                            SlideToUnlockView(action: {
+                                withAnimation(.easeInOut) {
+                                    vmodel.cleanData()
+                                }
+                            })
+                            Image(systemName: "trash")
+                                .font(.title3)
+                        }
+                        .padding(EdgeInsets(top: 5,
+                                            leading: 20,
+                                            bottom: 5,
+                                            trailing: 20))
+                        TapView(action: {
+                            withAnimation(.easeIn) {
+                                vmodel.increaseTaps()
+                            }
+                        })
                     }
                 }
-                .background(ignoresSafeAreaEdges: .bottom)
             }
-            .navigationTitle(vmodel.screenName)
-            .toolbar {
-                MainNavbarView()
-                    .onTapSomeButton { triggeredButton in
-                        debugPrint("\(triggeredButton)")
-                    }
-            }
+            CounterView(currentValue: $vmodel.numberOfTaps)
+                .frame(maxHeight: .infinity,
+                       alignment: .top)
+                .shadow(radius: 20)
         }
     }
 }
@@ -47,10 +73,11 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         let model = MainVModel()
-        model.tapsCollection = [
-            TapModel(date: Date().timeIntervalSince1970,
-                     tapNumber: 1)
-        ]
+        model.numberOfTaps = 200
+        model.tapsCollection = Array<TapModel>
+            .init(repeating: TapModel(date: Date().timeIntervalSince1970,
+                                      tapNumber: 1),
+                  count: 20)
         return MainView(vmodel: model)
     }
 }

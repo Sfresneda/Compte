@@ -10,7 +10,7 @@ import SwiftUI
 struct SlideToUnlockView: View {
     // MARK: Vars
     @State private var sliderValue: Float = .zero
-    private var action: (() -> Void)?
+    var action: (() -> Void)?
     
     // MARK: Body
     var body: some View {
@@ -21,15 +21,6 @@ struct SlideToUnlockView: View {
         } onEditingChanged: { editing in
             handleSliderChangeValue(isEditing: editing)
         }
-    }
-}
-
-// MARK: - Public
-extension SlideToUnlockView {
-    func actionOnComplete(perform action: @escaping () -> Void) -> Self {
-        var copy = self
-        copy.action = action
-        return copy
     }
 }
 

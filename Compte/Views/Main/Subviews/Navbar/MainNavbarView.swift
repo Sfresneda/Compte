@@ -2,46 +2,27 @@
 //  MainNavbarView.swift
 //  Compte
 //
-//  Created by likeadeveloper on 6/12/22.
+//  Created by likeadeveloper on 8/12/22.
 //
 
 import SwiftUI
 
-// MARK: - Lifecycle
-struct MainNavbarView: View {
-    // MARK: Vars
-    private var action: ((MainNavbarButton) -> Void)?
-    
-    // MARK: Body
+struct MainNavbarView<Content>: View where Content: View {
+    @Binding var name: String
+    @ViewBuilder var content: Content
     var body: some View {
-        HStack(alignment: .center) {
-            ForEach(MainNavbarButton.allCases, id: \.rawValue) { button in
-                Button {
-                    action?(button)
-                } label: {
-                    Image(systemName: button.imageName)
-                }
-                .buttonStyle(.borderedProminent)
-                .frame(maxHeight: .infinity,
-                       alignment: .center)
-            }
+        NavigationView {
+            content
+                .navigationBarTitleDisplayMode(.large)
+                .navigationTitle(name)
         }
-        .padding()
     }
 }
 
-// MARK: - Public
-extension MainNavbarView {
-    func onTapSomeButton(perform action: @escaping (MainNavbarButton) -> Void) -> Self {
-        var copy = self
-        copy.action = action
-        return copy
-    }
-}
-
-// MARK: - Preview
 struct MainNavbarView_Previews: PreviewProvider {
     static var previews: some View {
-        MainNavbarView()
+        MainNavbarView(name: .constant("something")) {
+            Text("something")
+        }
     }
 }

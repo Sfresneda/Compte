@@ -15,8 +15,11 @@ struct CounterView: View {
     var body: some View {
         Text(String(currentValue))
             .bold()
-            .font(.title)
+            .font(.system(size: 50))
             .fontDesign(.monospaced)
+            .padding()
+            .background(VisualEffectView(style: .systemThickMaterial))
+            .clipShape(Capsule())
     }
 }
 
