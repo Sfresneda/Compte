@@ -62,10 +62,25 @@ struct MainView: View {
                 }
             }
             CounterView(currentValue: $vmodel.numberOfTaps)
-                .frame(maxHeight: .infinity,
-                       alignment: .top)
                 .shadow(radius: 20)
+                .frame(maxWidth: .infinity,
+                       maxHeight: .infinity,
+                       alignment: frameAligment(for: vmodel.numberOfTaps))
+                .padding(padding(for: vmodel.numberOfTaps))
         }
+    }
+}
+
+private extension MainView {
+    func frameAligment(for numberOfItems: Int) -> Alignment {
+        numberOfItems < 100
+        ? .top
+        : .topTrailing
+    }
+    func padding(for numberOfItems: Int) -> EdgeInsets {
+        numberOfItems < 100
+        ? EdgeInsets()
+        : EdgeInsets(top: .zero, leading: .zero, bottom: .zero, trailing: 20)
     }
 }
 
@@ -73,7 +88,7 @@ struct MainView: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         let model = MainVModel()
-        model.numberOfTaps = 200
+        model.numberOfTaps = 90
         model.tapsCollection = Array<TapModel>
             .init(repeating: TapModel(date: Date().timeIntervalSince1970,
                                       tapNumber: 1),

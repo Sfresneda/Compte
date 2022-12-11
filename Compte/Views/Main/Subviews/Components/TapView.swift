@@ -18,7 +18,7 @@ struct TapView: View {
             Button() {
                 action?()
             } label: {
-                Text("Tap")
+                Image(systemName: "plus")
                     .frame(maxWidth: .infinity,
                            maxHeight: 120)
             }
