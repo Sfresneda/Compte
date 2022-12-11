@@ -6,19 +6,15 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct CompteApp: App {
     var body: some Scene {
         WindowGroup {
-            let vmodel = buildMainViewVM()
-            MainView(vmodel: vmodel)
+            ViewBuilderCoordinator
+                .shared
+                .buildListView()
         }
-    }
-}
-
-private extension CompteApp {
-    func buildMainViewVM() -> MainVModel {
-        MainVModel()
     }
 }
