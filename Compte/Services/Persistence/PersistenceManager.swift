@@ -9,70 +9,85 @@ import Foundation
 import CoreData
 import Combine
 
-class PersistenceManager<EntityModel: NSManagedObject>: NSObject, ObservableObject {
-    var models = CurrentValueSubject<[EntityModel], Never>([])
-    let modelFetcherController: NSFetchedResultsController<EntityModel>
-    let context: NSManagedObjectContext
-    private var isReady: Bool = false
-    
-    init(container: NSPersistentContainer) {
-        let request = EntityModel.fetchRequest()
-        request.sortDescriptors = []
+final class PersistenceManager: NSObject, ObservableObject {
+    static var shared: PersistenceManager = PersistenceManager()
 
-        modelFetcherController = NSFetchedResultsController(
-            fetchRequest: request,
-            managedObjectContext: container.viewContext,
-            sectionNameKeyPath: nil,
-            cacheName: nil) as! NSFetchedResultsController<EntityModel>
-        self.context = container.viewContext
+    @Published var compteModelCollection: Set<CompteObject> = []
+    @Published var tapsModelCollection: Set<TapObject> = []
+
+    fileprivate var managedObjectContext: NSManagedObjectContext
+    private let compteRequestController: NSFetchedResultsController<CompteEntity>
+    private let tapsRequestController: NSFetchedResultsController<TapEntity>
+    private var dataStore: DataStore
+
+    private override init() {
+        dataStore = DataStore()
+        managedObjectContext = dataStore.context
+
+        let compteRequest = CompteEntity.fetchRequest()
+        compteRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        compteRequestController = NSFetchedResultsController(fetchRequest: compteRequest,
+                                                             managedObjectContext: managedObjectContext,
+                                                             sectionNameKeyPath: nil,
+                                                             cacheName: nil)
+
+        let tapRequest = TapEntity.fetchRequest()
+        tapRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
+        tapsRequestController = NSFetchedResultsController(fetchRequest: tapRequest,
+                                                           managedObjectContext: managedObjectContext,
+                                                           sectionNameKeyPath: nil,
+                                                           cacheName: nil)
+
         super.init()
 
-        container.loadPersistentStores(completionHandler: { [weak self] _, error in
-            if let error = error as NSError? {
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-            self?.isReady.toggle()
-        })
+        compteRequestController.delegate = self
+        tapsRequestController.delegate = self
 
-        do {
-            try modelFetcherController.performFetch()
-            models.value = modelFetcherController.fetchedObjects ?? []
-        } catch {
-            NSLog("Could not fetch models data")
+        try? compteRequestController.performFetch()
+        try? tapsRequestController.performFetch()
+    }
+}
+
+extension PersistenceManager: PersistenceManagerProtocol {
+    func fetch(mapper: some ModelMapper) {
+        guard let objects = try? managedObjectContext.fetch(compteRequestController.fetchRequest) else { return }
+        let mappedObjects = mapper.fetch(objects)
+        if let compteCollection = mappedObjects as? Set<CompteObject> {
+            compteModelCollection = compteCollection
+        } else if let tapCollection = mappedObjects as? Set<TapObject> {
+            tapsModelCollection = tapCollection
         }
     }
+    func add(mapper: any ModelMapper, requireSave: Bool = false) {
+        defer { if requireSave { save() } }
+        mapper.insert(dataStore.context)
+    }
+    func update(mapper: any ModelMapper, requireSave: Bool = false) {
+        defer { if requireSave { save() } }
+        mapper.update(dataStore.context)
+    }
+    func delete(mapper: any ModelMapper, requireSave: Bool = false) {
+        defer { if requireSave { save() } }
+        mapper.delete(dataStore.context)
+    }
+    func clear(requireSave: Bool) {
+        defer { if requireSave { save() } }
+        //do stuff
+        debugPrint("do stuff here")
+    }
+    func save() {
+        dataStore.save()
+    }
+}
 
-    func add(_ model: EntityModel, requireSave: Bool = false) {
-        if requireSave { save() }
-    }
-    func update(_ id: UUID, requireSave: Bool = false) {
-        if requireSave { save() }
-    }
-    func delete(_ id: UUID, requireSave: Bool = false) {
-        if requireSave { save() }
-    }
-    func clearAll(requireSave: Bool = false) {
-        defer {
-            if requireSave { save() }
-        }
+extension PersistenceManager: NSFetchedResultsControllerDelegate {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        guard let fetchedCollection = controller.fetchedObjects else { return }
 
-        models.value.forEach { context.delete($0) }
-    }
-    
-    final func executeRequestWithoutResult(_ request: NSPersistentStoreRequest) {
-        do {
-            try context.execute(request)
-            save()
-        } catch {
-            fatalError("something went wrong executing the request: \(error)")
-        }
-    }
-    final func save() {
-        guard isReady, context.hasChanges else { return }
-        do {
-            try context.save()
-        } catch {
-            fatalError("something went wrong saving user data: \(error)")
+        if let items = fetchedCollection as? [CompteEntity] {
+            compteModelCollection = CompteMapper.buildCollection(items)
+        } else if let items = fetchedCollection as? [TapEntity] {
+            tapsModelCollection = TapMapper.buildCollection(items)
         }
     }
 }

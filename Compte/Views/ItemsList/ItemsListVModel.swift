@@ -8,30 +8,48 @@
 import Foundation
 import Combine
 
+@MainActor
 final class ItemsListVModel: ObservableObject {
-    @Published var items: [CompteEntity] = []
+    var items: [CompteObject]  {
+        dataManager.compteModelCollection.sorted { $0.date < $1.date }
+    }
     private var cancellable: AnyCancellable?
-    private var dataManager: CompteManager
+    @Published private var dataManager: PersistenceManager
 
-    init(dataManager: CompteManager!) {
+    init(dataManager: PersistenceManager = PersistenceManager.shared) {
         self.dataManager = dataManager
-
-        cancellable = dataManager.models.sink(receiveValue: { itemBlock in
-            self.items = itemBlock
-        })
+        cancellable = dataManager
+            .objectWillChange
+            .sink(receiveValue: { [weak self] _ in
+                self?.objectWillChange.send()
+            })
+        defer { dataManager.fetch(mapper: CompteMapper()) }
     }
 
     func add(with name: String?) {
-        let newModel = CompteEntity(context: dataManager.context)
-        let modelId = UUID()
-        newModel.id = modelId
-        newModel.date = Date().timeIntervalSince1970
-        newModel.name = name ?? "Compte-\(modelId.uuidString.prefix(5))"
+        let newObject = CompteObject(id: nil,
+                                     date: Date().timeIntervalSince1970,
+                                     name: name)
         dataManager
-            .add(newModel, requireSave: true)
+            .add(mapper: CompteMapper(newObject),
+                 requireSave: true)
+    }
+    func updateName(for id: UUID, name: String) {
+        guard let object = items.first(where: { $0.id == id }) else { return }
+        let updatedObject = CompteObject(id: object.id,
+                                         date: object.date,
+                                         name: name)
+
+        dataManager
+            .update(mapper: CompteMapper(updatedObject))
+    }
+    func delete(with id: UUID) {
+        guard let object = items.first(where: { $0.id == id }) else { return }
+        dataManager
+            .delete(mapper: CompteMapper(object))
     }
     func clear() {
         dataManager
-            .clearAll(requireSave: true)
+            .clear(requireSave: true)
     }
 }

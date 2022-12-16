@@ -16,7 +16,13 @@ struct ItemsListView: View {
         NavigationView {
             List {
                 ForEach(model.items, id: \.id) { item in
-                    Text(item.name ?? "--")
+                    ZStack {
+                        NavigationLink(destination: ViewBuilderCoordinator
+                            .shared
+                            .buildMainView(compteModel: item)) {
+                                Text(item.name ?? "--")
+                            }
+                    }
                 }
                 if !model.items.isEmpty {
                     Button {
@@ -39,7 +45,7 @@ struct ItemsListView: View {
 
 struct ItemsList_Previews: PreviewProvider {
     static var previews: some View {
-        let model = ItemsListVModel(dataManager: nil)
+        let model = ItemsListVModel()
         ItemsListView(model: model)
     }
 }

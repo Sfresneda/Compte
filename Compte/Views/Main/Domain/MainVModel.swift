@@ -16,33 +16,26 @@ protocol MainViewModel: ObservableObject {
 // MARK: - MainVModel
 class MainVModel {
     // MARK: Vars
-    private enum Constants {
-        static let defaultName = "Compte"
-    }
+    private enum Constants { static let defaultName = "Compte" }
     @Published var name: String = Constants.defaultName
     @Published var numberOfTaps: Int = .zero
-    @Published var tapsCollection: [TapModel] = []
-    
+    @Published var items: [TapEntity] = []
+    private var cancellable: AnyCancellable?
+
     // MARK: Lifecycle
 }
 // MARK: - Contract
 extension MainVModel: MainViewModel {
     func increaseTaps() {
-        numberOfTaps += 1
         insertNewTapToCollection()
     }
     func cleanData() {
-        numberOfTaps = .zero
-        tapsCollection.removeAll()
+        items.removeAll()
     }
 }
 // MARK: - Helpers
 private extension MainVModel {
     func insertNewTapToCollection() {
-        let newTap = TapModel(date: Date().timeIntervalSince1970,
-                              tapNumber: numberOfTaps)
-        tapsCollection.insert(newTap,
-                              at: .zero)
     }
 }
 // MARK: - Storage

@@ -22,14 +22,14 @@ struct MainView: View {
                     ScrollViewReader { proxy in
                         Form {
                             Section("Last Taps") {
-                                ForEach(vmodel.tapsCollection, id: \.id) { tap in
+                                ForEach(vmodel.items, id: \.id) { tap in
                                     MainViewListCell(model: tap)
                                 }
                             }
                         }
                         .onChange(of: vmodel.numberOfTaps) { newValue in
                             guard let firstId = vmodel
-                                .tapsCollection
+                                .items
                                 .first?
                                 .id else { return }
                             
@@ -85,14 +85,14 @@ private extension MainView {
 }
 
 // MARK: - Preview
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = MainVModel()
-        model.numberOfTaps = 90
-        model.tapsCollection = Array<TapModel>
-            .init(repeating: TapModel(date: Date().timeIntervalSince1970,
-                                      tapNumber: 1),
-                  count: 20)
-        return MainView(vmodel: model)
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let model = MainVModel()
+//        model.numberOfTaps = 90
+//        model.tapsCollection = Array<TapModel>
+//            .init(repeating: TapModel(date: Date().timeIntervalSince1970,
+//                                      tapNumber: 1),
+//                  count: 20)
+//        return MainView(vmodel: model)
+//    }
+//}

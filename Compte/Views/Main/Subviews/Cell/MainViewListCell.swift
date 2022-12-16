@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct MainViewListCell: View {
-    var model: TapModel
+    var model: TapEntity
     var body: some View {
         HStack(alignment: .center) {
             ZStack {
-                Text("\(model.tapNumber)")
+                Text("\(model.number)")
                     .font(.system(size: 30))
                     .minimumScaleFactor(0.1)
                     .fontDesign(.rounded)
@@ -33,10 +33,10 @@ struct MainViewListCell: View {
         }
     }
 }
-struct MainViewListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = TapModel(date: Date().timeIntervalSince1970,
-                             tapNumber: 1)
-        MainViewListCell(model: model)
-    }
-}
+//struct MainViewListCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let model = TapModel(date: Date().timeIntervalSince1970,
+//                             tapNumber: 1)
+//        MainViewListCell(model: model)
+//    }
+//}
