@@ -20,15 +20,10 @@ struct ItemsListView: View {
                         NavigationLink(destination: ViewBuilderCoordinator
                             .shared
                             .buildMainView(compteModel: item)) {
-                                Text(item.name ?? "--")
+                                ItemsListCell(model: item) { identifier in
+                                    model.delete(with: identifier)
+                                }
                             }
-                    }
-                }
-                if !model.items.isEmpty {
-                    Button {
-                        model.clear()
-                    } label: {
-                        Text("Remove all")
                     }
                 }
             }

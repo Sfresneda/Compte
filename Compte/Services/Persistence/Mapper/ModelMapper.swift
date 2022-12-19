@@ -15,11 +15,13 @@ protocol ModelMapper {
     var object: ModelObject? { get }
     var entity: NSManagedObject.Type { get }
 
+    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject?
+    
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<ModelObject>
     func insert(_ context: NSManagedObjectContext)
-    func update(_ context: NSManagedObjectContext)
-    func delete(_ context: NSManagedObjectContext)
-
+    func update(_ entity: NSManagedObject, context: NSManagedObjectContext)
+    func delete(_ entity: NSManagedObject, context: NSManagedObjectContext)
+    
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> [ModelObject]
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> Set<ModelObject>
 }

@@ -19,6 +19,13 @@ struct CompteMapper {
     init(_ object: CompteObject? = nil) { self.object = object }
 }
 extension CompteMapper: ModelMapper {
+    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject? {
+        guard let entitiesCollection = collection as? [CompteEntity] else {
+            return nil
+        }
+        return entitiesCollection
+            .first { $0.id == object?.id }
+    }
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<CompteObject> {
         CompteMapper.buildCollection(collection)
     }
@@ -28,12 +35,18 @@ extension CompteMapper: ModelMapper {
         newObject.id = object.id
         newObject.date = object.date
         newObject.name = object.name
+        newObject.taps = []
     }
-    func update(_ context: NSManagedObjectContext) {
-        // do stuff
+    func update(_ entity: NSManagedObject, context: NSManagedObjectContext) {
+        guard let compteEntity = entity as? CompteEntity,
+        let object else {
+            return
+        }
+        compteEntity.date = object.date
+        compteEntity.name = object.name
     }
-    func delete(_ context: NSManagedObjectContext) {
-        // do stuff
+    func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
+        context.delete(entity)
     }
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> [CompteObject] {
         collection

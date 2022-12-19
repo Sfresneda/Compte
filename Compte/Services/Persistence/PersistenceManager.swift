@@ -9,54 +9,45 @@ import Foundation
 import CoreData
 import Combine
 
+enum PersistenceManagerError: LocalizedError {
+    case entityCollectionIsEmpty
+    case unkown
+}
+
 final class PersistenceManager: NSObject, ObservableObject {
     static var shared: PersistenceManager = PersistenceManager()
-
+    
     @Published var compteModelCollection: Set<CompteObject> = []
-    @Published var tapsModelCollection: Set<TapObject> = []
-
+    
     fileprivate var managedObjectContext: NSManagedObjectContext
-    private let compteRequestController: NSFetchedResultsController<CompteEntity>
-    private let tapsRequestController: NSFetchedResultsController<TapEntity>
+    private let entityRequestController: NSFetchedResultsController<CompteEntity>
     private var dataStore: DataStore
-
-    private override init() {
-        dataStore = DataStore()
-        managedObjectContext = dataStore.context
-
+    
+    init(dataStore: DataStore = DataStore()) {
+        self.dataStore = dataStore
+        managedObjectContext = self.dataStore.context
+        
         let compteRequest = CompteEntity.fetchRequest()
         compteRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
-        compteRequestController = NSFetchedResultsController(fetchRequest: compteRequest,
+        entityRequestController = NSFetchedResultsController(fetchRequest: compteRequest,
                                                              managedObjectContext: managedObjectContext,
                                                              sectionNameKeyPath: nil,
                                                              cacheName: nil)
-
-        let tapRequest = TapEntity.fetchRequest()
-        tapRequest.sortDescriptors = [NSSortDescriptor(key: "date", ascending: false)]
-        tapsRequestController = NSFetchedResultsController(fetchRequest: tapRequest,
-                                                           managedObjectContext: managedObjectContext,
-                                                           sectionNameKeyPath: nil,
-                                                           cacheName: nil)
-
+        
         super.init()
-
-        compteRequestController.delegate = self
-        tapsRequestController.delegate = self
-
-        try? compteRequestController.performFetch()
-        try? tapsRequestController.performFetch()
+        
+        entityRequestController.delegate = self
+        
+        try? entityRequestController.performFetch()
     }
 }
 
 extension PersistenceManager: PersistenceManagerProtocol {
     func fetch(mapper: some ModelMapper) {
-        guard let objects = try? managedObjectContext.fetch(compteRequestController.fetchRequest) else { return }
-        let mappedObjects = mapper.fetch(objects)
-        if let compteCollection = mappedObjects as? Set<CompteObject> {
-            compteModelCollection = compteCollection
-        } else if let tapCollection = mappedObjects as? Set<TapObject> {
-            tapsModelCollection = tapCollection
-        }
+        guard let collection = try? entitiesCollection(),
+              let mappedObjects = mapper.fetch(collection) as? Set<CompteObject> else { return }
+        
+        compteModelCollection = mappedObjects
     }
     func add(mapper: any ModelMapper, requireSave: Bool = false) {
         defer { if requireSave { save() } }
@@ -64,30 +55,45 @@ extension PersistenceManager: PersistenceManagerProtocol {
     }
     func update(mapper: any ModelMapper, requireSave: Bool = false) {
         defer { if requireSave { save() } }
-        mapper.update(dataStore.context)
+        guard let collection = try? entitiesCollection(),
+              let entity = mapper.filterItemSelected(in: collection) else {
+            return
+        }
+        mapper.update(entity, context: dataStore.context)
     }
-    func delete(mapper: any ModelMapper, requireSave: Bool = false) {
+    func delete(mapper: some ModelMapper, requireSave: Bool = false) {
         defer { if requireSave { save() } }
-        mapper.delete(dataStore.context)
+        guard let entities = entityRequestController.fetchedObjects,
+              let entity = mapper.filterItemSelected(in: entities) else { return }
+        managedObjectContext.delete(entity)
     }
     func clear(requireSave: Bool) {
         defer { if requireSave { save() } }
-        //do stuff
-        debugPrint("do stuff here")
+        entityRequestController
+            .fetchedObjects?
+            .forEach { managedObjectContext.delete($0) }
     }
     func save() {
         dataStore.save()
     }
 }
 
+private extension PersistenceManager {
+    func entitiesCollection() throws -> [NSManagedObject]? {
+        guard let objects = try? managedObjectContext
+            .fetch(entityRequestController.fetchRequest) else {
+            throw PersistenceManagerError.entityCollectionIsEmpty
+        }
+        return objects
+    }
+}
+
 extension PersistenceManager: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        guard let fetchedCollection = controller.fetchedObjects else { return }
-
-        if let items = fetchedCollection as? [CompteEntity] {
-            compteModelCollection = CompteMapper.buildCollection(items)
-        } else if let items = fetchedCollection as? [TapEntity] {
-            tapsModelCollection = TapMapper.buildCollection(items)
+        guard let fetchedCollection = controller.fetchedObjects,
+              let items = fetchedCollection as? [CompteEntity] else {
+            return
         }
+        compteModelCollection = CompteMapper.buildCollection(items)
     }
 }

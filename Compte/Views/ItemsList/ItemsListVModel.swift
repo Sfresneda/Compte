@@ -10,8 +10,9 @@ import Combine
 
 @MainActor
 final class ItemsListVModel: ObservableObject {
-    var items: [CompteObject]  {
-        dataManager.compteModelCollection.sorted { $0.date < $1.date }
+    var items: [CompteObject]  { dataManager
+        .compteModelCollection
+        .sorted { $0.date < $1.date }
     }
     private var cancellable: AnyCancellable?
     @Published private var dataManager: PersistenceManager
@@ -46,10 +47,7 @@ final class ItemsListVModel: ObservableObject {
     func delete(with id: UUID) {
         guard let object = items.first(where: { $0.id == id }) else { return }
         dataManager
-            .delete(mapper: CompteMapper(object))
-    }
-    func clear() {
-        dataManager
-            .clear(requireSave: true)
+            .delete(mapper: CompteMapper(object),
+                    requireSave: true)
     }
 }
