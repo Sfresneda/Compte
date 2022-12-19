@@ -7,30 +7,44 @@
 
 import SwiftUI
 
-struct ItemsListView: View {
-    @StateObject var model: ItemsListVModel
-    @State private var showAlert: Bool = false
-    @State private var newItemName: String?
+struct ItemsListView<Model>: View where Model: ItemsListVModelProtocol {
+    @ObservedObject var model: Model
 
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(model.items, id: \.id) { item in
-                    ZStack {
-                        NavigationLink(destination: ViewBuilderCoordinator
-                            .shared
-                            .buildMainView(compteModel: item)) {
-                                ItemsListCell(model: item) { identifier in
-                                    model.delete(with: identifier)
+        ZStack {
+            NavigationView {
+                List {
+                    ForEach($model.items, id: \.id) { item in
+                        ZStack {
+                            NavigationLink(destination: ViewBuilderCoordinator
+                                .shared
+                                .buildMainView(compteModel: item.wrappedValue)) {
+                                    ItemsListCell(model: item) { identifier in
+                                        model.delete(with: identifier)
+                                    } onRename: {
+                                        model.selectedItem = item.wrappedValue
+                                        toggleEditName()
+                                    }
                                 }
-                            }
+                        }
+                    }
+                }
+                .toolbar {
+                    MainNavbarButtonsView(items: [.new]) { action in
+                        if action == .new {
+                            model.add(with: nil)
+                        }
                     }
                 }
             }
-            .toolbar {
-                MainNavbarButtonsView { action in
-                    if action == .new {
-                        model.add(with: nil)
+            if model.isEditNamePresented {
+                EditCompteView(model: model.selectedItemName) {
+                    toggleEditName()
+                } onSubmit: { newName in
+                    defer { toggleEditName() }
+
+                    withAnimation {
+                        model.updateName(newName)
                     }
                 }
             }
@@ -38,9 +52,15 @@ struct ItemsListView: View {
     }
 }
 
+private extension ItemsListView {
+    func toggleEditName() {
+        model.isEditNamePresented.toggle()
+    }
+}
+
 struct ItemsList_Previews: PreviewProvider {
     static var previews: some View {
         let model = ItemsListVModel()
-        ItemsListView(model: model)
+        ItemsListView<ItemsListVModel>(model: model)
     }
 }

@@ -10,12 +10,13 @@ import SwiftUI
 // MARK: - Lifecycle
 struct MainNavbarButtonsView: View {
     // MARK: Vars
+    var items: [MainNavbarButton] = MainNavbarButton.allCases
     var action: ((MainNavbarButton) -> Void)?
     
     // MARK: Body
     var body: some View {
         HStack(alignment: .center) {
-            ForEach(MainNavbarButton.allCases, id: \.rawValue) { button in
+            ForEach(items, id: \.rawValue) { button in
                 Button {
                     action?(button)
                 } label: {

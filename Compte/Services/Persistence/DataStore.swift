@@ -30,7 +30,7 @@ struct DataStore {
         do {
             try context.save()
         } catch {
-            fatalError("something went wrong saving user data: \(error)")
+            assertionFailure("something went wrong saving user data: \(error)")
         }
     }
 }

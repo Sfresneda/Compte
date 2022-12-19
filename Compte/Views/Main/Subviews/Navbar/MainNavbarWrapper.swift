@@ -13,7 +13,7 @@ enum MainNavbarButton: Int, CaseIterable {
     var name: String {
         switch self {
         case .new:
-            return "New Counter"
+            return "New Item"
         }
     }
     

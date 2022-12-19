@@ -17,7 +17,11 @@ enum PersistenceManagerError: LocalizedError {
 final class PersistenceManager: NSObject, ObservableObject {
     static var shared: PersistenceManager = PersistenceManager()
     
-    @Published var compteModelCollection: Set<CompteObject> = []
+    @Published var compteModelCollection: Set<CompteObject> = [] {
+        didSet {
+            objectWillChange.send()
+        }
+    }
     
     fileprivate var managedObjectContext: NSManagedObjectContext
     private let entityRequestController: NSFetchedResultsController<CompteEntity>

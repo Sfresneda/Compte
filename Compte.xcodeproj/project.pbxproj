@@ -20,6 +20,7 @@
 		373A3DB0293F56300083F74C /* MainNavbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */; };
 		373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */; };
 		378572E029505874005AFE9A /* ItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* ItemsListCell.swift */; };
+		378572E32950635C005AFE9A /* EditCompteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* EditCompteView.swift */; };
 		37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* MainViewListCell.swift */; };
 		37AE5FA72942173A00B96D2F /* MainNavbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AE5FA62942173A00B96D2F /* MainNavbarView.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
@@ -68,6 +69,7 @@
 		373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarButtonView.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* ItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListCell.swift; sourceTree = "<group>"; };
+		378572E22950635C005AFE9A /* EditCompteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCompteView.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* MainViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListCell.swift; sourceTree = "<group>"; };
 		37AE5FA62942173A00B96D2F /* MainNavbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarView.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 		373A3DA0293F42FB0083F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				378572E129506348005AFE9A /* Rename */,
 				37327E8B2946347300F19D4E /* ItemsList */,
 				373A3DA1293F43020083F74C /* Main */,
 			);
@@ -189,9 +192,9 @@
 		373A3DA1293F43020083F74C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DAB293F46CB0083F74C /* Domain */,
-				373A3DA6293F46610083F74C /* Subviews */,
 				373A3DA2293F43120083F74C /* MainView.swift */,
+				373A3DA4293F44FD0083F74C /* MainVModel.swift */,
+				373A3DA6293F46610083F74C /* Subviews */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -204,14 +207,6 @@
 				373A3DAE293F56200083F74C /* Navbar */,
 			);
 			path = Subviews;
-			sourceTree = "<group>";
-		};
-		373A3DAB293F46CB0083F74C /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				373A3DA4293F44FD0083F74C /* MainVModel.swift */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		373A3DAE293F56200083F74C /* Navbar */ = {
@@ -230,6 +225,14 @@
 				378572DF29505874005AFE9A /* ItemsListCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		378572E129506348005AFE9A /* Rename */ = {
+			isa = PBXGroup;
+			children = (
+				378572E22950635C005AFE9A /* EditCompteView.swift */,
+			);
+			path = Rename;
 			sourceTree = "<group>";
 		};
 		37A69E322942640B00129FB1 /* Components */ = {
@@ -480,6 +483,7 @@
 				378572E029505874005AFE9A /* ItemsListCell.swift in Sources */,
 				37AE5FA72942173A00B96D2F /* MainNavbarView.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
+				378572E32950635C005AFE9A /* EditCompteView.swift in Sources */,
 				373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
