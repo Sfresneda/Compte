@@ -29,23 +29,22 @@ extension TapMapper: ModelMapper {
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<TapObject> {
         TapMapper.buildCollection(collection)
     }
-    func insert(_ context: NSManagedObjectContext) {
+    func insert(_ context: NSManagedObjectContext,
+                relationEntityClosure: @autoclosure (() -> NSManagedObject?)) {
         guard let object else { return }
         let tapEntity = TapEntity(context: context)
         tapEntity.id = object.id
         tapEntity.date = object.date
         tapEntity.number = Int16(object.tapNumber)
-        tapEntity.compte = nil
-#warning("implement this")
+        tapEntity.compte = relationEntityClosure() as? CompteEntity
     }
-    func update(_ entity: NSManagedObject, context: NSManagedObjectContext) {
+    func update(_ entity: NSManagedObject,
+                context: NSManagedObjectContext) {
         guard let tapEntity = entity as? TapEntity,
               let object else { return }
 
         tapEntity.date = object.date
         tapEntity.number = Int16(object.tapNumber)
-        tapEntity.compte = nil
-#warning("implement this")
     }
     func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         context.delete(entity)

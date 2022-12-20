@@ -55,7 +55,13 @@ extension PersistenceManager: PersistenceManagerProtocol {
     }
     func add(mapper: any ModelMapper, requireSave: Bool = false) {
         defer { if requireSave { save() } }
-        mapper.insert(dataStore.context)
+        mapper
+            .insert(dataStore.context,
+                    relationEntityClosure: {
+                entityRequestController
+                    .fetchedObjects?
+                    .first(where: { mapper.object?.relationID == $0.id })
+            }())
     }
     func update(mapper: any ModelMapper, requireSave: Bool = false) {
         defer { if requireSave { save() } }
@@ -63,9 +69,11 @@ extension PersistenceManager: PersistenceManagerProtocol {
               let entity = mapper.filterItemSelected(in: collection) else {
             return
         }
-        mapper.update(entity, context: dataStore.context)
+        mapper.update(entity,
+                      context: dataStore.context)
     }
-    func delete(mapper: some ModelMapper, requireSave: Bool = false) {
+    func delete(mapper: some ModelMapper,
+                requireSave: Bool = false) {
         defer { if requireSave { save() } }
         guard let entities = entityRequestController.fetchedObjects,
               let entity = mapper.filterItemSelected(in: entities) else { return }

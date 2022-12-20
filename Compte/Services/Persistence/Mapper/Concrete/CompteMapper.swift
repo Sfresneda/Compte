@@ -28,7 +28,8 @@ extension CompteMapper: ModelMapper {
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<CompteObject> {
         CompteMapper.buildCollection(collection)
     }
-    func insert(_ context: NSManagedObjectContext) {
+    func insert(_ context: NSManagedObjectContext,
+                relationEntityClosure: @autoclosure (() -> NSManagedObject?)) {
         guard let object else { return }
         let compteEntity = CompteEntity(context: context)
         compteEntity.id = object.id
@@ -36,17 +37,19 @@ extension CompteMapper: ModelMapper {
         compteEntity.name = object.name
         compteEntity.lastModified = Date().timeIntervalSince1970
         compteEntity.taps = []
-#warning("implement this")
     }
-    func update(_ entity: NSManagedObject, context: NSManagedObjectContext) {
+    func update(_ entity: NSManagedObject,
+                context: NSManagedObjectContext) {
         guard let compteEntity = entity as? CompteEntity,
               let object else { return }
 
         compteEntity.date = object.date
         compteEntity.name = object.name
         compteEntity.lastModified = Date().timeIntervalSince1970
-        compteEntity.taps = []
-#warning("implement this")
+
+        if object.taps.isEmpty {
+            compteEntity.taps = []
+        }
     }
     func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         context.delete(entity)

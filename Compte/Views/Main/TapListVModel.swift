@@ -39,12 +39,16 @@ class TapListVModel {
         self.modelObject = modelObject
         self.name = modelObject.name
         self.dataManager = dataManager
+        self.items = modelObject.taps.sorted(by: { $0.date > $1.date })
+        self.numberOfTaps = self.items.count
     }
 }
 // MARK: - Contract
 extension TapListVModel: TapListVModelProtocol {
     func add() {
-        let newObject = TapObject(date: Date().timeIntervalSince1970, tapNumber: items.count + 1)
+        let newObject = TapObject(date: Date().timeIntervalSince1970,
+                                  tapNumber: items.count + 1,
+                                  parentId: modelObject.id)
         items.insert(newObject, at: .zero)
 
         store(newObject)
@@ -55,8 +59,7 @@ extension TapListVModel: TapListVModelProtocol {
     }
     func cleanData() {
         defer { dataManager.save() }
-
-        items.forEach { item in dataManager.delete(mapper: TapMapper(item)) }
+        dataManager.update(mapper: CompteMapper(modelObject.copyWithDefaultState()))
         items.removeAll()
     }
 }
@@ -77,5 +80,8 @@ private extension TapListVModel {
         }
 
         saveOperationQueue.addOperation(operation)
+    }
+    func fetchData() {
+        dataManager.fetch(mapper: CompteMapper(modelObject))
     }
 }

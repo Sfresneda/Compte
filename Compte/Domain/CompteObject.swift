@@ -26,13 +26,20 @@ struct CompteObject {
         self.lastModified = lastModified
     }
 }
-extension CompteObject: Hashable {}
+extension CompteObject: HashableMappedModel {
+    var relationID: UUID? {
+        nil
+    }
+}
 extension CompteObject {
     var dateFormatted: Date {
         Date(timeIntervalSince1970: date)
     }
     var lastModifiedDateFormatted: Date {
         Date(timeIntervalSince1970: lastModified)
+    }
+    func copyWithDefaultState() -> Self {
+        return CompteObject(id:self.id, date: self.date, name: self.name)
     }
 }
 extension CompteObject {

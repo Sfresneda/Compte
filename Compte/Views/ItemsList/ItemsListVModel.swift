@@ -34,7 +34,7 @@ final class ItemsListVModel: ObservableObject {
     @Published var selectedItemName: String = ""
 
     private var cancellable: AnyCancellable?
-    @Published private var dataManager: PersistenceManager
+    private var dataManager: PersistenceManager
     
     // MARK: Lifecycle
     init(dataManager: PersistenceManager = PersistenceManager.shared) {
