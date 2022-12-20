@@ -10,23 +10,33 @@ import SwiftUI
 struct CounterView: View {
     // MARK: Vars
     @Binding var currentValue: Int
-    
+
     // MARK: Body
     var body: some View {
-        Text(String(currentValue))
-            .bold()
-            .font(.system(size: 50))
+        ZStack {
+            VisualEffectView(style: .regular)
+            HStack(alignment: .center) {
+                Text("\(currentValue)")
+                    .font(.system(size: 50))
+                Image(systemName: "hand.tap")
+                    .font(.title)
+            }
             .fontDesign(.monospaced)
-            .padding()
-            .background(VisualEffectView(style: .systemThickMaterial))
-            .clipShape(Capsule())
+            .foregroundColor(.secondary)
+        }
+        .animation(.easeIn,
+                   value: currentValue)
     }
 }
-
 // MARK: - Preview
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
-        CounterView(currentValue: .constant(1))
+        ZStack {
+            Image(systemName: "pencil")
+                .resizable()
+                .scaledToFit()
+            CounterView(currentValue: .constant(1))
+        }
     }
 }
 

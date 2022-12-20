@@ -11,14 +11,14 @@ struct CompteObject {
     let id: UUID
     let date: Double
     var name: String
-    let taps: [TapObject]?
+    let taps: [TapObject]
     var lastModified: Double
 
     init(id: UUID? = nil,
          date: Double,
          name: String?,
-         taps: [TapObject]? = nil,
-         lastModified: Double) {
+         taps: [TapObject] = [],
+         lastModified: Double = Date().timeIntervalSince1970) {
         self.id = id ?? UUID()
         self.date = date
         self.name = name ?? "Compte-\(self.id.uuidString.prefix(5))"
@@ -34,11 +34,9 @@ extension CompteObject {
     var lastModifiedDateFormatted: Date {
         Date(timeIntervalSince1970: lastModified)
     }
-
+}
+extension CompteObject {
     static func defaultImplementation() -> Self {
-        CompteObject(id: UUID(),
-                     date: Date().timeIntervalSince1970,
-                     name: "",
-                     lastModified: Date().timeIntervalSince1970)
+        CompteObject(date: Date().timeIntervalSince1970, name: "", lastModified: Date().timeIntervalSince1970)
     }
 }

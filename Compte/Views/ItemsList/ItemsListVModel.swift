@@ -18,29 +18,24 @@ protocol ItemsListVModelProtocol: ObservableObject {
 
     func add(with name: String?)
     func updateName(_ name: String)
-    func delete(with id: UUID)
+    func delete(_ id: UUID)
 }
 
 @MainActor
 final class ItemsListVModel: ObservableObject {
     // MARK: Vars
     @Published var items: [CompteObject] = []
-    //    var items: [CompteObject]  { dataManager
-    //        .compteModelCollection
-    //        .sorted { $0.lastModified < $1.lastModified }
-    //    }
-    private var cancellable: AnyCancellable?
-    @Published private var dataManager: PersistenceManager
     @Published var isEditNamePresented: Bool = false
-
     @Published var selectedItem: CompteObject = .defaultImplementation() {
         didSet {
             selectedItemName = selectedItem.name
         }
     }
-
     @Published var selectedItemName: String = ""
 
+    private var cancellable: AnyCancellable?
+    @Published private var dataManager: PersistenceManager
+    
     // MARK: Lifecycle
     init(dataManager: PersistenceManager = PersistenceManager.shared) {
         self.dataManager = dataManager
@@ -73,7 +68,7 @@ extension ItemsListVModel: ItemsListVModelProtocol {
             .update(mapper: CompteMapper(selectedItem),
                     requireSave: true)
     }
-    func delete(with id: UUID) {
+    func delete(_ id: UUID) {
         guard let object = items.first(where: { $0.id == id }) else { return }
         dataManager
             .delete(mapper: CompteMapper(object),

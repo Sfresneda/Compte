@@ -23,8 +23,7 @@ extension CompteMapper: ModelMapper {
         guard let entitiesCollection = collection as? [CompteEntity] else {
             return nil
         }
-        return entitiesCollection
-            .first { $0.id == object?.id }
+        return entitiesCollection.first { $0.id == object?.id }
     }
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<CompteObject> {
         CompteMapper.buildCollection(collection)
@@ -37,15 +36,17 @@ extension CompteMapper: ModelMapper {
         compteEntity.name = object.name
         compteEntity.lastModified = Date().timeIntervalSince1970
         compteEntity.taps = []
+#warning("implement this")
     }
     func update(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         guard let compteEntity = entity as? CompteEntity,
-              let object else {
-            return
-        }
+              let object else { return }
+
         compteEntity.date = object.date
         compteEntity.name = object.name
         compteEntity.lastModified = Date().timeIntervalSince1970
+        compteEntity.taps = []
+#warning("implement this")
     }
     func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         context.delete(entity)
@@ -54,10 +55,17 @@ extension CompteMapper: ModelMapper {
         collection
             .compactMap { $0 as? CompteEntity }
             .map {
-                CompteObject(id: $0.id,
-                             date: $0.date,
-                             name: $0.name,
-                             lastModified: $0.lastModified)
+                let taps = $0.taps?
+                    .compactMap { $0 as? TapEntity }
+                    .map { tap in
+                        TapObject(id: tap.id, date: tap.date, tapNumber: Int(tap.number))
+                    }
+
+                return CompteObject(id: $0.id,
+                                    date: $0.date,
+                                    name: $0.name,
+                                    taps: taps ?? [],
+                                    lastModified: $0.lastModified)
             }
     }
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> Set<CompteObject> {

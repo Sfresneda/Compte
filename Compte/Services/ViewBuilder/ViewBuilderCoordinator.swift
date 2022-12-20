@@ -19,11 +19,11 @@ extension ViewBuilderCoordinator {
     @MainActor
     func buildListView() -> some View {
         let vmodel = ItemsListVModel()
-        return ItemsListView(model: vmodel)
+        return ItemsListView(vmodel: vmodel)
     }
     
-    func buildMainView(compteModel: CompteObject) -> some View {
-        let vmodel = MainVModel()
-        return MainView(vmodel: vmodel)
+    func buildTapListView(object: CompteObject) -> some View {
+        let vmodel = TapListVModel(modelObject: object)
+        return TapListView<TapListVModel>(vmodel: vmodel)
     }
 }

@@ -15,7 +15,7 @@ struct ItemsListCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .center) {
-                Text("\(model.taps?.count ?? .zero)")
+                Text("\(model.taps.count)")
                     .fontDesign(.monospaced)
                     .font(.largeTitle)
                     .foregroundColor(.white)

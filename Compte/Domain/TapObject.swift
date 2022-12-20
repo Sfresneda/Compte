@@ -12,7 +12,7 @@ struct TapObject {
     let date: TimeInterval
     let tapNumber: Int
 
-    init(id: UUID?,
+    init(id: UUID? = nil,
          date: TimeInterval,
          tapNumber: Int) {
         self.id = id ?? UUID()
@@ -21,3 +21,13 @@ struct TapObject {
     }
 }
 extension TapObject: Hashable {}
+extension TapObject {
+    var dateFormatted: Date {
+        Date(timeIntervalSince1970: date)
+    }
+}
+extension TapObject {
+    static func defaultImplementation() -> Self {
+        TapObject(date: Date().timeIntervalSince1970, tapNumber: .zero)
+    }
+}
