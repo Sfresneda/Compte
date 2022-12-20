@@ -76,6 +76,7 @@ private extension TapListVModel {
         operation.addExecutionBlock { [weak self] in
             usleep(Constant.saveQueueDelay)
             guard !operation.isCancelled else { return }
+            self?.dataManager.update(mapper: CompteMapper(self?.modelObject))
             self?.dataManager.save()
         }
 

@@ -8,21 +8,42 @@
 import SwiftUI
 
 struct EditCompteView: View {
-    @State var model: String
+    @State var model: String {
+        didSet {
+            debugPrint(model.count)
+        }
+    }
+    @State private var isPresented: Bool = false
     var onCancel: (() -> Void)?
     var onSubmit: ((String) -> Void)?
 
+    private enum Constants {
+        static let maxNumberCharacters: Int = 30
+        static let maxNumberOfLines: Int = 3
+        static let viewCornerShadowRadius: CGFloat = 20
+        static let viewMaxHeight: CGFloat = 300
+        static let overlayColor: Color = .black.opacity(0.3)
+        static let onAppearAnimation: Animation = .spring(dampingFraction: 0.75).delay(0.2)
+    }
+
     var body: some View {
-        withAnimation(.easeInOut) {
-            VStack {
+        VStack {
+            if isPresented {
                 VStack(alignment: .center) {
+                    Text("Max. \(Constants.maxNumberCharacters) Characters")
+                        .font(.footnote)
+                        .foregroundColor(.secondary)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+
                     TextField("Title",
-                              text: $model)
+                              text: $model,
+                              axis: .vertical)
+                    .foregroundColor(.primary)
+                    .lineLimit(Constants.maxNumberOfLines, reservesSpace: true)
                     .fontDesign(.monospaced)
                     .font(.title)
-                    .lineLimit(0, reservesSpace: true)
                     .padding()
-                    Spacer()
+
                     HStack(alignment: .center) {
                         Button {
                             onCancel?()
@@ -33,26 +54,36 @@ struct EditCompteView: View {
                         .buttonStyle(.bordered)
 
                         Button {
-                            onSubmit?(model)
+                            onSubmit?(String(model.prefix(Constants.maxNumberCharacters)))
                         } label: {
                             Text("Submit")
                         }
                         .tint(.blue)
                         .buttonStyle(.bordered)
                     }
-                    .padding()
                 }
                 .padding()
                 .background(.white)
-                .frame(maxHeight: 300)
-                .cornerRadius(20)
+                .cornerRadius(Constants.viewCornerShadowRadius)
+                .frame(maxHeight: Constants.viewMaxHeight)
+                .shadow(radius: Constants.viewCornerShadowRadius)
+                .transition(.scale)
+                .onTapGesture { /* silent is gold */ }
             }
-            .padding()
-            .frame(maxWidth: .infinity,
-                   maxHeight: .infinity,
-                   alignment: .center)
-            .background(VisualEffectView(style: .systemThinMaterial))
-            .ignoresSafeArea()
+        }
+        .padding()
+        .frame(maxWidth: .infinity,
+               maxHeight: .infinity,
+               alignment: .center)
+        .background(Constants.overlayColor)
+        .ignoresSafeArea()
+        .onAppear {
+            withAnimation(Constants.onAppearAnimation) {
+                isPresented.toggle()
+            }
+        }
+        .onTapGesture {
+            onCancel?()
         }
     }
 }
@@ -62,9 +93,10 @@ struct EditCompteView_Previews: PreviewProvider {
         let model = "Compte for testing purposes"
         ZStack {
             Image(systemName: "square.and.arrow.up")
-                .scaledToFill()
-                .tint(.blue)
-                .background(.red)
+                .resizable()
+                .scaledToFit()
+                .background(.mint)
+
             EditCompteView(model: model)
         }
     }

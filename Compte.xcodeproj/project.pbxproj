@@ -128,8 +128,8 @@
 		37327E7F29462FE900F19D4E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				37327E982946474C00F19D4E /* ViewBuilder */,
 				37327E8029462FEC00F19D4E /* Persistence */,
+				37327E982946474C00F19D4E /* ViewBuilder */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -137,10 +137,10 @@
 		37327E8029462FEC00F19D4E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
+				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
 				37E84F1A294B27050039BB4F /* Mapper */,
 				37327E8129462FF900F19D4E /* PersistenceManager.swift */,
-				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
+				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -174,8 +174,8 @@
 		373A3D9E293F42E50083F74C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				37327E83294630E800F19D4E /* Data */,
 				373A3D9F293F42F10083F74C /* Assets */,
+				37327E83294630E800F19D4E /* Data */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -192,10 +192,10 @@
 		373A3DA0293F42FB0083F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DAE293F56200083F74C /* Navbar */,
-				378572E129506348005AFE9A /* Rename */,
 				37327E8B2946347300F19D4E /* ItemsList */,
 				373A3DA1293F43020083F74C /* Main */,
+				373A3DAE293F56200083F74C /* Navbar */,
+				378572E129506348005AFE9A /* Rename */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,20 +204,12 @@
 			isa = PBXGroup;
 			children = (
 				37830D7A2951A3FE00AEC7D2 /* _wrapper */,
-				373A3DA2293F43120083F74C /* TapListView.swift */,
-				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
-				373A3DA6293F46610083F74C /* Subviews */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		373A3DA6293F46610083F74C /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
 				37A69E332942641000129FB1 /* Cell */,
 				37A69E322942640B00129FB1 /* Components */,
+				373A3DA2293F43120083F74C /* TapListView.swift */,
+				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
 			);
-			path = Subviews;
+			path = Main;
 			sourceTree = "<group>";
 		};
 		373A3DAE293F56200083F74C /* Navbar */ = {
@@ -295,11 +287,11 @@
 			isa = PBXGroup;
 			children = (
 				37B0C072293F427F00317132 /* CompteApp.swift */,
-				37F30516294292AC003AADD6 /* Helpers */,
 				37E84F1F294B29080039BB4F /* Domain */,
+				37F30516294292AC003AADD6 /* Helpers */,
+				373A3D9E293F42E50083F74C /* Resources */,
 				37327E7F29462FE900F19D4E /* Services */,
 				373A3DA0293F42FB0083F74C /* Views */,
-				373A3D9E293F42E50083F74C /* Resources */,
 			);
 			path = Compte;
 			sourceTree = "<group>";
@@ -332,8 +324,8 @@
 		37E84F1A294B27050039BB4F /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
-				37E84F1B294B27120039BB4F /* ModelMapper.swift */,
 				37E84F24294B29510039BB4F /* Concrete */,
+				37E84F1B294B27120039BB4F /* ModelMapper.swift */,
 			);
 			path = Mapper;
 			sourceTree = "<group>";

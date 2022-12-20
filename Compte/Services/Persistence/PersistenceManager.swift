@@ -60,7 +60,7 @@ extension PersistenceManager: PersistenceManagerProtocol {
                     relationEntityClosure: {
                 entityRequestController
                     .fetchedObjects?
-                    .first(where: { mapper.object?.relationID == $0.id })
+                    .first(where: { mapper.object?.relationIdentifier == $0.id })
             }())
     }
     func update(mapper: any ModelMapper, requireSave: Bool = false) {

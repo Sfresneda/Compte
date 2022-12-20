@@ -27,7 +27,7 @@ struct CompteObject {
     }
 }
 extension CompteObject: HashableMappedModel {
-    var relationID: UUID? {
+    var relationIdentifier: UUID? {
         nil
     }
 }

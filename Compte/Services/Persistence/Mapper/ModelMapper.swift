@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 protocol HashableMappedModel: Hashable {
-    var relationID: UUID? { get }
+    var relationIdentifier: UUID? { get }
 }
 
 protocol ModelMapper {

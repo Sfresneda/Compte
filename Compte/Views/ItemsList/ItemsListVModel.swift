@@ -42,7 +42,7 @@ final class ItemsListVModel: ObservableObject {
         cancellable = dataManager
             .objectWillChange
             .sink(receiveValue: { [weak self] _ in
-                self?.items = dataManager.compteModelCollection.sorted { $0.lastModified < $1.lastModified }
+                self?.items = dataManager.compteModelCollection.sorted { $0.lastModified > $1.lastModified }
                 self?.objectWillChange.send()
             })
         defer { fetchData() }

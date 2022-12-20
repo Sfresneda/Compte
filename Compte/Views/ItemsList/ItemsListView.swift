@@ -35,7 +35,9 @@ ItemsListVModelProtocol {
                 .toolbar {
                     MainNavbarButtonsView(items: [.new]) { action in
                         if action == .new {
-                            vmodel.add(with: nil)
+                            withAnimation(.easeIn) {
+                                vmodel.add(with: nil)
+                            }
                         }
                     }
                 }
@@ -46,8 +48,7 @@ ItemsListVModelProtocol {
                     toggleEditName()
                 } onSubmit: { newName in
                     defer { toggleEditName() }
-
-                    withAnimation {
+                    withAnimation(.easeIn) {
                         vmodel.updateName(newName)
                     }
                 }

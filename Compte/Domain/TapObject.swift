@@ -11,7 +11,7 @@ struct TapObject {
     let id: UUID
     let date: TimeInterval
     let tapNumber: Int
-    var parentId: UUID?
+    let parentId: UUID?
 
     init(id: UUID? = nil,
          date: TimeInterval,
@@ -24,7 +24,7 @@ struct TapObject {
     }
 }
 extension TapObject: HashableMappedModel {
-    var relationID: UUID? {
+    var relationIdentifier: UUID? {
         parentId
     }
 }
