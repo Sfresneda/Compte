@@ -28,10 +28,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                         .animation(.default, value: vmodel.items)
                     }
                     .onChange(of: vmodel.numberOfTaps) { newValue in
-                        guard let firstId = vmodel
-                            .items
-                            .first?
-                            .id else { return }
+                        guard let firstId = vmodel.items.first?.id else { return }
 
                         withAnimation(.easeOut) {
                             proxy.scrollTo(firstId,

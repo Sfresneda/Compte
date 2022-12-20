@@ -15,7 +15,7 @@ struct ItemsListCell: View {
     var body: some View {
         HStack {
             VStack(alignment: .center) {
-                Text("\(model.taps.count)")
+                Text(countNumber(for: model.taps.count))
                     .font(.largeTitle)
                     .foregroundColor(.white)
             }
@@ -64,11 +64,24 @@ struct ItemsListCell: View {
     }
 }
 
+private extension ItemsListCell {
+    func countNumber(for value: Int) -> String {
+        value > 99
+        ? "+99"
+        : String(value)
+    }
+}
+
 struct ItemsListCell_Previews: PreviewProvider {
     static var previews: some View {
+        let numberOfTaps: Int = 100
+        let tapsCollection = Array(repeating: TapObject(date: Date().timeIntervalSince1970,
+                                                        tapNumber: .zero),
+                                   count: numberOfTaps)
         let model = CompteObject(id: nil,
                                  date: Date().timeIntervalSince1970,
                                  name: "test",
+                                 taps: tapsCollection,
                                  lastModified: Date().timeIntervalSince1970)
         ItemsListCell(model: .constant(model))
     }

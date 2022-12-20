@@ -16,19 +16,29 @@ ItemsListVModelProtocol {
     var body: some View {
         ZStack {
             NavigationView {
-                List {
-                    ForEach($vmodel.items, id: \.id) { item in
-                        ZStack {
-                            NavigationLink(destination: ViewBuilderCoordinator
-                                .shared
-                                .buildTapListView(object: item.wrappedValue )) {
-                                    ItemsListCell(model: item) { identifier in
-                                        vmodel.delete(identifier)
-                                    } onRename: {
-                                        vmodel.selectedItem = item.wrappedValue
-                                        toggleEditName()
+                ScrollViewReader { proxy in
+                    List {
+                        ForEach($vmodel.items, id: \.id) { item in
+                            ZStack {
+                                NavigationLink(destination: ViewBuilderCoordinator
+                                    .shared
+                                    .buildTapListView(object: item.wrappedValue )) {
+                                        ItemsListCell(model: item) { identifier in
+                                            vmodel.delete(identifier)
+                                        } onRename: {
+                                            vmodel.selectedItem = item.wrappedValue
+                                            toggleEditName()
+                                        }
                                     }
-                                }
+                            }
+                        }
+                    }
+                    .onChange(of: vmodel.items) { newValue in
+                        guard let firstId = vmodel.items.first?.id else { return }
+
+                        withAnimation(.easeOut) {
+                            proxy.scrollTo(firstId,
+                                           anchor: .bottom)
                         }
                     }
                 }

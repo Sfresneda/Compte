@@ -15,7 +15,7 @@ struct SlideToUnlockView: View {
     // MARK: Body
     var body: some View {
         Slider(value: $sliderValue,
-               in: 0...100,
+               in: .zero...100,
                step: 5) {
             Text("Reset counter")
         } onEditingChanged: { editing in
