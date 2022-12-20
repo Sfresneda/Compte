@@ -63,7 +63,7 @@ struct EditCompteView: View {
                     }
                 }
                 .padding()
-                .background(.white)
+                .background(.background)
                 .cornerRadius(Constants.viewCornerShadowRadius)
                 .frame(maxHeight: Constants.viewMaxHeight)
                 .shadow(radius: Constants.viewCornerShadowRadius)
@@ -76,7 +76,6 @@ struct EditCompteView: View {
                maxHeight: .infinity,
                alignment: .center)
         .background(Constants.overlayColor)
-        .ignoresSafeArea()
         .onAppear {
             withAnimation(Constants.onAppearAnimation) {
                 isPresented.toggle()
