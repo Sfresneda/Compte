@@ -13,22 +13,20 @@ struct MainViewListCell: View {
         HStack(alignment: .center) {
             ZStack {
                 Text("\(model.tapNumber)")
-                    .font(.system(size: 30))
+                    .font(.system(size: 50))
+                    .bold()
                     .minimumScaleFactor(0.1)
-                    .fontDesign(.rounded)
-                    .padding()
+                    .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: .zero))
             }
             .aspectRatio(1, contentMode: .fit)
             VStack(alignment: .listRowSeparatorLeading) {
                 Text(Date(timeIntervalSince1970: model.date),
                      format: Date.FormatStyle().hour().minute().second())
-                .fontDesign(.monospaced)
                 .font(.title2)
+                .bold()
                 Text(Date(timeIntervalSince1970: model.date),
                      style: .date)
-                .fontDesign(.serif)
                 .font(.title3)
-                
             }
         }
     }

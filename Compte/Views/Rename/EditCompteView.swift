@@ -16,9 +16,10 @@ struct EditCompteView: View {
     @State private var isPresented: Bool = false
     var onCancel: (() -> Void)?
     var onSubmit: ((String) -> Void)?
+    @FocusState private var isTextFieldFocused: Bool
 
     private enum Constants {
-        static let maxNumberCharacters: Int = 30
+        static let maxNumberCharacters: Int = 50
         static let maxNumberOfLines: Int = 3
         static let viewCornerShadowRadius: CGFloat = 20
         static let viewMaxHeight: CGFloat = 300
@@ -38,10 +39,11 @@ struct EditCompteView: View {
                     TextField("Title",
                               text: $model,
                               axis: .vertical)
+                    .focused($isTextFieldFocused)
+                    .submitLabel(.done)
                     .foregroundColor(.primary)
                     .lineLimit(Constants.maxNumberOfLines, reservesSpace: true)
-                    .fontDesign(.monospaced)
-                    .font(.title)
+                    .font(.title2)
                     .padding()
 
                     HStack(alignment: .center) {
@@ -79,6 +81,7 @@ struct EditCompteView: View {
         .onAppear {
             withAnimation(Constants.onAppearAnimation) {
                 isPresented.toggle()
+                isTextFieldFocused.toggle()
             }
         }
         .onTapGesture {

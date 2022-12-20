@@ -16,7 +16,6 @@ struct ItemsListCell: View {
         HStack {
             VStack(alignment: .center) {
                 Text("\(model.taps.count)")
-                    .fontDesign(.monospaced)
                     .font(.largeTitle)
                     .foregroundColor(.white)
             }
@@ -24,20 +23,13 @@ struct ItemsListCell: View {
                                 leading: 8,
                                 bottom: 10,
                                 trailing: 8))
-            .background(alignment: .center,
-                        content: {
-                Image(systemName: "hand.tap")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(.white.opacity(0.15))
-            })
             .background(.secondary)
-
             .cornerRadius(20)
+
             VStack(alignment: .leading) {
                 Text(model.name)
-                    .font(.title)
-                    .fontDesign(.monospaced)
+                    .font(.title2)
+                    .bold()
                     .foregroundColor(.primary)
                 HStack {
                     Text(model.lastModifiedDateFormatted,
@@ -48,7 +40,6 @@ struct ItemsListCell: View {
                         .day()
                         .locale(Locale.current))
                     .font(.subheadline)
-                    .fontDesign(.serif)
                     .foregroundColor(.secondary)
                 }
             }

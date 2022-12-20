@@ -18,11 +18,11 @@ struct CounterView: View {
             HStack(alignment: .center) {
                 Text("\(currentValue)")
                     .font(.system(size: 50))
+                    .bold()
                 Image(systemName: "hand.tap")
                     .font(.title)
             }
-            .fontDesign(.monospaced)
-            .foregroundColor(.secondary)
+            .foregroundColor(.primary)
         }
         .animation(.easeIn,
                    value: currentValue)
