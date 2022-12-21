@@ -8,24 +8,15 @@
 import Foundation
 import CoreData
 
-struct TapMapper {
+// MARK: - TapMapper
+struct TapMapper: ModelMapper {
     static var uniqueIdentifier: String { String(describing: self) }
-
     let object: TapObject?
-    var entity: NSManagedObject.Type {
-        TapEntity.self
-    }
 
     init(_ object: TapObject? = nil) { self.object = object }
-
 }
-extension TapMapper: ModelMapper {
-    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject? {
-        guard let entitiesCollection = collection as? [TapEntity] else {
-            return nil
-        }
-        return entitiesCollection.first { $0.id == object?.id }
-    }
+// MARK: - Public CRUD
+extension TapMapper {
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<TapObject> {
         TapMapper.buildCollection(collection)
     }
@@ -49,6 +40,18 @@ extension TapMapper: ModelMapper {
     func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         context.delete(entity)
     }
+}
+// MARK: - Public Helper
+extension TapMapper {
+    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject? {
+        guard let entitiesCollection = collection as? [TapEntity] else {
+            return nil
+        }
+        return entitiesCollection.first { $0.id == object?.id }
+    }
+}
+// MARK: - Statics
+extension TapMapper {
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> [TapObject] {
         collection
             .compactMap { $0 as? TapEntity }

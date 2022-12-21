@@ -8,14 +8,17 @@
 import Foundation
 import CoreData
 
+// MARK: - DataStore
 struct DataStore {
+    // MARK: Vars
     var container: NSPersistentContainer
     var context: NSManagedObjectContext {
         container.viewContext
     }
 
-    init() {
-        container = NSPersistentContainer(name:"CompteModel")
+    // MARK: Lifecycle
+    init(dataModelName: String = "CompteModel") {
+        container = NSPersistentContainer(name: dataModelName)
         context.automaticallyMergesChangesFromParent = true
 
         container.loadPersistentStores(completionHandler: { _, error in
@@ -24,7 +27,9 @@ struct DataStore {
             }
         })
     }
-
+}
+// MARK: - Public
+extension DataStore {
     func save() {
         guard context.hasChanges else { return }
         do {

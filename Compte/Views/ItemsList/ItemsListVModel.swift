@@ -8,23 +8,12 @@
 import Foundation
 import Combine
 
-// MARK: - ItemsListVModelProtocol
-protocol ItemsListVModelProtocol: ObservableObject {
-    var items: [CompteObject] { get set }
-    var isEditNamePresented: Bool { get set }
-
-    var selectedItem: CompteObject { get set }
-    var selectedItemName: String { get }
-
-    func add(with name: String?)
-    func updateName(_ name: String)
-    func delete(_ id: UUID)
-}
-
+// MARK: - ItemsListVModel
 @MainActor
 final class ItemsListVModel: ObservableObject {
     // MARK: Vars
     @Published var items: [CompteObject] = []
+    var isItemsEmpty: Bool { items.isEmpty }
     @Published var isEditNamePresented: Bool = false
     @Published var selectedItem: CompteObject = .defaultImplementation() {
         didSet {
@@ -32,9 +21,16 @@ final class ItemsListVModel: ObservableObject {
         }
     }
     @Published var selectedItemName: String = ""
+    @Published var navigationBarItems: [NavbarButton] = Constants.defaultNavbarItems
 
+    var firstItemIdentifier: UUID? {
+        items.first?.id
+    }
     private var cancellable: AnyCancellable?
     private var dataManager: PersistenceManager
+    private enum Constants {
+        static let defaultNavbarItems: [NavbarButton] = []
+    }
     
     // MARK: Lifecycle
     init(dataManager: PersistenceManager = PersistenceManager.shared) {
@@ -50,7 +46,15 @@ final class ItemsListVModel: ObservableObject {
 }
 // MARK: - Contract
 extension ItemsListVModel: ItemsListVModelProtocol {
-    func add(with name: String?) {
+    func handleNavbarButton(_ button: NavbarButton) {
+        switch button {
+        case .new:
+            add()
+        default:
+            break
+        }
+    }
+    func add(with name: String? = nil) {
         let newObject = CompteObject(date: Date().timeIntervalSince1970,
                                      name: name,
                                      lastModified: Date().timeIntervalSince1970)

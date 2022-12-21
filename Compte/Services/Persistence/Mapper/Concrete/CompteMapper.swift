@@ -8,23 +8,15 @@
 import Foundation
 import CoreData
 
-struct CompteMapper {
+// MARK: - TapMapper
+struct CompteMapper: ModelMapper {
     static var uniqueIdentifier: String { String(describing: self) }
-    
     let object: CompteObject?
-    var entity: NSManagedObject.Type {
-        CompteEntity.self
-    }
-    
+
     init(_ object: CompteObject? = nil) { self.object = object }
 }
-extension CompteMapper: ModelMapper {
-    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject? {
-        guard let entitiesCollection = collection as? [CompteEntity] else {
-            return nil
-        }
-        return entitiesCollection.first { $0.id == object?.id }
-    }
+// MARK: - Public CRUD
+extension CompteMapper {
     func fetch(_ collection: [NSFetchRequestResult]) -> Set<CompteObject> {
         CompteMapper.buildCollection(collection)
     }
@@ -54,6 +46,18 @@ extension CompteMapper: ModelMapper {
     func delete(_ entity: NSManagedObject, context: NSManagedObjectContext) {
         context.delete(entity)
     }
+}
+// MARK: - Public Helpers
+extension CompteMapper {
+    func filterItemSelected(in collection: [NSManagedObject]) -> NSManagedObject? {
+        guard let entitiesCollection = collection as? [CompteEntity] else {
+            return nil
+        }
+        return entitiesCollection.first { $0.id == object?.id }
+    }
+}
+// MARK: - Statics
+extension CompteMapper {
     static func buildCollection(_ collection: [NSFetchRequestResult]) -> [CompteObject] {
         collection
             .compactMap { $0 as? CompteEntity }

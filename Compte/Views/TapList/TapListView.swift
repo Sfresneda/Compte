@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Combine
 
 // MARK: - Lifecycle
 struct TapListView<Model>: View where Model: TapListVModelProtocol {
@@ -50,9 +49,14 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                                         leading: 20,
                                         bottom: 5,
                                         trailing: 20))
-                    TapView(action: {
+                    TapView(buttonFont: {
+                        .system(size: 50)
+                    }, maxWidth: {
+                        .infinity
+                    }, action: {
                         vmodel.add()
                     })
+                    .background(.blue)
                 }
             }
             .safeAreaInset(edge: .top) {
@@ -68,7 +72,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                 }
             }
         }
-        .toolbar(.visible, for: .navigationBar)
+//        .toolbar(.visible, for: .navigationBar)
         .navigationTitle(vmodel.name)
     }
 }

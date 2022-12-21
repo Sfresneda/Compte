@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+
+// MARK: - VisualEffectView
 struct VisualEffectView: UIViewRepresentable {
     var style: UIBlurEffect.Style = .systemMaterial
 

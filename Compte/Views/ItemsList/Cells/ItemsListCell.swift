@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+// MARK: - Lifecycle
 struct ItemsListCell: View {
+    // MARK: Vars
     @Binding var model: CompteObject
     var onDelete: ((UUID) -> Void)?
     var onRename: (() -> Void)?
 
+    // MARK: Body
     var body: some View {
         HStack {
             VStack(alignment: .center) {
@@ -31,6 +34,7 @@ struct ItemsListCell: View {
                     .font(.title2)
                     .bold()
                     .foregroundColor(.primary)
+
                 HStack {
                     Text(model.lastModifiedDateFormatted,
                          format: Date
@@ -51,6 +55,7 @@ struct ItemsListCell: View {
                 } label: {
                     Image(systemName: "trash")
                 }
+
                 Button {
                     withAnimation {
                         onRename?()
@@ -63,7 +68,7 @@ struct ItemsListCell: View {
         }
     }
 }
-
+// MARK: - Helpers
 private extension ItemsListCell {
     func countNumber(for value: Int) -> String {
         value > 99
@@ -72,6 +77,7 @@ private extension ItemsListCell {
     }
 }
 
+// MARK: - Preview
 struct ItemsListCell_Previews: PreviewProvider {
     static var previews: some View {
         let numberOfTaps: Int = 100

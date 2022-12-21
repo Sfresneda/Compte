@@ -8,6 +8,12 @@
 import Foundation
 import CoreData
 
+// MARK: - PersistenceManagerError
+enum PersistenceManagerError: LocalizedError {
+    case entityCollectionIsEmpty
+    case unkown
+}
+// MARK: - PersistenceManagerProtocol
 protocol PersistenceManagerProtocol {
     func fetch(mapper: some ModelMapper)
     func add(mapper: any ModelMapper, requireSave: Bool)

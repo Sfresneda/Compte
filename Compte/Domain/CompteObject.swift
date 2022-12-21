@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - CompteObject
 struct CompteObject {
     let id: UUID
     let date: Double
@@ -26,11 +27,13 @@ struct CompteObject {
         self.lastModified = lastModified
     }
 }
+// MARK: - HashableMappedModel
 extension CompteObject: HashableMappedModel {
     var relationIdentifier: UUID? {
         nil
     }
 }
+// MARK: - Public Helpers
 extension CompteObject {
     var dateFormatted: Date {
         Date(timeIntervalSince1970: date)
@@ -42,6 +45,7 @@ extension CompteObject {
         return CompteObject(id:self.id, date: self.date, name: self.name)
     }
 }
+// MARK: - Statics
 extension CompteObject {
     static func defaultImplementation() -> Self {
         CompteObject(date: Date().timeIntervalSince1970, name: "", lastModified: Date().timeIntervalSince1970)

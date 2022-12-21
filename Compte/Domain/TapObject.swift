@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - TapObject
 struct TapObject {
     let id: UUID
     let date: TimeInterval
@@ -23,16 +24,19 @@ struct TapObject {
         self.parentId = parentId
     }
 }
+// MARK: - HashableMappedModel
 extension TapObject: HashableMappedModel {
     var relationIdentifier: UUID? {
         parentId
     }
 }
+// MARK: - Public Helpers
 extension TapObject {
     var dateFormatted: Date {
         Date(timeIntervalSince1970: date)
     }
 }
+// MARK: - Statics
 extension TapObject {
     static func defaultImplementation() -> Self {
         TapObject(date: Date().timeIntervalSince1970, tapNumber: .zero)

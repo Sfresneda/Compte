@@ -17,12 +17,13 @@
 		373A3DA8293F46770083F74C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA7293F46770083F74C /* CounterView.swift */; };
 		373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */; };
 		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
-		373A3DB0293F56300083F74C /* MainNavbarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */; };
-		373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */; };
+		373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* NavbarButtonsView.swift */; };
+		373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */; };
 		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* ItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* ItemsListCell.swift */; };
 		378572E32950635C005AFE9A /* EditCompteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* EditCompteView.swift */; };
+		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* MainViewListCell.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
 		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
@@ -67,12 +68,13 @@
 		373A3DA7293F46770083F74C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToUnlockView.swift; sourceTree = "<group>"; };
 		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
-		373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarButtonView.swift; sourceTree = "<group>"; };
-		373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavbarWrapper.swift; sourceTree = "<group>"; };
+		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
+		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* ItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListCell.swift; sourceTree = "<group>"; };
 		378572E22950635C005AFE9A /* EditCompteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCompteView.swift; sourceTree = "<group>"; };
+		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* MainViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListCell.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C072293F427F00317132 /* CompteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteApp.swift; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		370FCFE22950AD8300C3DDAC /* _wrapper */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DB3293F5C060083F74C /* MainNavbarWrapper.swift */,
+				373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */,
 			);
 			path = _wrapper;
 			sourceTree = "<group>";
@@ -156,6 +158,7 @@
 		37327E8B2946347300F19D4E /* ItemsList */ = {
 			isa = PBXGroup;
 			children = (
+				3793DEEA29531F2A00C04C30 /* _wrapper */,
 				378572DE29505859005AFE9A /* Cells */,
 				37327E8C2946348500F19D4E /* ItemsListView.swift */,
 				37327E8E294634D000F19D4E /* ItemsListVModel.swift */,
@@ -193,30 +196,29 @@
 			isa = PBXGroup;
 			children = (
 				37327E8B2946347300F19D4E /* ItemsList */,
-				373A3DA1293F43020083F74C /* Main */,
+				373A3DA1293F43020083F74C /* TapList */,
 				373A3DAE293F56200083F74C /* Navbar */,
 				378572E129506348005AFE9A /* Rename */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		373A3DA1293F43020083F74C /* Main */ = {
+		373A3DA1293F43020083F74C /* TapList */ = {
 			isa = PBXGroup;
 			children = (
 				37830D7A2951A3FE00AEC7D2 /* _wrapper */,
 				37A69E332942641000129FB1 /* Cell */,
-				37A69E322942640B00129FB1 /* Components */,
 				373A3DA2293F43120083F74C /* TapListView.swift */,
 				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
 			);
-			path = Main;
+			path = TapList;
 			sourceTree = "<group>";
 		};
 		373A3DAE293F56200083F74C /* Navbar */ = {
 			isa = PBXGroup;
 			children = (
 				370FCFE22950AD8300C3DDAC /* _wrapper */,
-				373A3DAF293F56300083F74C /* MainNavbarButtonView.swift */,
+				373A3DAF293F56300083F74C /* NavbarButtonsView.swift */,
 			);
 			path = Navbar;
 			sourceTree = "<group>";
@@ -243,6 +245,14 @@
 				378572E22950635C005AFE9A /* EditCompteView.swift */,
 			);
 			path = Rename;
+			sourceTree = "<group>";
+		};
+		3793DEEA29531F2A00C04C30 /* _wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */,
+			);
+			path = _wrapper;
 			sourceTree = "<group>";
 		};
 		37A69E322942640B00129FB1 /* Components */ = {
@@ -288,6 +298,7 @@
 			children = (
 				37B0C072293F427F00317132 /* CompteApp.swift */,
 				37E84F1F294B29080039BB4F /* Domain */,
+				37A69E322942640B00129FB1 /* Components */,
 				37F30516294292AC003AADD6 /* Helpers */,
 				373A3D9E293F42E50083F74C /* Resources */,
 				37327E7F29462FE900F19D4E /* Services */,
@@ -492,9 +503,10 @@
 				37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */,
 				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
 				378572E029505874005AFE9A /* ItemsListCell.swift in Sources */,
+				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
 				378572E32950635C005AFE9A /* EditCompteView.swift in Sources */,
-				373A3DB4293F5C070083F74C /* MainNavbarWrapper.swift in Sources */,
+				373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
 				37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */,
@@ -502,7 +514,7 @@
 				37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */,
 				37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */,
 				37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */,
-				373A3DB0293F56300083F74C /* MainNavbarButtonView.swift in Sources */,
+				373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */,
 				373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */,
 				37E84F23294B291B0039BB4F /* TapObject.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
@@ -681,7 +693,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -719,7 +731,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

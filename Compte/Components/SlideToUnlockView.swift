@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 // MARK: - Lifecycle
 struct SlideToUnlockView: View {
     // MARK: Vars
@@ -23,7 +24,6 @@ struct SlideToUnlockView: View {
         }
     }
 }
-
 // MARK: - Helper
 private extension SlideToUnlockView {
     func handleSliderChangeValue(isEditing: Bool) {

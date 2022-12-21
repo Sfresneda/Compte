@@ -8,8 +8,9 @@
 import Foundation
 import Combine
 
-// MARK: - MainVModel
-class TapListVModel {
+// MARK: - TapListVModel
+@MainActor
+final class TapListVModel {
     // MARK: Vars
     @Published var numberOfTaps: Int = .zero
     @Published var items: [TapObject] = [] {
@@ -76,7 +77,6 @@ private extension TapListVModel {
         operation.addExecutionBlock { [weak self] in
             usleep(Constant.saveQueueDelay)
             guard !operation.isCancelled else { return }
-            self?.dataManager.update(mapper: CompteMapper(self?.modelObject))
             self?.dataManager.save()
         }
 

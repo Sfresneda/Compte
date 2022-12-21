@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 // MARK: - Lifecycle
 struct CounterView: View {
     // MARK: Vars
@@ -28,6 +29,7 @@ struct CounterView: View {
                    value: currentValue)
     }
 }
+
 // MARK: - Preview
 struct CounterView_Previews: PreviewProvider {
     static var previews: some View {

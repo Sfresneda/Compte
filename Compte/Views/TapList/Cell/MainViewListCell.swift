@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+// MARK: - Lifecycle
 struct MainViewListCell: View {
+    // MARK: Vars
     var model: TapObject
+
+    // MARK: Body
     var body: some View {
         HStack(alignment: .center) {
             ZStack {
@@ -19,7 +23,7 @@ struct MainViewListCell: View {
                     .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: .zero))
             }
             .aspectRatio(1, contentMode: .fit)
-            VStack(alignment: .listRowSeparatorLeading) {
+            VStack(alignment: .leading) {
                 Text(Date(timeIntervalSince1970: model.date),
                      format: Date.FormatStyle().hour().minute().second())
                 .font(.title2)
@@ -31,6 +35,8 @@ struct MainViewListCell: View {
         }
     }
 }
+
+// MARK: - Preview
 struct MainViewListCell_Previews: PreviewProvider {
     static var previews: some View {
         let model = TapObject(date: Date().timeIntervalSince1970,

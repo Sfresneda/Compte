@@ -9,11 +9,7 @@ import Foundation
 import CoreData
 import Combine
 
-enum PersistenceManagerError: LocalizedError {
-    case entityCollectionIsEmpty
-    case unkown
-}
-
+// MARK: - PersistenceManager
 final class PersistenceManager: NSObject, ObservableObject {
     static var shared: PersistenceManager = PersistenceManager()
     
@@ -45,7 +41,7 @@ final class PersistenceManager: NSObject, ObservableObject {
         try? entityRequestController.performFetch()
     }
 }
-
+// MARK: - Public CRUD
 extension PersistenceManager: PersistenceManagerProtocol {
     func fetch(mapper: some ModelMapper) {
         guard let collection = try? entitiesCollection(),
@@ -89,7 +85,7 @@ extension PersistenceManager: PersistenceManagerProtocol {
         dataStore.save()
     }
 }
-
+// MARK: - Helpers
 private extension PersistenceManager {
     func entitiesCollection() throws -> [NSManagedObject]? {
         guard let objects = try? managedObjectContext
@@ -100,6 +96,7 @@ private extension PersistenceManager {
     }
 }
 
+// MARK: - NSFetchedResultsControllerDelegate
 extension PersistenceManager: NSFetchedResultsControllerDelegate {
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         guard let fetchedCollection = controller.fetchedObjects,

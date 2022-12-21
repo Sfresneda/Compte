@@ -9,19 +9,20 @@ import Foundation
 import SwiftUI
 import CoreData
 
+// MARK: - ViewBuilderCoordinator
 struct ViewBuilderCoordinator {
     static var shared: ViewBuilderCoordinator = ViewBuilderCoordinator()
 }
 
+// MARK: - Public
 extension ViewBuilderCoordinator {
-    func createMock() {
-    }
     @MainActor
     func buildListView() -> some View {
         let vmodel = ItemsListVModel()
         return ItemsListView(vmodel: vmodel)
     }
     
+    @MainActor
     func buildTapListView(object: CompteObject) -> some View {
         let vmodel = TapListVModel(modelObject: object)
         return TapListView<TapListVModel>(vmodel: vmodel)
