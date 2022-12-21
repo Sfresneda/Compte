@@ -1,5 +1,5 @@
 //
-//  ItemsListWrapper.swift
+//  BoardListWrapper.swift
 //  Compte
 //
 //  Created by likeadeveloper on 21/12/22.
@@ -7,8 +7,8 @@
 
 import Foundation
 
-// MARK: - ItemsListVModelProtocol
-protocol ItemsListVModelProtocol: ObservableObject {
+// MARK: - BoardListVModelProtocol
+protocol BoardListVModelProtocol: ObservableObject {
     var items: [CompteObject] { get set }
     var isItemsEmpty: Bool { get }
     var isEditNamePresented: Bool { get set }

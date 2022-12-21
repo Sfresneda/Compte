@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - NavbarButtonsView
 struct NavbarButtonsView: View {
     // MARK: Vars
     @Binding var items: [NavbarButton]
     var action: ((NavbarButton) -> Void)?
     
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         if !items.isEmpty {
             HStack(alignment: .center) {

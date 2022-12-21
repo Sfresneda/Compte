@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - TapView
 struct TapView<ButtonRepresentation: View>: View {
     // MARK: Vars
     var icon: () -> ButtonRepresentation
@@ -25,7 +25,7 @@ struct TapView<ButtonRepresentation: View>: View {
         self.maxWidth = maxWidth
     }
     
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         Button() {
             action?()
@@ -57,7 +57,6 @@ struct TapView_Previews: PreviewProvider {
         }
     }
 }
-
 struct MAXWIDTHTapView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {

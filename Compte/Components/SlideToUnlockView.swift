@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - SlideToUnlockView
 struct SlideToUnlockView: View {
     // MARK: Vars
     @State private var sliderValue: Float = .zero
     var action: (() -> Void)?
     
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         Slider(value: $sliderValue,
                in: .zero...100,

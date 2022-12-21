@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - EditCompteView
 struct EditCompteView: View {
     // MARK: Vars
     @State var model: String
@@ -26,7 +26,7 @@ struct EditCompteView: View {
         static let onAppearAnimation: Animation = .spring(dampingFraction: 0.75).delay(0.2)
     }
 
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         VStack {
             if isPresented {
@@ -35,13 +35,15 @@ struct EditCompteView: View {
                         .font(.footnote)
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        TextEditor(text: $model)
-                            .focused($isTextFieldFocused)
-                            .submitLabel(.done)
-                            .foregroundColor(.primary)
-                            .font(.title2)
-                            .lineLimit(2)
-                            .padding()
+
+                    TextEditor(text: $model)
+                        .focused($isTextFieldFocused)
+                        .submitLabel(.done)
+                        .foregroundColor(.primary)
+                        .font(.title2)
+                        .lineLimit(2)
+                        .padding()
+
                     HStack(alignment: .center) {
                         Button {
                             onCancel?()

@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8129462FF900F19D4E /* PersistenceManager.swift */; };
 		37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37327E842946310300F19D4E /* CompteModel.xcdatamodeld */; };
-		37327E8D2946348500F19D4E /* ItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8C2946348500F19D4E /* ItemsListView.swift */; };
-		37327E8F294634D000F19D4E /* ItemsListVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8E294634D000F19D4E /* ItemsListVModel.swift */; };
+		37327E8D2946348500F19D4E /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8C2946348500F19D4E /* BoardListView.swift */; };
+		37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8E294634D000F19D4E /* BoardListVModel.swift */; };
 		37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E992946475E00F19D4E /* ViewBuilderCoordinator.swift */; };
 		373A3DA3293F43120083F74C /* TapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA2293F43120083F74C /* TapListView.swift */; };
 		373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA4293F44FD0083F74C /* TapListVModel.swift */; };
@@ -24,6 +24,7 @@
 		378572E029505874005AFE9A /* ItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* ItemsListCell.swift */; };
 		378572E32950635C005AFE9A /* EditCompteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* EditCompteView.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
+		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
 		37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* MainViewListCell.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
 		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
@@ -60,8 +61,8 @@
 /* Begin PBXFileReference section */
 		37327E8129462FF900F19D4E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		37327E852946310300F19D4E /* CompteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompteModel.xcdatamodel; sourceTree = "<group>"; };
-		37327E8C2946348500F19D4E /* ItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListView.swift; sourceTree = "<group>"; };
-		37327E8E294634D000F19D4E /* ItemsListVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListVModel.swift; sourceTree = "<group>"; };
+		37327E8C2946348500F19D4E /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
+		37327E8E294634D000F19D4E /* BoardListVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListVModel.swift; sourceTree = "<group>"; };
 		37327E992946475E00F19D4E /* ViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderCoordinator.swift; sourceTree = "<group>"; };
 		373A3DA2293F43120083F74C /* TapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListView.swift; sourceTree = "<group>"; };
 		373A3DA4293F44FD0083F74C /* TapListVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModel.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		378572DF29505874005AFE9A /* ItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListCell.swift; sourceTree = "<group>"; };
 		378572E22950635C005AFE9A /* EditCompteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCompteView.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
+		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* MainViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListCell.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C072293F427F00317132 /* CompteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteApp.swift; sourceTree = "<group>"; };
@@ -139,10 +141,8 @@
 		37327E8029462FEC00F19D4E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
-				37E84F1A294B27050039BB4F /* Mapper */,
-				37327E8129462FF900F19D4E /* PersistenceManager.swift */,
-				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
+				3793DEF229535C9C00C04C30 /* UserDefaults */,
+				3793DEF129535C9300C04C30 /* CoreData */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -155,15 +155,16 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		37327E8B2946347300F19D4E /* ItemsList */ = {
+		37327E8B2946347300F19D4E /* BoardList */ = {
 			isa = PBXGroup;
 			children = (
+				3793DEEE295359AE00C04C30 /* Components */,
 				3793DEEA29531F2A00C04C30 /* _wrapper */,
 				378572DE29505859005AFE9A /* Cells */,
-				37327E8C2946348500F19D4E /* ItemsListView.swift */,
-				37327E8E294634D000F19D4E /* ItemsListVModel.swift */,
+				37327E8C2946348500F19D4E /* BoardListView.swift */,
+				37327E8E294634D000F19D4E /* BoardListVModel.swift */,
 			);
-			path = ItemsList;
+			path = BoardList;
 			sourceTree = "<group>";
 		};
 		37327E982946474C00F19D4E /* ViewBuilder */ = {
@@ -195,10 +196,10 @@
 		373A3DA0293F42FB0083F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37327E8B2946347300F19D4E /* ItemsList */,
-				373A3DA1293F43020083F74C /* TapList */,
+				37327E8B2946347300F19D4E /* BoardList */,
 				373A3DAE293F56200083F74C /* Navbar */,
 				378572E129506348005AFE9A /* Rename */,
+				373A3DA1293F43020083F74C /* TapList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +256,32 @@
 			path = _wrapper;
 			sourceTree = "<group>";
 		};
+		3793DEEE295359AE00C04C30 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3793DEEF295359C800C04C30 /* BoardScrollView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3793DEF129535C9300C04C30 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
+				37E84F1A294B27050039BB4F /* Mapper */,
+				37327E8129462FF900F19D4E /* PersistenceManager.swift */,
+				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3793DEF229535C9C00C04C30 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
 		37A69E322942640B00129FB1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,9 +323,9 @@
 		37B0C071293F427F00317132 /* Compte */ = {
 			isa = PBXGroup;
 			children = (
+				37A69E322942640B00129FB1 /* Components */,
 				37B0C072293F427F00317132 /* CompteApp.swift */,
 				37E84F1F294B29080039BB4F /* Domain */,
-				37A69E322942640B00129FB1 /* Components */,
 				37F30516294292AC003AADD6 /* Helpers */,
 				373A3D9E293F42E50083F74C /* Resources */,
 				37327E7F29462FE900F19D4E /* Services */,
@@ -499,6 +526,7 @@
 			files = (
 				373A3DA3293F43120083F74C /* TapListView.swift in Sources */,
 				37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */,
+				3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */,
 				37E84F21294B29130039BB4F /* CompteObject.swift in Sources */,
 				37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */,
 				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
@@ -510,7 +538,7 @@
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
 				37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */,
-				37327E8D2946348500F19D4E /* ItemsListView.swift in Sources */,
+				37327E8D2946348500F19D4E /* BoardListView.swift in Sources */,
 				37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */,
 				37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */,
 				37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */,
@@ -520,7 +548,7 @@
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
-				37327E8F294634D000F19D4E /* ItemsListVModel.swift in Sources */,
+				37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */,
 				37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */,
 				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,
 			);

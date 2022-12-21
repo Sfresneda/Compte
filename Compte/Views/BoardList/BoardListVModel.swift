@@ -1,5 +1,5 @@
 //
-//  ItemsListVModel.swift
+//  BoardListVModel.swift
 //  Compte
 //
 //  Created by likeadeveloper on 11/12/22.
@@ -8,9 +8,9 @@
 import Foundation
 import Combine
 
-// MARK: - ItemsListVModel
+// MARK: - BoardListVModel
 @MainActor
-final class ItemsListVModel: ObservableObject {
+final class BoardListVModel: ObservableObject {
     // MARK: Vars
     @Published var items: [CompteObject] = []
     var isItemsEmpty: Bool { items.isEmpty }
@@ -45,7 +45,7 @@ final class ItemsListVModel: ObservableObject {
     }
 }
 // MARK: - Contract
-extension ItemsListVModel: ItemsListVModelProtocol {
+extension BoardListVModel: BoardListVModelProtocol {
     func handleNavbarButton(_ button: NavbarButton) {
         switch button {
         case .new:
@@ -80,7 +80,7 @@ extension ItemsListVModel: ItemsListVModelProtocol {
     }
 }
 // MARK: - Helpers
-private extension ItemsListVModel {
+private extension BoardListVModel {
     func fetchData() {
         dataManager.fetch(mapper: CompteMapper())
     }

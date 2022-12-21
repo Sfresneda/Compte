@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - CounterView
 struct CounterView: View {
     // MARK: Vars
     @Binding var currentValue: Int
 
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         ZStack {
             VisualEffectView(style: .regular)

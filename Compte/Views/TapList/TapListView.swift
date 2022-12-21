@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - TapListView
 struct TapListView<Model>: View where Model: TapListVModelProtocol {
     // MARK: Vars
     @ObservedObject var vmodel: Model
     @State private var needsToShowAlert: Bool = false
     
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         ZStack {
             VStack {

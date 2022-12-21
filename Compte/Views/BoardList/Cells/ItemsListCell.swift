@@ -1,5 +1,5 @@
 //
-//  ItemsListCell.swift
+//  BoardListCell.swift
 //  Compte
 //
 //  Created by likeadeveloper on 19/12/22.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
-struct ItemsListCell: View {
+// MARK: - BoardListCell
+struct BoardListCell: View {
     // MARK: Vars
     @Binding var model: CompteObject
     var onDelete: ((UUID) -> Void)?
     var onRename: (() -> Void)?
 
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         HStack {
             VStack(alignment: .center) {
@@ -69,7 +69,7 @@ struct ItemsListCell: View {
     }
 }
 // MARK: - Helpers
-private extension ItemsListCell {
+private extension BoardListCell {
     func countNumber(for value: Int) -> String {
         value > 99
         ? "+99"
@@ -78,7 +78,7 @@ private extension ItemsListCell {
 }
 
 // MARK: - Preview
-struct ItemsListCell_Previews: PreviewProvider {
+struct BoardListCell_Previews: PreviewProvider {
     static var previews: some View {
         let numberOfTaps: Int = 100
         let tapsCollection = Array(repeating: TapObject(date: Date().timeIntervalSince1970,
@@ -89,6 +89,6 @@ struct ItemsListCell_Previews: PreviewProvider {
                                  name: "test",
                                  taps: tapsCollection,
                                  lastModified: Date().timeIntervalSince1970)
-        ItemsListCell(model: .constant(model))
+        BoardListCell(model: .constant(model))
     }
 }

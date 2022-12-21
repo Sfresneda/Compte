@@ -59,6 +59,7 @@ extension TapListVModel: TapListVModelProtocol {
         dataManager.delete(mapper: TapMapper(object), requireSave: true)
     }
     func cleanData() {
+        guard !items.isEmpty else { return }
         defer { dataManager.save() }
         dataManager.update(mapper: CompteMapper(modelObject.copyWithDefaultState()))
         items.removeAll()

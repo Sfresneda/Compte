@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-// MARK: - Lifecycle
+// MARK: - MainViewListCell
 struct MainViewListCell: View {
     // MARK: Vars
     var model: TapObject
 
-    // MARK: Body
+    // MARK: Lifecycle
     var body: some View {
         HStack(alignment: .center) {
             ZStack {

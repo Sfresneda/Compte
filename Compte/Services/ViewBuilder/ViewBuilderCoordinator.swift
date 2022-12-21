@@ -18,8 +18,8 @@ struct ViewBuilderCoordinator {
 extension ViewBuilderCoordinator {
     @MainActor
     func buildListView() -> some View {
-        let vmodel = ItemsListVModel()
-        return ItemsListView(vmodel: vmodel)
+        let vmodel = BoardListVModel()
+        return BoardListView(vmodel: vmodel)
     }
     
     @MainActor
