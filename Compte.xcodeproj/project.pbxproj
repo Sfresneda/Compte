@@ -82,6 +82,7 @@
 		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
+		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
@@ -349,6 +350,7 @@
 		37B0C071293F427F00317132 /* Compte */ = {
 			isa = PBXGroup;
 			children = (
+				374252B82954A41700E35A95 /* Info.plist */,
 				37A69E322942640B00129FB1 /* Components */,
 				37B0C072293F427F00317132 /* CompteApp.swift */,
 				37E84F1F294B29080039BB4F /* Domain */,
@@ -823,6 +825,7 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Compte/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Compte;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -861,6 +864,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Compte/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Compte;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
