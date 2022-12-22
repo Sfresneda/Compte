@@ -18,10 +18,12 @@ final class TapListVModel {
             numberOfTaps = items.count
         }
     }
+    var firstItemIdentifier: UUID? { items.first?.id }
     @Published var name: String
 
     private enum Constant {
         static let saveQueueDelay: useconds_t = 1000000 // 1 second
+        static let queueName: String = "com.taplistvmodel.saveoperationqueue"
     }
     private var modelObject: CompteObject
     private var cancellable: AnyCancellable?
@@ -30,7 +32,7 @@ final class TapListVModel {
         let oq = OperationQueue()
         oq.maxConcurrentOperationCount = 1
         oq.qualityOfService = .userInitiated
-        oq.name = "com.mainvmodel.saveoperationqueue"
+        oq.name = Constant.queueName
         return oq
     }()
 

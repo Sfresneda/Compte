@@ -11,7 +11,8 @@ import SwiftUI
 struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     // MARK: Vars
     @ObservedObject var vmodel: Model
-    
+    let decorator: BoardListDecorator = DefaultBoardListDecorator()
+
     // MARK: Lifecycle
     var body: some View {
         ZStack {
@@ -23,7 +24,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                         vmodel.selectedItem = object
                         toggleEditName()
                     }
-                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
                     .toolbar {
                         NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
                             withAnimation {
@@ -35,15 +36,15 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                     VStack {
                         Spacer()
                         TapView {
-                            Text("Add New Compte")
+                            Text(decorator.tapViewTextTitle)
                         } buttonFont: {
                             .system(size: 20)
                         } action: {
                             withAnimation { vmodel.add(with: nil) }
                         }
-                        .background(.blue)
+                        .background(decorator.tapViewBackgroundColor)
                         .clipShape(Capsule())
-                        .shadow(radius: 10)
+                        .shadow(radius: decorator.tapViewShadowRadius)
                     }
                 }
             }

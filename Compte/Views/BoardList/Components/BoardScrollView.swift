@@ -26,7 +26,7 @@ struct BoardScrollView: View {
                     NavigationLink(destination: ViewBuilderCoordinator
                         .shared
                         .buildTapListView(object: item.wrappedValue )) {
-                            BoardListCell(model: item) { identifier in
+                            BoardListCellView(model: item) { identifier in
                                 delete(identifier)
                             } onRename: {
                                 rename(item.wrappedValue)
@@ -53,6 +53,5 @@ struct BoardScrollView_Previews: PreviewProvider {
         } rename: { _ in
             // Silent is gold
         }
-
     }
 }

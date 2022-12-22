@@ -12,63 +12,56 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
     // MARK: Vars
     @ObservedObject var vmodel: Model
     @State private var needsToShowAlert: Bool = false
-    
+    let decorator: TapListDecorator = DefaultTapListDecorator()
+
     // MARK: Lifecycle
     var body: some View {
         ZStack {
             VStack {
                 ScrollViewReader { proxy in
                     Form {
-                        Section("Last Taps") {
+                        Section(decorator.sectionTitle) {
                             ForEach(vmodel.items, id: \.id) { tap in
-                                MainViewListCell(model: tap)
+                                TapListCellView(model: tap)
                             }
                         }
                         .animation(.default, value: vmodel.items)
                     }
                     .onChange(of: vmodel.numberOfTaps) { newValue in
-                        guard let firstId = vmodel.items.first?.id else { return }
+                        guard let firstId = vmodel.firstItemIdentifier else { return }
 
-                        withAnimation(.easeOut) {
-                            proxy.scrollTo(firstId,
-                                           anchor: .bottom)
+                        withAnimation(decorator.scrollToTopAnimation) {
+                            proxy.scrollTo(firstId, anchor: .bottom)
                         }
                     }
                 }
                 VStack {
                     HStack {
                         SlideToUnlockView(action: {
-                            withAnimation(.easeInOut) {
-                                vmodel.cleanData()
-                            }
+                            withAnimation(decorator.slideToUnlockAnimation) { vmodel.cleanData()}
                         })
-                        Image(systemName: "trash")
-                            .font(.title3)
+                        Image(systemName: decorator.slideToUnlockImageName)
+                            .font(decorator.slideToUnlockImageFont)
                     }
-                    .padding(EdgeInsets(top: 5,
-                                        leading: 20,
-                                        bottom: 5,
-                                        trailing: 20))
+                    .padding(decorator.slideToUnlockPadding)
+
                     TapView(buttonFont: {
-                        .system(size: 50)
+                        decorator.tapButtonFont
                     }, maxWidth: {
-                        .infinity
+                        decorator.tapButtonMaxWidth
                     }, action: {
                         vmodel.add()
                     })
-                    .background(.blue)
+                    .background(decorator.tapButtonBackgroundColor)
                 }
             }
             .safeAreaInset(edge: .top) {
                 withAnimation {
                     CounterView(currentValue: $vmodel.numberOfTaps)
                         .clipShape(Capsule())
-                        .padding(EdgeInsets(top: .zero,
-                                            leading: 40,
-                                            bottom: .zero,
-                                            trailing: 40))
+                        .padding(decorator.counterViewPadding)
                         .scaledToFit()
-                        .frame(maxHeight: 80)
+                        .frame(maxHeight: decorator.counterViewMaxHeight)
                 }
             }
         }
@@ -77,6 +70,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
 }
 // MARK: - Helpers
 private extension TapView {}
+
 // MARK: - Preview
 struct TapListView_Previews: PreviewProvider {
     static var previews: some View {

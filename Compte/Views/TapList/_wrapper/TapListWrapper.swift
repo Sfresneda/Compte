@@ -11,6 +11,7 @@ import Foundation
 protocol TapListVModelProtocol: ObservableObject {
     var name: String { get }
     var items: [TapObject] { get set }
+    var firstItemIdentifier: UUID? { get }
     var numberOfTaps: Int { get set }
 
     func add()

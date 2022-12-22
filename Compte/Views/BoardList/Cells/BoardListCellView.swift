@@ -7,44 +7,37 @@
 
 import SwiftUI
 
-// MARK: - BoardListCell
-struct BoardListCell: View {
+// MARK: - BoardListCellView
+struct BoardListCellView: View {
     // MARK: Vars
     @Binding var model: CompteObject
     var onDelete: ((UUID) -> Void)?
     var onRename: (() -> Void)?
+    let decorator: BoardListCellDecorator = DefaultBoardListCellDecorator()
 
     // MARK: Lifecycle
     var body: some View {
         HStack {
             VStack(alignment: .center) {
                 Text(countNumber(for: model.taps.count))
-                    .font(.largeTitle)
-                    .foregroundColor(.white)
+                    .font(decorator.tapsIndicatorFont)
+                    .foregroundColor(decorator.tapsIndicatorForegroundColor)
             }
-            .padding(EdgeInsets(top: 10,
-                                leading: 8,
-                                bottom: 10,
-                                trailing: 8))
-            .background(.secondary)
-            .cornerRadius(20)
+            .padding(decorator.tapsIndicatorPadding)
+            .background(decorator.tapsIndicatorBackgroundColor)
+            .cornerRadius(decorator.tapsIndicatorCornerRadious)
 
             VStack(alignment: .leading) {
                 Text(model.name)
-                    .font(.title2)
+                    .font(decorator.boardTitleFont)
+                    .foregroundColor(decorator.boardForegroundColor)
                     .bold()
-                    .foregroundColor(.primary)
 
                 HStack {
                     Text(model.lastModifiedDateFormatted,
-                         format: Date
-                        .FormatStyle()
-                        .year()
-                        .month()
-                        .day()
-                        .locale(Locale.current))
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                         format: decorator.lastModificationFormat)
+                    .font(decorator.lastModificationFont)
+                    .foregroundColor(decorator.lastModificationForegroundColor)
                 }
             }
             .swipeActions(allowsFullSwipe: true) {
@@ -53,7 +46,7 @@ struct BoardListCell: View {
                         onDelete?(model.id)
                     }
                 } label: {
-                    Image(systemName: "trash")
+                    Image(systemName: decorator.swipeActionDeleteImageName)
                 }
 
                 Button {
@@ -61,15 +54,15 @@ struct BoardListCell: View {
                         onRename?()
                     }
                 } label: {
-                    Image(systemName: "pencil.line")
+                    Image(systemName: decorator.swipeActionRenameImageName)
                 }
-                .tint(.blue)
+                .tint(decorator.swipeActionRenameColor)
             }
         }
     }
 }
 // MARK: - Helpers
-private extension BoardListCell {
+private extension BoardListCellView {
     func countNumber(for value: Int) -> String {
         value > 99
         ? "+99"
@@ -89,6 +82,6 @@ struct BoardListCell_Previews: PreviewProvider {
                                  name: "test",
                                  taps: tapsCollection,
                                  lastModified: Date().timeIntervalSince1970)
-        BoardListCell(model: .constant(model))
+        BoardListCellView(model: .constant(model))
     }
 }

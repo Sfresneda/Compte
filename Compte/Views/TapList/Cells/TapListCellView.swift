@@ -1,5 +1,5 @@
 //
-//  MainViewListCell.swift
+//  TapListCellView.swift
 //  Compte
 //
 //  Created by likeadeveloper on 8/12/22.
@@ -7,30 +7,32 @@
 
 import SwiftUI
 
-// MARK: - MainViewListCell
-struct MainViewListCell: View {
+// MARK: - TapListCellView
+struct TapListCellView: View {
     // MARK: Vars
     var model: TapObject
+    let decorator: TapListCellDecorator = DefaultTapListCellDecorator()
 
     // MARK: Lifecycle
     var body: some View {
         HStack(alignment: .center) {
             ZStack {
                 Text("\(model.tapNumber)")
-                    .font(.system(size: 50))
+                    .font(decorator.tapNumberFont)
                     .bold()
-                    .minimumScaleFactor(0.1)
-                    .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: .zero))
+                    .padding(decorator.tapNumberPadding)
             }
-            .aspectRatio(1, contentMode: .fit)
+
             VStack(alignment: .leading) {
                 Text(Date(timeIntervalSince1970: model.date),
-                     format: Date.FormatStyle().hour().minute().second())
-                .font(.title2)
-                .bold()
+                     format: decorator.topDateStyle)
+                .font(decorator.topDateFont)
+
                 Text(Date(timeIntervalSince1970: model.date),
-                     style: .date)
-                .font(.title3)
+                     style: decorator.secondaryDateStyle)
+                .italic()
+                .foregroundColor(decorator.secondaryDateFontColor)
+                .font(decorator.secondaryDateFont)
             }
         }
     }
@@ -41,6 +43,6 @@ struct MainViewListCell_Previews: PreviewProvider {
     static var previews: some View {
         let model = TapObject(date: Date().timeIntervalSince1970,
                              tapNumber: 1)
-        MainViewListCell(model: model)
+        TapListCellView(model: model)
     }
 }
