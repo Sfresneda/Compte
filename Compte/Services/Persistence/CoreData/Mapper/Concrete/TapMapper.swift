@@ -27,7 +27,11 @@ extension TapMapper {
         tapEntity.id = object.id
         tapEntity.date = object.date
         tapEntity.number = Int16(object.tapNumber)
-        tapEntity.compte = relationEntityClosure() as? CompteEntity
+
+        let compteEntity = relationEntityClosure() as? CompteEntity
+        compteEntity?.lastModified = Date().timeIntervalSince1970
+
+        tapEntity.compte = compteEntity
     }
     func update(_ entity: NSManagedObject,
                 context: NSManagedObjectContext) {

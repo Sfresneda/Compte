@@ -72,7 +72,6 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                 }
             }
         }
-//        .toolbar(.visible, for: .navigationBar)
         .navigationTitle(vmodel.name)
     }
 }
