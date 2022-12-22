@@ -49,7 +49,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
             }
             
             if vmodel.isEditNamePresented {
-                EditCompteView(model: vmodel.selectedItemName) {
+                RenameBoardView(model: vmodel.selectedItemName) {
                     toggleEditName()
                 } onSubmit: { newName in
                     defer { toggleEditName() }

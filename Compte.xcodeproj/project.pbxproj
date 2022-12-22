@@ -22,7 +22,7 @@
 		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* ItemsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* ItemsListCell.swift */; };
-		378572E32950635C005AFE9A /* EditCompteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* EditCompteView.swift */; };
+		378572E32950635C005AFE9A /* RenameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* RenameBoardView.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
 		37A69E352942643400129FB1 /* MainViewListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* MainViewListCell.swift */; };
@@ -32,6 +32,7 @@
 		37B0C084293F428000317132 /* CompteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C083293F428000317132 /* CompteTests.swift */; };
 		37B0C08E293F428000317132 /* CompteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08D293F428000317132 /* CompteUITests.swift */; };
 		37B0C090293F428000317132 /* CompteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */; };
+		37B1B96529545D6B002B99E0 /* LimitedTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */; };
 		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
 		37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */; };
 		37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1B294B27120039BB4F /* ModelMapper.swift */; };
@@ -74,7 +75,7 @@
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* ItemsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListCell.swift; sourceTree = "<group>"; };
-		378572E22950635C005AFE9A /* EditCompteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCompteView.swift; sourceTree = "<group>"; };
+		378572E22950635C005AFE9A /* RenameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardView.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* MainViewListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewListCell.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		37B0C089293F428000317132 /* CompteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C08D293F428000317132 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
 		37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedTextEditorView.swift; sourceTree = "<group>"; };
 		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerWrapper.swift; sourceTree = "<group>"; };
 		37E84F1B294B27120039BB4F /* ModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapper.swift; sourceTree = "<group>"; };
@@ -243,7 +245,7 @@
 		378572E129506348005AFE9A /* Rename */ = {
 			isa = PBXGroup;
 			children = (
-				378572E22950635C005AFE9A /* EditCompteView.swift */,
+				378572E22950635C005AFE9A /* RenameBoardView.swift */,
 			);
 			path = Rename;
 			sourceTree = "<group>";
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				373A3DA7293F46770083F74C /* CounterView.swift */,
+				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
 				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
 				373A3DAC293F48B60083F74C /* TapView.swift */,
 			);
@@ -533,7 +536,7 @@
 				378572E029505874005AFE9A /* ItemsListCell.swift in Sources */,
 				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
-				378572E32950635C005AFE9A /* EditCompteView.swift in Sources */,
+				378572E32950635C005AFE9A /* RenameBoardView.swift in Sources */,
 				373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
@@ -545,6 +548,7 @@
 				373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */,
 				373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */,
 				37E84F23294B291B0039BB4F /* TapObject.swift in Sources */,
+				37B1B96529545D6B002B99E0 /* LimitedTextEditorView.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
