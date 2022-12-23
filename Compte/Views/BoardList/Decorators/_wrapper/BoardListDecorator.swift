@@ -20,7 +20,7 @@ extension BoardListDecorator {
         .inline
     }
     var tapViewTextTitle: String {
-        "Add New Compte"
+        NSLocalizedString("add_new_board", comment: "new board")
     }
     var tapViewFont: Font {
         .system(size: 20)

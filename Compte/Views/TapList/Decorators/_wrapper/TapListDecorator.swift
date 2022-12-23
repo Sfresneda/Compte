@@ -24,7 +24,7 @@ protocol TapListDecorator {
 
 extension TapListDecorator {
     var sectionTitle: String {
-        "Last Taps"
+        NSLocalizedString("section_title_last_taps", comment: "last taps section title")
     }
     var scrollToTopAnimation: Animation {
         .easeOut

@@ -18,7 +18,8 @@ struct SlideToUnlockView: View {
         Slider(value: $sliderValue,
                in: .zero...100,
                step: 5) {
-            Text("Reset counter")
+            Text(NSLocalizedString("reset_counter",
+                                   comment: "Reset Counter"))
         } onEditingChanged: { editing in
             handleSliderChangeValue(isEditing: editing)
         }
