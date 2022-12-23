@@ -6,3 +6,6 @@
 "alert_cancel" = "Cancel";
 "alert_submit" = "Submit";
 "section_title_last_taps" = "Last Taps";
+"empty_boards_message" = "This seems to be too empty, add a new board.";
+"empty_taps_message" = "Start tracking by pressing the below button";
+"boards_list_title" = "Compte Boards";

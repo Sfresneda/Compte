@@ -10,14 +10,19 @@ import SwiftUI
 
 protocol BoardListDecorator {
     var navigationBarTitleDisplayMode: NavigationBarItem.TitleDisplayMode { get }
+    var navigationBarTitle: String { get }
     var tapViewTextTitle: String { get }
     var tapViewFont: Font { get }
     var tapViewBackgroundColor: Color { get }
     var tapViewShadowRadius: CGFloat { get }
+    var tapViewPadding: EdgeInsets { get }
 }
 extension BoardListDecorator {
     var navigationBarTitleDisplayMode: NavigationBarItem.TitleDisplayMode {
-        .inline
+        .large
+    }
+    var navigationBarTitle: String {
+        NSLocalizedString("boards_list_title", comment: "Compte boards")
     }
     var tapViewTextTitle: String {
         NSLocalizedString("add_new_board", comment: "new board")
@@ -30,5 +35,8 @@ extension BoardListDecorator {
     }
     var tapViewShadowRadius: CGFloat {
         10
+    }
+    var tapViewPadding: EdgeInsets {
+        EdgeInsets(top: .zero, leading: .zero, bottom: 20, trailing: .zero)
     }
 }

@@ -6,3 +6,6 @@
 "alert_cancel" = "Annulla";
 "alert_submit" = "Invia";
 "section_title_last_taps" = "Ultimi tocchi";
+"empty_boards_message" = "Questo sembra essere troppo vuoto, aggiungere una nuova scheda.";
+"empty_taps_message" = "Inizia a contare premendo il pulsante \"+\"";
+"boards_list_title" = "Compte bacheche";

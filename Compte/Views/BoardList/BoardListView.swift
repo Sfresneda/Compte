@@ -17,36 +17,50 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     var body: some View {
         ZStack {
             NavigationView {
-                ZStack {
-                    BoardScrollView(items: $vmodel.items) { identifier in
-                        vmodel.delete(identifier)
-                    } rename: { object in
-                        vmodel.selectedItem = object
-                        toggleEditName()
-                    }
-                    .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
-                    .toolbar {
-                        NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
-                            withAnimation {
-                                vmodel.handleNavbarButton(button)
+                VStack {
+                    if vmodel.isItemsEmpty {
+                        PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
+                            if .addNewBoard == action {
+                                withAnimation {
+                                    vmodel.add(with: nil)
+                                }
+                            }
+                        }
+                    } else {
+                        ZStack {
+                            BoardScrollView(items: $vmodel.items) { identifier in
+                                vmodel.delete(identifier)
+                            } rename: { object in
+                                vmodel.selectedItem = object
+                                toggleEditName()
+                            }
+                            .toolbar {
+                                NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
+                                    withAnimation {
+                                        vmodel.handleNavbarButton(button)
+                                    }
+                                }
+                            }
+
+                            VStack {
+                                Spacer()
+                                TapView {
+                                    Text(decorator.tapViewTextTitle)
+                                } buttonFont: {
+                                    .system(size: 20)
+                                } action: {
+                                    withAnimation { vmodel.add(with: nil) }
+                                }
+                                .background(decorator.tapViewBackgroundColor)
+                                .clipShape(Capsule())
+                                .shadow(radius: decorator.tapViewShadowRadius)
+                                .padding(decorator.tapViewPadding)
                             }
                         }
                     }
-
-                    VStack {
-                        Spacer()
-                        TapView {
-                            Text(decorator.tapViewTextTitle)
-                        } buttonFont: {
-                            .system(size: 20)
-                        } action: {
-                            withAnimation { vmodel.add(with: nil) }
-                        }
-                        .background(decorator.tapViewBackgroundColor)
-                        .clipShape(Capsule())
-                        .shadow(radius: decorator.tapViewShadowRadius)
-                    }
                 }
+                .navigationTitle(decorator.navigationBarTitle)
+                .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
             
             if vmodel.isEditNamePresented {
@@ -72,7 +86,7 @@ private extension BoardListView {
 // MARK: - Preview
 struct BoardList_Previews: PreviewProvider {
     static var vmodel: BoardListVModel {
-        let numberOfItems = 3
+        let numberOfItems = 4
         let numberOfTaps = 80
         let model = BoardListVModel()
         model.items = (0..<numberOfItems).map {_ in
@@ -86,5 +100,16 @@ struct BoardList_Previews: PreviewProvider {
     }
     static var previews: some View {
         BoardListView<BoardListVModel>(vmodel: BoardList_Previews.vmodel)
+    }
+}
+
+struct EMPTY_Previews: PreviewProvider {
+    static var vmodel: BoardListVModel {
+        let model = BoardListVModel()
+        model.items = []
+        return model
+    }
+    static var previews: some View {
+        BoardListView<BoardListVModel>(vmodel: EMPTY_Previews.vmodel)
     }
 }

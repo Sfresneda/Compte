@@ -6,3 +6,6 @@
 "alert_cancel" = "Cancel · lar";
 "alert_submit" = "Acceptar";
 "section_title_last_taps" = "Últims comptes";
+"empty_boards_message" = "Sembla que està massa buit, afegeix un nou tauler.";
+"empty_taps_message" = "Comenceu el compte prement el botó \"+\"";
+"boards_list_title" = "Taulers de Compte";

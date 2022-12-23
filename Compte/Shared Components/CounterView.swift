@@ -20,13 +20,9 @@ struct CounterView: View {
                 Text("\(currentValue)")
                     .font(.system(size: 50))
                     .bold()
-                Image(systemName: "hand.tap")
-                    .font(.title)
             }
             .foregroundColor(.primary)
         }
-        .animation(.easeIn,
-                   value: currentValue)
     }
 }
 
