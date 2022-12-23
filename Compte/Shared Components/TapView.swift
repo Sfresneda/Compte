@@ -14,7 +14,7 @@ struct TapView<ButtonRepresentation: View>: View {
     var buttonFont: () -> Font?
     var maxWidth: () -> CGFloat?
     var action: (() -> Void)?
-    
+
     init(@ViewBuilder representation: @escaping (() -> ButtonRepresentation) = { Image(systemName: "plus") },
          buttonFont: @escaping () -> Font? = { nil },
          maxWidth: @escaping () -> CGFloat? = { nil },

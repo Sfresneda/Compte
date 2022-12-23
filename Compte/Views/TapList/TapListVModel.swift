@@ -18,6 +18,9 @@ final class TapListVModel {
             numberOfTaps = items.count
         }
     }
+    var isItemsEmpty: Bool {
+        items.isEmpty
+    }
     var firstItemIdentifier: UUID? { items.first?.id }
     @Published var name: String
 

@@ -48,6 +48,6 @@ extension CompteObject {
 // MARK: - Statics
 extension CompteObject {
     static func defaultImplementation() -> Self {
-        CompteObject(date: Date().timeIntervalSince1970, name: "", lastModified: Date().timeIntervalSince1970)
+        CompteObject(date: Date().timeIntervalSince1970, name: "-", lastModified: Date().timeIntervalSince1970)
     }
 }

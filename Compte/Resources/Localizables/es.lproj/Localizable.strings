@@ -6,3 +6,6 @@
 "alert_cancel" = "Cancelar";
 "alert_submit" = "Enviar";
 "section_title_last_taps" = "Últimos toques";
+"empty_boards_message" = "Esto parece estar demasiado vacío, añade un nuevo tablero.";
+"empty_taps_message" = "Comience a contar presionando el botón \"+\"";
+"boards_list_title" = "Tableros de Compte";
