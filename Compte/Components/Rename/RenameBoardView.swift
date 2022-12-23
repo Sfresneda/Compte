@@ -23,24 +23,24 @@ struct RenameBoardView: View {
         VStack {
             if isPresented {
                 VStack(alignment: .center) {
-                    Text(decorator.limitCharactersText)
-                        .font(decorator.limitCharactersLabelFont(isMaxCharactersReached))
-                        .foregroundColor(decorator.limitCharactersLabelColor(isMaxCharactersReached))
-                        .frame(maxWidth: decorator.limitCharactersMaxWidth,
-                               alignment: decorator.limitCharactersAligment)
+                    Text(decorator.limitCharsText)
+                        .font(decorator.limitCharsLabelFont(isMaxCharactersReached))
+                        .foregroundColor(decorator.limitCharsLabelColor(isMaxCharactersReached))
+                        .frame(maxWidth: decorator.limitCharsMaxWidth,
+                               alignment: decorator.limitCharsAligment)
 
                     TextEditor(text: $model)
                         .limitCharacters($model,
-                                         limit: decorator.limitCharacters,
+                                         limit: decorator.limitChars,
                                          limitReached: { isReached in
                             withAnimation {
                                 isMaxCharactersReached = isReached
                             }
                         })
                         .focused($isTextFieldFocused)
-                        .submitLabel(.done)
-                        .foregroundColor(.primary)
-                        .font(.title2)
+                        .submitLabel(decorator.limitCharsSubmitButtonType)
+                        .foregroundColor(decorator.limitCharsForegroundColor)
+                        .font(decorator.limitCharsFont)
 
                     HStack(alignment: .center) {
                         Button {

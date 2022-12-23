@@ -229,7 +229,6 @@
 			children = (
 				37327E8B2946347300F19D4E /* BoardList */,
 				373A3DAE293F56200083F74C /* Navbar */,
-				378572E129506348005AFE9A /* Rename */,
 				373A3DA1293F43020083F74C /* TapList */,
 			);
 			path = Views;
@@ -318,6 +317,7 @@
 		37A69E322942640B00129FB1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				378572E129506348005AFE9A /* Rename */,
 				373A3DA7293F46770083F74C /* CounterView.swift */,
 				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
 				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
