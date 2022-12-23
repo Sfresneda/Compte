@@ -82,12 +82,12 @@ extension RenameBoardDecorator {
     }
     func limitCharsLabelColor(_ isMaxCharactersReached: Bool) -> Color {
         isMaxCharactersReached
-        ? .secondary
-        : .red
+        ? .red
+        : .secondary
     }
     func limitCharsLabelFont(_ isMaxCharactersReached: Bool) -> Font {
         isMaxCharactersReached
-        ? .footnote
-        : .title3
+        ? .title3
+        : .footnote
     }
 }
