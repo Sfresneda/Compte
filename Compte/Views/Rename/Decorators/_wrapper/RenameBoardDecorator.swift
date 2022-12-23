@@ -17,6 +17,8 @@ protocol RenameBoardDecorator {
     var viewMaxHeight: CGFloat { get }
     var overlayColor: Color { get }
     var onAppearAnimation: Animation { get }
+    var cancelButtonText: String { get }
+    var submitButtonText: String { get }
 
     func limitCharactersLabelColor(_ isMaxCharactersReached: Bool) -> Color
     func limitCharactersLabelFont(_ isMaxCharactersReached: Bool) -> Font
@@ -27,7 +29,7 @@ extension RenameBoardDecorator {
         50
     }
     var limitCharactersText: String {
-        "Max. \(limitCharacters) Characters"
+        String(format: NSLocalizedString("limit_characters", comment: "limit characters"), limitCharacters)
     }
     var limitCharactersMaxWidth: CGFloat {
         .infinity
@@ -46,6 +48,12 @@ extension RenameBoardDecorator {
     }
     var onAppearAnimation: Animation {
         .spring(dampingFraction: 0.75).delay(0.2)
+    }
+    var cancelButtonText: String {
+        NSLocalizedString("alert_cancel", comment: "Cancel button")
+    }
+    var submitButtonText: String {
+        NSLocalizedString("alert_submit", comment: "Submit button")
     }
     func limitCharactersLabelColor(_ isMaxCharactersReached: Bool) -> Color {
         isMaxCharactersReached

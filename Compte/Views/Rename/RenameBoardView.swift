@@ -46,7 +46,7 @@ struct RenameBoardView: View {
                         Button {
                             onCancel?()
                         } label: {
-                            Text("Cancel")
+                            Text(decorator.cancelButtonText)
                         }
                         .tint(.gray)
                         .buttonStyle(.bordered)
@@ -54,7 +54,7 @@ struct RenameBoardView: View {
                         Button {
                             onSubmit?(model)
                         } label: {
-                            Text("Submit")
+                            Text(decorator.submitButtonText)
                         }
                         .tint(.blue)
                         .buttonStyle(.bordered)

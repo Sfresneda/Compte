@@ -43,6 +43,7 @@
 		37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */; };
 		37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */; };
 		37B1B984295496B0002B99E0 /* DefaultBoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */; };
+		37BFC252295597D4006AC26B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37BFC254295597D4006AC26B /* Localizable.strings */; };
 		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
 		37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */; };
 		37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1B294B27120039BB4F /* ModelMapper.swift */; };
@@ -82,7 +83,7 @@
 		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
-		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
@@ -110,6 +111,10 @@
 		37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardListDecorator.swift; sourceTree = "<group>"; };
 		37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecorator.swift; sourceTree = "<group>"; };
 		37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardListCellDecorator.swift; sourceTree = "<group>"; };
+		37BFC253295597D4006AC26B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37BFC255295597D8006AC26B /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37BFC256295597D8006AC26B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		37BFC257295597E2006AC26B /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerWrapper.swift; sourceTree = "<group>"; };
 		37E84F1B294B27120039BB4F /* ModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapper.swift; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 			children = (
 				373A3D9F293F42F10083F74C /* Assets */,
 				37327E83294630E800F19D4E /* Data */,
+				37BFC24F295597A5006AC26B /* Localizables */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -212,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				37B0C076293F428000317132 /* Assets.xcassets */,
+				374252B82954A41700E35A95 /* Info.plist */,
 				37B0C078293F428000317132 /* Preview Content */,
 			);
 			path = Assets;
@@ -350,7 +357,6 @@
 		37B0C071293F427F00317132 /* Compte */ = {
 			isa = PBXGroup;
 			children = (
-				374252B82954A41700E35A95 /* Info.plist */,
 				37A69E322942640B00129FB1 /* Components */,
 				37B0C072293F427F00317132 /* CompteApp.swift */,
 				37E84F1F294B29080039BB4F /* Domain */,
@@ -456,6 +462,14 @@
 				37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		37BFC24F295597A5006AC26B /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				37BFC254295597D4006AC26B /* Localizable.strings */,
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 		37E84F1A294B27050039BB4F /* Mapper */ = {
@@ -579,6 +593,9 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				ca,
+				it,
 			);
 			mainGroup = 37B0C066293F427F00317132;
 			productRefGroup = 37B0C070293F427F00317132 /* Products */;
@@ -598,6 +615,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */,
+				37BFC252295597D4006AC26B /* Localizable.strings in Resources */,
 				37B0C077293F428000317132 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +713,20 @@
 			targetProxy = 37B0C08A293F428000317132 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		37BFC254295597D4006AC26B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37BFC253295597D4006AC26B /* en */,
+				37BFC255295597D8006AC26B /* ca */,
+				37BFC256295597D8006AC26B /* es */,
+				37BFC257295597E2006AC26B /* it */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		37B0C091293F428000317132 /* Debug */ = {
@@ -825,7 +857,7 @@
 				ENABLE_PREVIEWS = YES;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Compte/Info.plist;
+				INFOPLIST_FILE = Compte/Resources/Assets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Compte;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -864,7 +896,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Compte/Info.plist;
+				INFOPLIST_FILE = Compte/Resources/Assets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Compte;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

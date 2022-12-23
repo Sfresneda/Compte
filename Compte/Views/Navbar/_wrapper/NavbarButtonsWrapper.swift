@@ -16,9 +16,9 @@ enum NavbarButton: Int, CaseIterable {
     var name: String {
         switch self {
         case .new:
-            return "New Item"
+            return NSLocalizedString("new_item", comment: "New Item Button")
         case .delete:
-            return "Delete"
+            return NSLocalizedString("delete_item", comment: "Delete Item Button")
         }
     }
     var imageName: String? {
