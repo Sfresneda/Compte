@@ -21,9 +21,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                     if vmodel.isItemsEmpty {
                         PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
                             if .addNewBoard == action {
-                                withAnimation {
-                                    vmodel.add(with: nil)
-                                }
+                                withAnimation { addActionHasBeenPressed() }
                             }
                         }
                     } else {
@@ -32,7 +30,8 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                                 vmodel.delete(identifier)
                             } rename: { object in
                                 vmodel.selectedItem = object
-                                toggleEditName()
+                                toggleRenameViewPresented()
+                                vmodel.isEditingObject.toggle()
                             }
                             .toolbar {
                                 NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
@@ -47,9 +46,11 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                                 TapView {
                                     Text(decorator.tapViewTextTitle)
                                 } buttonFont: {
-                                    .system(size: 20)
+                                    decorator.tapViewFont
                                 } action: {
-                                    withAnimation { vmodel.add(with: nil) }
+                                    withAnimation {
+                                        addActionHasBeenPressed()
+                                    }
                                 }
                                 .background(decorator.tapViewBackgroundColor)
                                 .clipShape(Capsule())
@@ -63,13 +64,18 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                 .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
             
-            if vmodel.isEditNamePresented {
-                RenameBoardView(model: vmodel.selectedItemName) {
-                    toggleEditName()
+            if vmodel.isRenameViewPresented {
+                RenameBoardView(model: vmodel.selectedItemName ?? "") {
+                    toggleRenameViewPresented()
                 } onSubmit: { newName in
-                    defer { toggleEditName() }
                     withAnimation(.easeIn) {
-                        vmodel.updateName(newName)
+                        defer { toggleRenameViewPresented() }
+                        if vmodel.isEditingObject {
+                            vmodel.updateName(newName)
+                            vmodel.isEditingObject.toggle()
+                        } else {
+                            vmodel.add(with: newName)
+                        }
                     }
                 }
             }
@@ -78,8 +84,12 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
 }
 // MARK: - Helpers
 private extension BoardListView {
-    func toggleEditName() {
-        vmodel.isEditNamePresented.toggle()
+    func toggleRenameViewPresented() {
+        vmodel.isRenameViewPresented.toggle()
+    }
+    func addActionHasBeenPressed() {
+        //        vmodel.add(with: nil)
+        vmodel.isRenameViewPresented.toggle()
     }
 }
 

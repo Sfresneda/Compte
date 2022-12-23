@@ -14,18 +14,20 @@ final class BoardListVModel: ObservableObject {
     // MARK: Vars
     @Published var items: [CompteObject] = []
     var isItemsEmpty: Bool { items.isEmpty }
-    @Published var isEditNamePresented: Bool = false
-    @Published var selectedItem: CompteObject = .defaultImplementation() {
-        didSet {
-            selectedItemName = selectedItem.name
+    @Published var isRenameViewPresented: Bool = false
+    @Published var isEditingObject: Bool = false {
+        willSet {
+            guard !newValue else { return }
+            selectedItemName = nil
         }
     }
-    @Published var selectedItemName: String = ""
-    @Published var navigationBarItems: [NavbarButton] = Constants.defaultNavbarItems
-
-    var firstItemIdentifier: UUID? {
-        items.first?.id
+    @Published var selectedItem: CompteObject = .defaultImplementation() {
+        didSet { selectedItemName = selectedItem.name }
     }
+    @Published var selectedItemName: String?
+    @Published var navigationBarItems: [NavbarButton] = Constants.defaultNavbarItems
+    var firstItemIdentifier: UUID? { items.first?.id }
+
     private var cancellable: AnyCancellable?
     private var dataManager: PersistenceManager
     private enum Constants {

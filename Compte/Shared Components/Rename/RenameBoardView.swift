@@ -28,20 +28,28 @@ struct RenameBoardView: View {
                         .foregroundColor(decorator.limitCharsLabelColor(isMaxCharactersReached))
                         .frame(maxWidth: decorator.limitCharsMaxWidth,
                                alignment: decorator.limitCharsAligment)
+                    ZStack {
+                        TextEditor(text: $model)
+                            .limitCharacters($model, limit: decorator.limitChars, limitReached: { isReached in
+                                withAnimation {
+                                    isMaxCharactersReached = isReached
+                                }
+                            })
+                            .focused($isTextFieldFocused)
+                            .submitLabel(decorator.limitCharsSubmitButtonType)
+                            .foregroundColor(decorator.limitCharsForegroundColor)
+                            .font(decorator.limitCharsFont)
 
-                    TextEditor(text: $model)
-                        .limitCharacters($model,
-                                         limit: decorator.limitChars,
-                                         limitReached: { isReached in
-                            withAnimation {
-                                isMaxCharactersReached = isReached
-                            }
-                        })
-                        .focused($isTextFieldFocused)
-                        .submitLabel(decorator.limitCharsSubmitButtonType)
-                        .foregroundColor(decorator.limitCharsForegroundColor)
-                        .font(decorator.limitCharsFont)
-
+                        if model.isEmpty {
+                            Text(NSLocalizedString("rename_placeholder_text",
+                                                   comment: "rename placeholder text"))
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(.secondary)
+                                .font(decorator.limitCharsFont)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                                .padding(EdgeInsets(top: 8, leading: 5, bottom: 0, trailing: 0))
+                        }
+                    }
                     HStack(alignment: .center) {
                         Button {
                             onCancel?()
@@ -58,7 +66,7 @@ struct RenameBoardView: View {
                         }
                         .tint(.blue)
                         .buttonStyle(.bordered)
-                        .disabled(isMaxCharactersReached)
+                        .disabled(isMaxCharactersReached || model.isEmpty)
                     }
                 }
                 .padding()
@@ -91,6 +99,20 @@ struct RenameBoardView: View {
 struct EditCompteView_Previews: PreviewProvider {
     static var previews: some View {
         let model = "Compte for testing purposes, Compte for testing"
+        ZStack {
+            Image(systemName: "square.and.arrow.up")
+                .resizable()
+                .scaledToFit()
+                .background(.mint)
+
+            RenameBoardView(model: model)
+        }
+    }
+}
+
+struct EmptyEditCompteView_Previews: PreviewProvider {
+    static var previews: some View {
+        let model = ""
         ZStack {
             Image(systemName: "square.and.arrow.up")
                 .resizable()

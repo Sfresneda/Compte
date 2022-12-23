@@ -11,12 +11,12 @@ import Foundation
 protocol BoardListVModelProtocol: ObservableObject {
     var items: [CompteObject] { get set }
     var isItemsEmpty: Bool { get }
-    var isEditNamePresented: Bool { get set }
+    var isRenameViewPresented: Bool { get set }
+    var isEditingObject: Bool { get set }
 
     var selectedItem: CompteObject { get set }
-    var selectedItemName: String { get }
+    var selectedItemName: String? { get }
     var navigationBarItems: [NavbarButton] { get set }
-    
     var firstItemIdentifier: UUID? { get }
 
     func handleNavbarButton(_ button: NavbarButton)

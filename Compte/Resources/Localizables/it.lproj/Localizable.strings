@@ -1,11 +1,12 @@
 "reset_counter" = "Azzera contatore";
-"add_new_board" = "Aggiungi nuova bacheca";
+"add_new_board" = "Aggiungi nuova carta";
 "new_item" = "Nuovo elemento";
 "delete_item" = "Elimina";
 "limit_characters" = "Massimo %d caratteri";
 "alert_cancel" = "Annulla";
-"alert_submit" = "Invia";
+"alert_submit" = "Accettare";
 "section_title_last_taps" = "Ultimi tocchi";
-"empty_boards_message" = "Questo sembra essere troppo vuoto, aggiungere una nuova scheda.";
+"empty_boards_message" = "Questo sembra essere troppo vuoto, aggiungere una nuova carta.";
 "empty_taps_message" = "Inizia a contare premendo il pulsante \"+\"";
-"boards_list_title" = "Compte bacheche";
+"boards_list_title" = "Compte";
+"rename_placeholder_text" = "Nome carta";
