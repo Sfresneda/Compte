@@ -55,6 +55,7 @@ struct BoardListCellView: View {
                 } label: {
                     Image(systemName: decorator.swipeActionDeleteImageName)
                 }
+                .tint(decorator.swipeActionDeleteColor)
 
                 Button {
                     withAnimation {

@@ -9,25 +9,38 @@ import Foundation
 import SwiftUI
 
 protocol TapListDecorator {
+    var viewBackgroundColor: Color { get }
     var sectionTitle: String { get }
     var scrollToTopAnimation: Animation { get }
+    var listRowBackgroundColor: Color { get }
+
     var slideToUnlockAnimation: Animation { get }
     var slideToUnlockImageName: String { get }
     var slideToUnlockImageFont: Font { get }
     var slideToUnlockPadding: EdgeInsets { get }
+
     var tapButtonFont: Font { get }
     var tapButtonMaxWidth: CGFloat { get }
     var tapButtonBackgroundColor: Color { get }
+
     var counterViewPadding: EdgeInsets { get }
     var counterViewMaxHeight: CGFloat { get }
+
+    var trashButtonColor: Color { get }
 }
 
 extension TapListDecorator {
+    var viewBackgroundColor: Color {
+        Color.grayBackground
+    }
     var sectionTitle: String {
         NSLocalizedString("section_title_last_taps", comment: "last taps section title")
     }
     var scrollToTopAnimation: Animation {
         .easeOut
+    }
+    var listRowBackgroundColor: Color {
+        Color.suplementaryBackground
     }
     var slideToUnlockAnimation: Animation {
         .easeInOut
@@ -48,12 +61,15 @@ extension TapListDecorator {
         .infinity
     }
     var tapButtonBackgroundColor: Color {
-        .orange
+        .fireOrange
     }
     var counterViewPadding: EdgeInsets {
         EdgeInsets(top: .zero, leading: 40, bottom: .zero, trailing: 40)
     }
     var counterViewMaxHeight: CGFloat {
         80
+    }
+    var trashButtonColor: Color {
+        Color.textPrimary
     }
 }

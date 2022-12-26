@@ -13,6 +13,13 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     @ObservedObject var vmodel: Model
     let decorator: BoardListDecorator = DefaultBoardListDecorator()
 
+    init(vmodel: Model) {
+        self.vmodel = vmodel
+        UINavigationBar.appearance().tintColor = UIColor(named: "fireOrange")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
+    }
+
     // MARK: Lifecycle
     var body: some View {
         ZStack {
@@ -22,6 +29,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                         PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
                             if .addNewBoard == action { vmodel.renameViewInvocationAction(.new) }
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     } else {
                         ZStack {
                             BoardScrollView(items: $vmodel.items) { identifier in
@@ -53,9 +61,12 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                         }
                     }
                 }
+                .background(decorator.viewBackgroundColor)
                 .navigationTitle(decorator.navigationBarTitle)
                 .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
+            .accentColor(decorator.navigationBarAccentColor)
+
             if vmodel.isRenameViewPresented {
                 RenameCardView(model: vmodel.objectToRename?.name ?? "") {
                     vmodel.renameViewInvocationAction(.done)

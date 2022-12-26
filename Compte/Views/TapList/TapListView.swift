@@ -19,19 +19,25 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
         ZStack {
             VStack {
                 if vmodel.isItemsEmpty {
-                    Spacer()
-                    PlaceholderView(decorator: PlaceholderEmptyTapListDecorator())
-                    Spacer()
+                    VStack {
+                        Spacer()
+                        PlaceholderView(decorator: PlaceholderEmptyTapListDecorator())
+                        Spacer()
+                    }
                 } else {
                     ScrollViewReader { proxy in
-                        Form {
+                        List {
                             Section(decorator.sectionTitle) {
                                 ForEach(vmodel.items, id: \.id) { tap in
                                     TapListCellView(model: tap)
                                 }
                             }
                             .animation(.default, value: vmodel.items)
+                            .listSectionSeparator(.hidden)
+                            .listRowBackground(decorator.listRowBackgroundColor)
                         }
+                        .listStyle(.plain)
+
                         .onChange(of: vmodel.numberOfTaps) { newValue in
                             guard let firstId = vmodel.firstItemIdentifier else { return }
 
@@ -41,6 +47,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                         }
                     }
                 }
+
                 VStack {
                     HStack {
                         SlideToUnlockView(action: {
@@ -50,6 +57,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                         })
                         Image(systemName: decorator.slideToUnlockImageName)
                             .font(decorator.slideToUnlockImageFont)
+                            .foregroundColor(decorator.trashButtonColor)
                     }
                     .padding(decorator.slideToUnlockPadding)
 
@@ -79,6 +87,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
         }
         .navigationTitle(vmodel.name)
         .navigationBarTitleDisplayMode(.inline)
+        .background(decorator.viewBackgroundColor)
     }
 }
 

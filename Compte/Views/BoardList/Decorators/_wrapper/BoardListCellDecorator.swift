@@ -29,6 +29,7 @@ protocol BoardListCellDecorator {
 
     var swipeActionDeleteImageName: String { get }
     var swipeActionRenameImageName: String { get }
+    var swipeActionDeleteColor: Color { get }
     var swipeActionRenameColor: Color { get }
 }
 extension BoardListCellDecorator {
@@ -54,7 +55,7 @@ extension BoardListCellDecorator {
         EdgeInsets()
     }
     var tapsIndicatorBackgroundColor: Color {
-        .orange
+        .fireOrange
     }
     var tapsIndicatorCornerRadious: CGFloat {
         .zero
@@ -63,7 +64,7 @@ extension BoardListCellDecorator {
         .title2
     }
     var boardForegroundColor: Color {
-        .primary
+        .textPrimary
     }
     var boardTitleLinesLimit: Int {
         1
@@ -75,7 +76,7 @@ extension BoardListCellDecorator {
         .subheadline
     }
     var lastModificationForegroundColor: Color {
-        .secondary
+        .textSecondary
     }
     var swipeActionDeleteImageName: String {
         "trash"
@@ -83,7 +84,10 @@ extension BoardListCellDecorator {
     var swipeActionRenameImageName: String {
         "pencil.line"
     }
+    var swipeActionDeleteColor: Color {
+        Color.warning
+    }
     var swipeActionRenameColor: Color {
-        .blue
+        Color.textSecondary
     }
 }

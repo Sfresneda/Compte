@@ -23,6 +23,8 @@ struct SlideToUnlockView: View {
         } onEditingChanged: { editing in
             handleSliderChangeValue(isEditing: editing)
         }
+        .tint(Color.suplementaryBackground)
+        .foregroundColor(.red)
     }
 }
 // MARK: - Helper

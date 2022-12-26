@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		372D2DC72959C5A3009CF1BE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372D2DC62959C5A3009CF1BE /* Color.swift */; };
 		37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8129462FF900F19D4E /* PersistenceManager.swift */; };
 		37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37327E842946310300F19D4E /* CompteModel.xcdatamodeld */; };
 		37327E8D2946348500F19D4E /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8C2946348500F19D4E /* BoardListView.swift */; };
@@ -76,6 +77,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		372D2DC62959C5A3009CF1BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		37327E8129462FF900F19D4E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		37327E852946310300F19D4E /* CompteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompteModel.xcdatamodel; sourceTree = "<group>"; };
 		37327E8C2946348500F19D4E /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
@@ -238,7 +240,6 @@
 			isa = PBXGroup;
 			children = (
 				37327E8B2946347300F19D4E /* BoardList */,
-				373A3DAE293F56200083F74C /* Navbar */,
 				373A3DA1293F43020083F74C /* TapList */,
 			);
 			path = Views;
@@ -327,6 +328,7 @@
 		37A69E322942640B00129FB1 /* Shared Components */ = {
 			isa = PBXGroup;
 			children = (
+				373A3DAE293F56200083F74C /* Navbar */,
 				378572E129506348005AFE9A /* Rename */,
 				373A3DA7293F46770083F74C /* CounterView.swift */,
 				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
@@ -550,6 +552,7 @@
 			isa = PBXGroup;
 			children = (
 				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
+				372D2DC62959C5A3009CF1BE /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -701,6 +704,7 @@
 				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
 				378572E029505874005AFE9A /* BoardListCellView.swift in Sources */,
 				37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */,
+				372D2DC72959C5A3009CF1BE /* Color.swift in Sources */,
 				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
 				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,

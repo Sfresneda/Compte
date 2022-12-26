@@ -36,10 +36,11 @@ struct BoardScrollView: View {
                                                   leading: .zero,
                                                   bottom: .zero,
                                                   trailing: 20))
-                        .listStyle(.plain)
                         .listRowSeparator(.hidden)
                 }
+                .listRowBackground(Color.suplementaryBackground)
             }
+            .listStyle(.plain)
             .onChange(of: items) { newValue in
                 guard let firstId = firstItem else { return }
                 withAnimation(.easeIn) {
@@ -47,6 +48,7 @@ struct BoardScrollView: View {
                 }
             }
         }
+        .background(Color.grayBackground)
     }
 }
 

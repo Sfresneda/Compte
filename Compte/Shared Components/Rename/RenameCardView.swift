@@ -18,6 +18,17 @@ struct RenameCardView: View {
     @State private var isMaxCharactersReached: Bool = false
     let decorator: RenameBoardDecorator = DefaultRenameBoardDecorator()
 
+    init(model: String, onCancel: ( () -> Void)? = nil, onSubmit: ( (String) -> Void)? = nil) {
+        self.model = model
+        self.isPresented = isPresented
+        self.onCancel = onCancel
+        self.onSubmit = onSubmit
+        self.isTextFieldFocused = isTextFieldFocused
+        self.isMaxCharactersReached = isMaxCharactersReached
+
+        UITextView.appearance().backgroundColor = .clear
+    }
+
     // MARK: Lifecycle
     var body: some View {
         VStack {
@@ -39,6 +50,7 @@ struct RenameCardView: View {
                             .submitLabel(decorator.limitCharsSubmitButtonType)
                             .foregroundColor(decorator.limitCharsForegroundColor)
                             .font(decorator.limitCharsFont)
+                            .cornerRadius(decorator.textEditorCornerRadius)
 
                         if model.isEmpty {
                             Text(NSLocalizedString("rename_placeholder_text",
@@ -56,7 +68,7 @@ struct RenameCardView: View {
                         } label: {
                             Text(decorator.cancelButtonText)
                         }
-                        .tint(.gray)
+                        .tint(decorator.cancelButtonTintColor)
                         .buttonStyle(.bordered)
 
                         Button {
@@ -64,13 +76,13 @@ struct RenameCardView: View {
                         } label: {
                             Text(decorator.submitButtonText)
                         }
-                        .tint(.blue)
+                        .tint(decorator.submitButtonTintColor)
                         .buttonStyle(.bordered)
                         .disabled(isMaxCharactersReached || model.isEmpty)
                     }
                 }
                 .padding()
-                .background(.background)
+                .background(decorator.viewBackgroundColor)
                 .cornerRadius(decorator.viewCornerShadowRadius)
                 .frame(maxHeight: decorator.viewMaxHeight)
                 .shadow(radius: decorator.viewCornerShadowRadius)

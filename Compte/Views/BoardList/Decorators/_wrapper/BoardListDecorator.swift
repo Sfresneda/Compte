@@ -9,8 +9,10 @@ import Foundation
 import SwiftUI
 
 protocol BoardListDecorator {
+    var viewBackgroundColor: Color { get }
     var navigationBarTitleDisplayMode: NavigationBarItem.TitleDisplayMode { get }
     var navigationBarTitle: String { get }
+    var navigationBarAccentColor: Color { get }
     var tapViewTextTitle: String { get }
     var tapViewFont: Font { get }
     var tapViewBackgroundColor: Color { get }
@@ -18,11 +20,17 @@ protocol BoardListDecorator {
     var tapViewPadding: EdgeInsets { get }
 }
 extension BoardListDecorator {
+    var viewBackgroundColor: Color {
+        Color.grayBackground
+    }
     var navigationBarTitleDisplayMode: NavigationBarItem.TitleDisplayMode {
         .large
     }
     var navigationBarTitle: String {
         NSLocalizedString("boards_list_title", comment: "Compte boards")
+    }
+    var navigationBarAccentColor: Color {
+        Color.textPrimary
     }
     var tapViewTextTitle: String {
         NSLocalizedString("add_new_board", comment: "new board")
@@ -31,7 +39,7 @@ extension BoardListDecorator {
         .system(size: 20)
     }
     var tapViewBackgroundColor: Color {
-        .orange
+        .fireOrange
     }
     var tapViewShadowRadius: CGFloat {
         10
