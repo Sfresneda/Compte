@@ -8,5 +8,5 @@
 "section_title_last_taps" = "Últims comptes";
 "empty_boards_message" = "Sembla que està massa buit, afegeix una targeta nova.";
 "empty_taps_message" = "Comenceu el compte prement el botó \"+\"";
-"boards_list_title" = "Compte";
+"boards_list_title" = "Targetes";
 "rename_placeholder_text" = "Nom de la targeta";

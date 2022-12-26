@@ -20,7 +20,7 @@ struct PlaceholderEmptyTapListDecorator {
                                                         trailing: 40)
 
         static let imageMaxHeight: CGFloat = 80
-        static let imageForegroundColor: Color = .blue.opacity(0.7)
+        static let imageForegroundColor: Color = .orange.opacity(0.7)
         static let imageAnimationMaxScale: CGFloat = 1
         static let imageAnimationMinScale: CGFloat = 0.95
         static let imageName: String = "arrowshape.backward"

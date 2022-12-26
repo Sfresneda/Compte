@@ -32,6 +32,12 @@ struct BoardScrollView: View {
                                 rename(item.wrappedValue)
                             }
                         }
+                        .listRowInsets(EdgeInsets(top: .zero,
+                                                  leading: .zero,
+                                                  bottom: .zero,
+                                                  trailing: 20))
+                        .listStyle(.plain)
+                        .listRowSeparator(.hidden)
                 }
             }
             .onChange(of: items) { newValue in

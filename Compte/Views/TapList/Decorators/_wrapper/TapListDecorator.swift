@@ -48,7 +48,7 @@ extension TapListDecorator {
         .infinity
     }
     var tapButtonBackgroundColor: Color {
-        .blue
+        .orange
     }
     var counterViewPadding: EdgeInsets {
         EdgeInsets(top: .zero, leading: 40, bottom: .zero, trailing: 40)

@@ -39,6 +39,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                                 Spacer()
                                 TapView {
                                     Text(decorator.tapViewTextTitle)
+                                        .bold()
                                 } buttonFont: {
                                     decorator.tapViewFont
                                 } action: {
@@ -76,7 +77,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
 struct BoardList_Previews: PreviewProvider {
     static var vmodel: BoardListVModel {
         let numberOfItems = 4
-        let numberOfTaps = 80
+        let numberOfTaps = 100
         let model = BoardListVModel()
         model.items = (0..<numberOfItems).map {_ in
             CompteObject(id: UUID(),

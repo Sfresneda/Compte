@@ -8,5 +8,5 @@
 "section_title_last_taps" = "Últimos toques";
 "empty_boards_message" = "Esto parece estar demasiado vacío, añade una nueva tarjeta.";
 "empty_taps_message" = "Comience a contar presionando el botón \"+\"";
-"boards_list_title" = "Compte";
+"boards_list_title" = "Tarjetas";
 "rename_placeholder_text" = "Nombre de la tarjeta";

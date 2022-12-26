@@ -31,7 +31,7 @@ extension BoardListDecorator {
         .system(size: 20)
     }
     var tapViewBackgroundColor: Color {
-        .blue
+        .orange
     }
     var tapViewShadowRadius: CGFloat {
         10
