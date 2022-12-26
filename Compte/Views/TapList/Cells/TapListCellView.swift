@@ -19,6 +19,7 @@ struct TapListCellView: View {
             ZStack {
                 Text("\(model.tapNumber)")
                     .font(decorator.tapNumberFont)
+                    .foregroundColor(decorator.tapNumberColor)
                     .bold()
                     .padding(decorator.tapNumberPadding)
             }
@@ -26,7 +27,9 @@ struct TapListCellView: View {
             VStack(alignment: .leading) {
                 Text(Date(timeIntervalSince1970: model.date),
                      format: decorator.topDateStyle)
+                .foregroundColor(decorator.secondaryDateFontColor)
                 .font(decorator.topDateFont)
+                .bold()
 
                 Text(Date(timeIntervalSince1970: model.date),
                      style: decorator.secondaryDateStyle)

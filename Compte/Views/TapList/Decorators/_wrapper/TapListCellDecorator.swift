@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol TapListCellDecorator {
     var tapNumberFont: Font { get }
+    var tapNumberColor: Color { get }
     var tapNumberPadding: EdgeInsets { get }
     var topDateStyle: Date.FormatStyle { get }
     var topDateFont: Font { get }
@@ -20,6 +21,9 @@ protocol TapListCellDecorator {
 extension TapListCellDecorator {
     var tapNumberFont: Font {
         .system(size: 50)
+    }
+    var tapNumberColor: Color {
+        Color.textPrimary
     }
     var tapNumberPadding: EdgeInsets {
         EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: .zero)
@@ -37,6 +41,6 @@ extension TapListCellDecorator {
         .title3
     }
     var secondaryDateFontColor: Color {
-        .secondary
+        .textSecondary
     }
 }

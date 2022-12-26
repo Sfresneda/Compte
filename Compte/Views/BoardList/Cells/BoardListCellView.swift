@@ -21,8 +21,13 @@ struct BoardListCellView: View {
             VStack(alignment: .center) {
                 Text(countNumber(for: model.taps.count))
                     .font(decorator.tapsIndicatorFont)
+                    .bold()
                     .foregroundColor(decorator.tapsIndicatorForegroundColor)
+                    .multilineTextAlignment(decorator.tapsIndicatorTextAligment)
             }
+            .frame(maxWidth: decorator.tapsIndicatorMaxWidth,
+                   maxHeight: decorator.tapsIndicatorMaxHeight,
+                   alignment: decorator.tapsIndicatorAligment)
             .padding(decorator.tapsIndicatorPadding)
             .background(decorator.tapsIndicatorBackgroundColor)
             .cornerRadius(decorator.tapsIndicatorCornerRadious)
@@ -32,6 +37,7 @@ struct BoardListCellView: View {
                     .font(decorator.boardTitleFont)
                     .foregroundColor(decorator.boardForegroundColor)
                     .bold()
+                    .lineLimit(decorator.boardTitleLinesLimit)
 
                 HStack {
                     Text(model.lastModifiedDateFormatted,
@@ -40,6 +46,7 @@ struct BoardListCellView: View {
                     .foregroundColor(decorator.lastModificationForegroundColor)
                 }
             }
+            .padding()
             .swipeActions(allowsFullSwipe: true) {
                 Button(role: .destructive) {
                     withAnimation {
@@ -48,6 +55,7 @@ struct BoardListCellView: View {
                 } label: {
                     Image(systemName: decorator.swipeActionDeleteImageName)
                 }
+                .tint(decorator.swipeActionDeleteColor)
 
                 Button {
                     withAnimation {

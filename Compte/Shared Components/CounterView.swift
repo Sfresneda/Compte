@@ -21,8 +21,9 @@ struct CounterView: View {
                     .font(.system(size: 50))
                     .bold()
             }
-            .foregroundColor(.primary)
+            .foregroundColor(Color.textPrimary)
         }
+        .background(Color.suplementaryBackground)
     }
 }
 

@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 protocol RenameBoardDecorator {
+    var viewBackgroundColor: Color { get }
     var limitChars: Int { get }
     var limitCharsText: String { get }
     var limitCharsMaxWidth: CGFloat { get }
@@ -16,7 +17,9 @@ protocol RenameBoardDecorator {
     var limitCharsSubmitButtonType: SubmitLabel { get }
     var limitCharsForegroundColor: Color { get }
     var limitCharsFont: Font { get }
-
+    var textEditorBackgroundColor: Color { get }
+    var textEditorCornerRadius: CGFloat { get }
+    
     var viewCornerShadowRadius: CGFloat { get }
     var viewMaxHeight: CGFloat { get }
     var overlayColor: Color { get }
@@ -32,6 +35,9 @@ protocol RenameBoardDecorator {
 }
 
 extension RenameBoardDecorator {
+    var viewBackgroundColor: Color {
+        Color.grayBackground
+    }
     var limitChars: Int {
         50
     }
@@ -48,10 +54,16 @@ extension RenameBoardDecorator {
         .done
     }
     var limitCharsForegroundColor: Color {
-        .primary
+        .textPrimary
     }
     var limitCharsFont: Font {
         .title2
+    }
+    var textEditorBackgroundColor: Color {
+        .red
+    }
+    var textEditorCornerRadius: CGFloat {
+        8
     }
     var viewCornerShadowRadius: CGFloat {
         20
@@ -60,10 +72,10 @@ extension RenameBoardDecorator {
         300
     }
     var overlayColor: Color {
-        .black.opacity(0.3)
+        Color.smokeBlueBackground.opacity(0.9)
     }
     var onAppearAnimation: Animation {
-        .spring(dampingFraction: 0.75).delay(0.2)
+        .spring(dampingFraction: 0.75).delay(0.1)
     }
     var buttonsStyle: BorderedButtonStyle {
         .bordered
@@ -72,18 +84,18 @@ extension RenameBoardDecorator {
         NSLocalizedString("alert_cancel", comment: "Cancel button")
     }
     var cancelButtonTintColor: Color {
-        .gray
+        Color.textPrimary
     }
     var submitButtonText: String {
         NSLocalizedString("alert_submit", comment: "Submit button")
     }
     var submitButtonTintColor: Color {
-        .blue
+        Color.fireOrange
     }
     func limitCharsLabelColor(_ isMaxCharactersReached: Bool) -> Color {
         isMaxCharactersReached
-        ? .red
-        : .secondary
+        ? Color.warning
+        : Color.textSecondary
     }
     func limitCharsLabelFont(_ isMaxCharactersReached: Bool) -> Font {
         isMaxCharactersReached

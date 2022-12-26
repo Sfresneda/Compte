@@ -12,7 +12,7 @@ struct PlaceholderEmptyBoardListDecorator {
     private enum Constants {
         static let imageName: String = "plus.square.dashed"
         static let imageMaxWidth: CGFloat = 120
-        static let imageForegroundColor: Color = .blue.opacity(0.7)
+        static let imageForegroundColor: Color = .fireOrange
         static let imageAnimationMaxScale: CGFloat = 1
         static let imageAnimationMinScale: CGFloat = 0.95
 
@@ -24,7 +24,7 @@ struct PlaceholderEmptyBoardListDecorator {
                                                         bottom: .zero,
                                                         trailing: 40)
         static let textAligment: TextAlignment = .center
-        static let textForegroundColor: Color = .secondary
+        static let textForegroundColor: Color = .textPrimary
 
         static let animationDuration: Double = 1
     }

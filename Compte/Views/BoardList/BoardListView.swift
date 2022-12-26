@@ -13,6 +13,13 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     @ObservedObject var vmodel: Model
     let decorator: BoardListDecorator = DefaultBoardListDecorator()
 
+    init(vmodel: Model) {
+        self.vmodel = vmodel
+        UINavigationBar.appearance().tintColor = UIColor(named: "fireOrange")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
+    }
+
     // MARK: Lifecycle
     var body: some View {
         ZStack {
@@ -20,25 +27,19 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                 VStack {
                     if vmodel.isItemsEmpty {
                         PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
-                            if .addNewBoard == action {
-                                withAnimation {
-                                    vmodel.add(with: nil)
-                                }
-                            }
+                            if .addNewBoard == action { vmodel.renameViewInvocationAction(.new) }
                         }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
                     } else {
                         ZStack {
                             BoardScrollView(items: $vmodel.items) { identifier in
                                 vmodel.delete(identifier)
                             } rename: { object in
-                                vmodel.selectedItem = object
-                                toggleEditName()
+                                vmodel.renameViewInvocationAction(.edit(object))
                             }
                             .toolbar {
                                 NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
-                                    withAnimation {
-                                        vmodel.handleNavbarButton(button)
-                                    }
+                                    withAnimation { vmodel.handleNavbarButton(button) }
                                 }
                             }
 
@@ -46,10 +47,11 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                                 Spacer()
                                 TapView {
                                     Text(decorator.tapViewTextTitle)
+                                        .bold()
                                 } buttonFont: {
-                                    .system(size: 20)
+                                    decorator.tapViewFont
                                 } action: {
-                                    withAnimation { vmodel.add(with: nil) }
+                                    withAnimation { vmodel.renameViewInvocationAction(.new) }
                                 }
                                 .background(decorator.tapViewBackgroundColor)
                                 .clipShape(Capsule())
@@ -59,27 +61,26 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                         }
                     }
                 }
+                .background(decorator.viewBackgroundColor)
                 .navigationTitle(decorator.navigationBarTitle)
                 .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
-            
-            if vmodel.isEditNamePresented {
-                RenameBoardView(model: vmodel.selectedItemName) {
-                    toggleEditName()
+            .accentColor(decorator.navigationBarAccentColor)
+
+            if vmodel.isRenameViewPresented {
+                RenameCardView(model: vmodel.objectToRename?.name ?? "") {
+                    vmodel.renameViewInvocationAction(.done)
                 } onSubmit: { newName in
-                    defer { toggleEditName() }
                     withAnimation(.easeIn) {
-                        vmodel.updateName(newName)
+                        if vmodel.isAnObjectToRename {
+                            vmodel.renameViewSubmitAction(.update(newName))
+                        } else {
+                            vmodel.renameViewSubmitAction(.add(newName))
+                        }
                     }
                 }
             }
         }
-    }
-}
-// MARK: - Helpers
-private extension BoardListView {
-    func toggleEditName() {
-        vmodel.isEditNamePresented.toggle()
     }
 }
 
@@ -87,7 +88,7 @@ private extension BoardListView {
 struct BoardList_Previews: PreviewProvider {
     static var vmodel: BoardListVModel {
         let numberOfItems = 4
-        let numberOfTaps = 80
+        let numberOfTaps = 100
         let model = BoardListVModel()
         model.items = (0..<numberOfItems).map {_ in
             CompteObject(id: UUID(),

@@ -1,11 +1,12 @@
 "reset_counter" = "Reset Counter";
-"add_new_board" = "Add New Board";
+"add_new_board" = "Add New Card";
 "new_item" = "New Item";
 "delete_item" = "Delete";
 "limit_characters" = "Max. %d Characters";
 "alert_cancel" = "Cancel";
 "alert_submit" = "Submit";
 "section_title_last_taps" = "Last Taps";
-"empty_boards_message" = "This seems to be too empty, add a new board.";
+"empty_boards_message" = "This seems to be too empty, add a new card.";
 "empty_taps_message" = "Start tracking by pressing the below button";
-"boards_list_title" = "Compte Boards";
+"boards_list_title" = "Cards";
+"rename_placeholder_text" = "Card name";

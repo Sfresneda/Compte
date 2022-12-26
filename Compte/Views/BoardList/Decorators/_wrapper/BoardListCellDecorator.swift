@@ -11,12 +11,17 @@ import SwiftUI
 protocol BoardListCellDecorator {
     var tapsIndicatorFont: Font { get }
     var tapsIndicatorForegroundColor: Color { get }
+    var tapsIndicatorTextAligment: TextAlignment { get }
+    var tapsIndicatorMaxWidth: CGFloat { get }
+    var tapsIndicatorMaxHeight: CGFloat { get }
+    var tapsIndicatorAligment: Alignment { get }
     var tapsIndicatorPadding: EdgeInsets { get }
     var tapsIndicatorBackgroundColor: Color { get }
     var tapsIndicatorCornerRadious: CGFloat { get }
 
     var boardTitleFont: Font { get }
     var boardForegroundColor: Color { get }
+    var boardTitleLinesLimit: Int { get }
 
     var lastModificationFormat: Date.FormatStyle { get }
     var lastModificationFont: Font { get }
@@ -24,6 +29,7 @@ protocol BoardListCellDecorator {
 
     var swipeActionDeleteImageName: String { get }
     var swipeActionRenameImageName: String { get }
+    var swipeActionDeleteColor: Color { get }
     var swipeActionRenameColor: Color { get }
 }
 extension BoardListCellDecorator {
@@ -33,20 +39,35 @@ extension BoardListCellDecorator {
     var tapsIndicatorForegroundColor: Color {
         .white
     }
+    var tapsIndicatorTextAligment: TextAlignment {
+        .center
+    }
+    var tapsIndicatorMaxWidth: CGFloat {
+        100
+    }
+    var tapsIndicatorMaxHeight: CGFloat {
+        .infinity
+    }
+    var tapsIndicatorAligment: Alignment {
+        .center
+    }
     var tapsIndicatorPadding: EdgeInsets {
-        EdgeInsets(top: 10, leading: 8, bottom: 10, trailing: 8)
+        EdgeInsets()
     }
     var tapsIndicatorBackgroundColor: Color {
-        .secondary
+        .fireOrange
     }
     var tapsIndicatorCornerRadious: CGFloat {
-        20
+        .zero
     }
     var boardTitleFont: Font {
         .title2
     }
     var boardForegroundColor: Color {
-        .primary
+        .textPrimary
+    }
+    var boardTitleLinesLimit: Int {
+        1
     }
     var lastModificationFormat: Date.FormatStyle {
         Date.FormatStyle().year().month().day().locale(Locale.current)
@@ -55,7 +76,7 @@ extension BoardListCellDecorator {
         .subheadline
     }
     var lastModificationForegroundColor: Color {
-        .secondary
+        .textSecondary
     }
     var swipeActionDeleteImageName: String {
         "trash"
@@ -63,7 +84,10 @@ extension BoardListCellDecorator {
     var swipeActionRenameImageName: String {
         "pencil.line"
     }
+    var swipeActionDeleteColor: Color {
+        Color.warning
+    }
     var swipeActionRenameColor: Color {
-        .blue
+        Color.textSecondary
     }
 }

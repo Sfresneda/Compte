@@ -13,14 +13,14 @@ struct PlaceholderEmptyTapListDecorator {
         static let emptyListPlaceholderText: String = NSLocalizedString("empty_taps_message", comment: "empty taps")
         static let textFont: Font = .title2
         static let textAligment: TextAlignment = .center
-        static let textForegroundColor: Color = .secondary
+        static let textForegroundColor: Color = .textSecondary
         static let textPadding: EdgeInsets = EdgeInsets(top: 20,
                                                         leading: 40,
                                                         bottom: .zero,
                                                         trailing: 40)
 
         static let imageMaxHeight: CGFloat = 80
-        static let imageForegroundColor: Color = .blue.opacity(0.7)
+        static let imageForegroundColor: Color = .fireOrange
         static let imageAnimationMaxScale: CGFloat = 1
         static let imageAnimationMinScale: CGFloat = 0.95
         static let imageName: String = "arrowshape.backward"

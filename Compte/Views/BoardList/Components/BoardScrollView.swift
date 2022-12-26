@@ -32,8 +32,15 @@ struct BoardScrollView: View {
                                 rename(item.wrappedValue)
                             }
                         }
+                        .listRowInsets(EdgeInsets(top: .zero,
+                                                  leading: .zero,
+                                                  bottom: .zero,
+                                                  trailing: 20))
+                        .listRowSeparator(.hidden)
                 }
+                .listRowBackground(Color.suplementaryBackground)
             }
+            .listStyle(.plain)
             .onChange(of: items) { newValue in
                 guard let firstId = firstItem else { return }
                 withAnimation(.easeIn) {
@@ -41,6 +48,7 @@ struct BoardScrollView: View {
                 }
             }
         }
+        .background(Color.grayBackground)
     }
 }
 
