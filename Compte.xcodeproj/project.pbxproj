@@ -22,7 +22,7 @@
 		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
-		378572E32950635C005AFE9A /* RenameBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* RenameBoardView.swift */; };
+		378572E32950635C005AFE9A /* RenameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* RenameCardView.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
 		37A69E352942643400129FB1 /* TapListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* TapListCellView.swift */; };
@@ -92,7 +92,7 @@
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
-		378572E22950635C005AFE9A /* RenameBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardView.swift; sourceTree = "<group>"; };
+		378572E22950635C005AFE9A /* RenameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameCardView.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* TapListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellView.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				37B1B971295485E7002B99E0 /* Decorators */,
-				378572E22950635C005AFE9A /* RenameBoardView.swift */,
+				378572E22950635C005AFE9A /* RenameCardView.swift */,
 			);
 			path = Rename;
 			sourceTree = "<group>";
@@ -704,7 +704,7 @@
 				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
 				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
-				378572E32950635C005AFE9A /* RenameBoardView.swift in Sources */,
+				378572E32950635C005AFE9A /* RenameCardView.swift in Sources */,
 				373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */,

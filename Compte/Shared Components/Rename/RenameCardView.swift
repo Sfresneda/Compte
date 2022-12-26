@@ -1,5 +1,5 @@
 //
-//  RenameBoardView.swift
+//  RenameCardView.swift
 //  Compte
 //
 //  Created by likeadeveloper on 19/12/22.
@@ -8,9 +8,9 @@
 import SwiftUI
 
 // MARK: - RenameBoardView
-struct RenameBoardView: View {
+struct RenameCardView: View {
     // MARK: Vars
-    @State var model: String
+    @State var model: String = ""
     @State private var isPresented: Bool = false
     var onCancel: (() -> Void)?
     var onSubmit: ((String) -> Void)?
@@ -105,7 +105,7 @@ struct EditCompteView_Previews: PreviewProvider {
                 .scaledToFit()
                 .background(.mint)
 
-            RenameBoardView(model: model)
+            RenameCardView(model: model)
         }
     }
 }
@@ -119,7 +119,7 @@ struct EmptyEditCompteView_Previews: PreviewProvider {
                 .scaledToFit()
                 .background(.mint)
 
-            RenameBoardView(model: model)
+            RenameCardView(model: model)
         }
     }
 }

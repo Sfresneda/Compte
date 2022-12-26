@@ -20,24 +20,18 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                 VStack {
                     if vmodel.isItemsEmpty {
                         PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
-                            if .addNewBoard == action {
-                                withAnimation { addActionHasBeenPressed() }
-                            }
+                            if .addNewBoard == action { vmodel.renameViewInvocationAction(.new) }
                         }
                     } else {
                         ZStack {
                             BoardScrollView(items: $vmodel.items) { identifier in
                                 vmodel.delete(identifier)
                             } rename: { object in
-                                vmodel.selectedItem = object
-                                toggleRenameViewPresented()
-                                vmodel.isEditingObject.toggle()
+                                vmodel.renameViewInvocationAction(.edit(object))
                             }
                             .toolbar {
                                 NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
-                                    withAnimation {
-                                        vmodel.handleNavbarButton(button)
-                                    }
+                                    withAnimation { vmodel.handleNavbarButton(button) }
                                 }
                             }
 
@@ -48,9 +42,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                                 } buttonFont: {
                                     decorator.tapViewFont
                                 } action: {
-                                    withAnimation {
-                                        addActionHasBeenPressed()
-                                    }
+                                    withAnimation { vmodel.renameViewInvocationAction(.new) }
                                 }
                                 .background(decorator.tapViewBackgroundColor)
                                 .clipShape(Capsule())
@@ -63,33 +55,20 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                 .navigationTitle(decorator.navigationBarTitle)
                 .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
-            
             if vmodel.isRenameViewPresented {
-                RenameBoardView(model: vmodel.selectedItemName ?? "") {
-                    toggleRenameViewPresented()
+                RenameCardView(model: vmodel.objectToRename?.name ?? "") {
+                    vmodel.renameViewInvocationAction(.done)
                 } onSubmit: { newName in
                     withAnimation(.easeIn) {
-                        defer { toggleRenameViewPresented() }
-                        if vmodel.isEditingObject {
-                            vmodel.updateName(newName)
-                            vmodel.isEditingObject.toggle()
+                        if vmodel.isAnObjectToRename {
+                            vmodel.renameViewSubmitAction(.update(newName))
                         } else {
-                            vmodel.add(with: newName)
+                            vmodel.renameViewSubmitAction(.add(newName))
                         }
                     }
                 }
             }
         }
-    }
-}
-// MARK: - Helpers
-private extension BoardListView {
-    func toggleRenameViewPresented() {
-        vmodel.isRenameViewPresented.toggle()
-    }
-    func addActionHasBeenPressed() {
-        //        vmodel.add(with: nil)
-        vmodel.isRenameViewPresented.toggle()
     }
 }
 

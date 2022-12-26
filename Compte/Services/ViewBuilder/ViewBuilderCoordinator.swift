@@ -11,7 +11,11 @@ import CoreData
 
 // MARK: - ViewBuilderCoordinator
 struct ViewBuilderCoordinator {
+    // MARK: Vars
     static var shared: ViewBuilderCoordinator = ViewBuilderCoordinator()
+
+    // MARK: Lifecycle
+    private init() {}
 }
 
 // MARK: - Public
