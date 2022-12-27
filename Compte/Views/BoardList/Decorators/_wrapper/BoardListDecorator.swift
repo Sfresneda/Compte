@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 protocol BoardListDecorator {
+    var navigationBarTintColor: UIColor { get }
+    var navigationBarLargeTitleAttributes: [NSAttributedString.Key: Any] { get }
+    var navigationBarTitleAttributes: [NSAttributedString.Key: Any] { get }
     var viewBackgroundColor: Color { get }
     var navigationBarTitleDisplayMode: NavigationBarItem.TitleDisplayMode { get }
     var navigationBarTitle: String { get }
@@ -20,6 +23,15 @@ protocol BoardListDecorator {
     var tapViewPadding: EdgeInsets { get }
 }
 extension BoardListDecorator {
+    var navigationBarTintColor: UIColor {
+        UIColor(named: "fireOrange")!
+    }
+    var navigationBarLargeTitleAttributes: [NSAttributedString.Key: Any] {
+        [.foregroundColor: UIColor(named: "textPrimary")!]
+    }
+    var navigationBarTitleAttributes: [NSAttributedString.Key: Any] {
+        [.foregroundColor: UIColor(named: "textPrimary")!]
+    }
     var viewBackgroundColor: Color {
         Color.grayBackground
     }
