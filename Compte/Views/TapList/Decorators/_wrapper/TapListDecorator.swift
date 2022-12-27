@@ -10,7 +10,9 @@ import SwiftUI
 
 protocol TapListDecorator {
     var viewBackgroundColor: Color { get }
+
     var sectionTitle: String { get }
+    var sectionForegroundColor: Color { get }
     var scrollToTopAnimation: Animation { get }
     var listRowBackgroundColor: Color { get }
 
@@ -35,6 +37,9 @@ extension TapListDecorator {
     }
     var sectionTitle: String {
         NSLocalizedString("section_title_last_taps", comment: "last taps section title")
+    }
+    var sectionForegroundColor: Color {
+        Color.textPrimary
     }
     var scrollToTopAnimation: Animation {
         .easeOut

@@ -27,10 +27,12 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
                 } else {
                     ScrollViewReader { proxy in
                         List {
-                            Section(decorator.sectionTitle) {
-                                ForEach(vmodel.items, id: \.id) { tap in
-                                    TapListCellView(model: tap)
-                                }
+                            Spacer()
+                                .listRowBackground(Color.clear)
+                                .listSectionSeparator(.hidden)
+                                .foregroundColor(decorator.sectionForegroundColor)
+                            ForEach(vmodel.items, id: \.id) { tap in
+                                TapListCellView(model: tap)
                             }
                             .animation(.default, value: vmodel.items)
                             .listSectionSeparator(.hidden)
