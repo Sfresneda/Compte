@@ -18,17 +18,6 @@ struct RenameCardView: View {
     @State private var isMaxCharactersReached: Bool = false
     let decorator: RenameBoardDecorator = DefaultRenameBoardDecorator()
 
-    init(model: String, onCancel: ( () -> Void)? = nil, onSubmit: ( (String) -> Void)? = nil) {
-        self.model = model
-        self.isPresented = isPresented
-        self.onCancel = onCancel
-        self.onSubmit = onSubmit
-        self.isTextFieldFocused = isTextFieldFocused
-        self.isMaxCharactersReached = isMaxCharactersReached
-
-        UITextView.appearance().backgroundColor = .clear
-    }
-
     // MARK: Lifecycle
     var body: some View {
         VStack {
