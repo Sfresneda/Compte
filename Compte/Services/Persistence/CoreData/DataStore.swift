@@ -29,7 +29,7 @@ struct DataStore {
     }
 }
 // MARK: - Public
-extension DataStore {
+extension DataStore: DataStoreProtocol {
     func save() {
         guard context.hasChanges else { return }
         do {

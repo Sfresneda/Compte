@@ -21,9 +21,9 @@ final class PersistenceManager: NSObject, ObservableObject {
     
     fileprivate var managedObjectContext: NSManagedObjectContext
     private let entityRequestController: NSFetchedResultsController<CompteEntity>
-    private var dataStore: DataStore
+    private var dataStore: DataStoreProtocol
     
-    init(dataStore: DataStore = DataStore()) {
+    init(dataStore: DataStoreProtocol = DataStore()) {
         self.dataStore = dataStore
         managedObjectContext = self.dataStore.context
         
