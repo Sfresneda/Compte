@@ -24,13 +24,15 @@
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
 		378572E32950635C005AFE9A /* RenameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* RenameCardView.swift */; };
+		3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */; };
+		3791D4E0295B68ED00DAB251 /* DataSourceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */; };
+		3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
 		37A69E352942643400129FB1 /* TapListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* TapListCellView.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
 		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
 		37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C079293F428000317132 /* Preview Assets.xcassets */; };
-		37B0C084293F428000317132 /* CompteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C083293F428000317132 /* CompteTests.swift */; };
 		37B0C08E293F428000317132 /* CompteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08D293F428000317132 /* CompteUITests.swift */; };
 		37B0C090293F428000317132 /* CompteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */; };
 		37B1B96529545D6B002B99E0 /* LimitedTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */; };
@@ -95,6 +97,9 @@
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
 		378572E22950635C005AFE9A /* RenameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameCardView.swift; sourceTree = "<group>"; };
+		3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTests.swift; sourceTree = "<group>"; };
+		3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceWrapper.swift; sourceTree = "<group>"; };
+		3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreMock.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* TapListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellView.swift; sourceTree = "<group>"; };
@@ -103,7 +108,6 @@
 		37B0C076293F428000317132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37B0C079293F428000317132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37B0C07F293F428000317132 /* CompteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37B0C083293F428000317132 /* CompteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteTests.swift; sourceTree = "<group>"; };
 		37B0C089293F428000317132 /* CompteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C08D293F428000317132 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
 		37B0C08F293F428000317132 /* CompteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -291,6 +295,32 @@
 			path = Rename;
 			sourceTree = "<group>";
 		};
+		3791D4DB295B683000DAB251 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				3791D4E1295B69FE00DAB251 /* Mock */,
+				3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		3791D4DE295B68E000DAB251 /* _wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */,
+				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
+			);
+			path = _wrapper;
+			sourceTree = "<group>";
+		};
+		3791D4E1295B69FE00DAB251 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		3793DEEA29531F2A00C04C30 /* _wrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,10 +340,10 @@
 		3793DEF129535C9300C04C30 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				3791D4DE295B68E000DAB251 /* _wrapper */,
 				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
 				37E84F1A294B27050039BB4F /* Mapper */,
 				37327E8129462FF900F19D4E /* PersistenceManager.swift */,
-				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -392,7 +422,7 @@
 		37B0C082293F428000317132 /* CompteTests */ = {
 			isa = PBXGroup;
 			children = (
-				37B0C083293F428000317132 /* CompteTests.swift */,
+				3791D4DB295B683000DAB251 /* Persistence */,
 			);
 			path = CompteTests;
 			sourceTree = "<group>";
@@ -703,6 +733,7 @@
 				37B1B974295485FB002B99E0 /* RenameBoardDecorator.swift in Sources */,
 				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
 				378572E029505874005AFE9A /* BoardListCellView.swift in Sources */,
+				3791D4E0295B68ED00DAB251 /* DataSourceWrapper.swift in Sources */,
 				37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */,
 				372D2DC72959C5A3009CF1BE /* Color.swift in Sources */,
 				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
@@ -742,7 +773,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B0C084293F428000317132 /* CompteTests.swift in Sources */,
+				3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */,
+				3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,9 +15,9 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
 
     init(vmodel: Model) {
         self.vmodel = vmodel
-        UINavigationBar.appearance().tintColor = UIColor(named: "fireOrange")
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor(named: "textPrimary")]
+        UINavigationBar.appearance().tintColor = decorator.navigationBarTintColor
+        UINavigationBar.appearance().largeTitleTextAttributes = decorator.navigationBarLargeTitleAttributes
+        UINavigationBar.appearance().titleTextAttributes = decorator.navigationBarTitleAttributes
     }
 
     // MARK: Lifecycle
