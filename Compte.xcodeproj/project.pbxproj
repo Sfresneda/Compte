@@ -53,6 +53,7 @@
 		37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */; };
 		37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */; };
 		37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */; };
+		37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */; };
 		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
 		37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */; };
 		37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1B294B27120039BB4F /* ModelMapper.swift */; };
@@ -133,6 +134,7 @@
 		37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderWrapper.swift; sourceTree = "<group>"; };
 		37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyTapListDecorator.swift; sourceTree = "<group>"; };
 		37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModelTests.swift; sourceTree = "<group>"; };
+		37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RenameCardView+Components.swift"; sourceTree = "<group>"; };
 		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerWrapper.swift; sourceTree = "<group>"; };
 		37E84F1B294B27120039BB4F /* ModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapper.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				37B1B971295485E7002B99E0 /* Decorators */,
 				378572E22950635C005AFE9A /* RenameCardView.swift */,
+				37D10D29295DE377000ACD80 /* Extensions */,
 			);
 			path = Rename;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 		37AEA890295C7BB100E12A4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37D10D26295DE292000ACD80 /* Decorators */,
 				37AEA891295C7BB400E12A4F /* BoardList */,
 				37D10D23295DB9A6000ACD80 /* TapList */,
 			);
@@ -441,7 +445,7 @@
 		37B0C082293F428000317132 /* CompteTests */ = {
 			isa = PBXGroup;
 			children = (
-				3791D4DB295B683000DAB251 /* Persistence */,
+				37D10D27295DE299000ACD80 /* Services */,
 				37AEA890295C7BB100E12A4F /* Views */,
 			);
 			path = CompteTests;
@@ -576,6 +580,29 @@
 				37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */,
 			);
 			path = TapList;
+			sourceTree = "<group>";
+		};
+		37D10D26295DE292000ACD80 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		37D10D27295DE299000ACD80 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3791D4DB295B683000DAB251 /* Persistence */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		37D10D29295DE377000ACD80 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		37E84F1A294B27050039BB4F /* Mapper */ = {
@@ -757,6 +784,7 @@
 				37E84F21294B29130039BB4F /* CompteObject.swift in Sources */,
 				37B1B96D29548233002B99E0 /* TapListCellDecorator.swift in Sources */,
 				37B1B984295496B0002B99E0 /* DefaultBoardListCellDecorator.swift in Sources */,
+				37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */,
 				37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */,
 				37B1B974295485FB002B99E0 /* RenameBoardDecorator.swift in Sources */,
 				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
@@ -967,7 +995,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
@@ -1007,7 +1035,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
