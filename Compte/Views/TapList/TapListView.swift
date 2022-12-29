@@ -95,7 +95,7 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
 
 // MARK: - Preview
 struct TapListView_Previews: PreviewProvider {
-    static var model: TapListVModel {
+    static var model: TapListVModel<PersistenceManager> {
         let model = TapListVModel(modelObject: CompteObject.defaultImplementation())
         model.numberOfTaps = 1
         model.items = Array<TapObject>

@@ -20,13 +20,10 @@ struct ViewBuilderCoordinator {
 
 // MARK: - Public
 extension ViewBuilderCoordinator {
-    @MainActor
     func buildListView() -> some View {
         let vmodel = BoardListVModel()
         return BoardListView(vmodel: vmodel)
     }
-    
-    @MainActor
     func buildTapListView(object: CompteObject) -> some View {
         let vmodel = TapListVModel(modelObject: object)
         return TapListView<TapListVModel>(vmodel: vmodel)

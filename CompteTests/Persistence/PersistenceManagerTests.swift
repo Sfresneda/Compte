@@ -24,6 +24,7 @@ final class PersistenceManagerTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         sut = PersistenceManager(dataStore: DataStoreMock())
+        continueAfterFailure = true
     }
     override func tearDownWithError() throws {
         try super.tearDownWithError()
