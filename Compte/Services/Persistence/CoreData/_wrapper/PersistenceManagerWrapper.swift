@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import CoreData
+import Combine
 
 // MARK: - PersistenceManagerError
 enum PersistenceManagerError: LocalizedError {
@@ -14,7 +14,9 @@ enum PersistenceManagerError: LocalizedError {
     case unkown
 }
 // MARK: - PersistenceManagerProtocol
-protocol PersistenceManagerProtocol {
+protocol PersistenceManagerProtocol: ObservableObject {
+    var compteModelCollection: Set<CompteObject> { get }
+
     func fetch(mapper: some ModelMapper)
     func add(mapper: any ModelMapper, requireSave: Bool)
     func update(mapper: any ModelMapper, requireSave: Bool)

@@ -8,9 +8,12 @@
 import Foundation
 import Combine
 
+private enum Constants {
+    static let defaultNavbarItems: [NavbarButton] = []
+}
+
 // MARK: - BoardListVModel
-@MainActor
-final class BoardListVModel: ObservableObject {
+final class BoardListVModel<DataManager: PersistenceManagerProtocol>: ObservableObject {
     // MARK: Vars
     @Published var items: [CompteObject] = []
     var isItemsEmpty: Bool { items.isEmpty }
@@ -21,23 +24,17 @@ final class BoardListVModel: ObservableObject {
     var isAnObjectToRename: Bool { nil != objectToRename }
 
     private var cancellable: AnyCancellable?
-    private var dataManager: PersistenceManager
-    private enum Constants {
-        static let defaultNavbarItems: [NavbarButton] = []
-    }
-    
+    private var dataManager: DataManager
+
     // MARK: Lifecycle
-    init(dataManager: PersistenceManager = PersistenceManager.shared) {
+    init(dataManager: DataManager = PersistenceManager.shared) {
         self.dataManager = dataManager
         cancellable = dataManager
             .objectWillChange
             .sink(receiveValue: { [weak self] _ in
                 let newItems = dataManager.compteModelCollection.sorted { $0.lastModified > $1.lastModified }
-                let differences = self?.items == newItems
                 self?.items = newItems
-                if differences {
-                    self?.objectWillChange.send()
-                }
+                self?.objectWillChange.send()
             })
         defer { fetchData() }
     }
@@ -45,6 +42,8 @@ final class BoardListVModel: ObservableObject {
 // MARK: - Contract
 extension BoardListVModel: BoardListVModelProtocol {
     func renameViewInvocationAction(_ action: RenameViewPresentingAction) {
+        isRenameViewPresented.toggle()
+
         switch action {
         case .new:
             break
@@ -52,8 +51,8 @@ extension BoardListVModel: BoardListVModelProtocol {
             objectToRename = item
         case .done:
             objectToRename = nil
+            isRenameViewPresented = false
         }
-        isRenameViewPresented.toggle()
     }
     func renameViewSubmitAction(_ action: RenameViewSubmitAction) {
         switch action {
@@ -81,9 +80,12 @@ extension BoardListVModel: BoardListVModelProtocol {
                  requireSave: true)
     }
     func updateName(_ name: String) {
-        guard var objectToRename, !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
-              name != objectToRename.name else { return }
-        objectToRename.name = name
+        guard var objectToRename,
+              !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+              name != objectToRename.name else {
+            return
+        }
+        objectToRename.name = name.trimmingCharacters(in: .whitespacesAndNewlines)
         objectToRename.lastModified = Date().timeIntervalSince1970
 
         dataManager

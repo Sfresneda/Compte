@@ -8,9 +8,13 @@
 import Foundation
 import Combine
 
+private enum Constant {
+    static let saveQueueDelay: useconds_t = 1000000 // 1 second
+    static let queueName: String = "com.taplistvmodel.saveoperationqueue"
+}
+
 // MARK: - TapListVModel
-@MainActor
-final class TapListVModel {
+final class TapListVModel<DataManager: PersistenceManagerProtocol>: ObservableObject {
     // MARK: Vars
     @Published var numberOfTaps: Int = .zero
     @Published var items: [TapObject] = [] {
@@ -24,13 +28,9 @@ final class TapListVModel {
     var firstItemIdentifier: UUID? { items.first?.id }
     @Published var name: String
 
-    private enum Constant {
-        static let saveQueueDelay: useconds_t = 1000000 // 1 second
-        static let queueName: String = "com.taplistvmodel.saveoperationqueue"
-    }
     private var modelObject: CompteObject
     private var cancellable: AnyCancellable?
-    private var dataManager: PersistenceManager
+    private var dataManager: DataManager
     private var saveOperationQueue: OperationQueue = {
         let oq = OperationQueue()
         oq.maxConcurrentOperationCount = 1
@@ -41,12 +41,19 @@ final class TapListVModel {
 
     // MARK: Lifecycle
     init(modelObject: CompteObject,
-         dataManager: PersistenceManager = PersistenceManager.shared) {
+         dataManager: DataManager = PersistenceManager.shared) {
         self.modelObject = modelObject
         self.name = modelObject.name
+        self.items = modelObject
+            .taps
+            .sorted(by: { $0.date > $1.date })
+        self.numberOfTaps = modelObject.taps.count
         self.dataManager = dataManager
-        self.items = modelObject.taps.sorted(by: { $0.date > $1.date })
-        self.numberOfTaps = self.items.count
+        cancellable = self.dataManager
+            .objectWillChange
+            .sink { _ in } receiveValue: { [weak self] _ in
+                self?.objectWillChange.send()
+            }
     }
 }
 // MARK: - Contract
@@ -62,18 +69,21 @@ extension TapListVModel: TapListVModelProtocol {
     func delete(_ id: UUID) {
         guard let object = items.first(where: { $0.id == id }) else { return }
         dataManager.delete(mapper: TapMapper(object), requireSave: true)
+        items.removeAll(where: { $0.id == id })
     }
     func cleanData() {
         guard !items.isEmpty else { return }
         defer { dataManager.save() }
-        dataManager.update(mapper: CompteMapper(modelObject.copyWithDefaultState()))
+        dataManager.update(mapper: CompteMapper(modelObject.copyWithDefaultState()),
+                           requireSave: false)
         items.removeAll()
     }
 }
 // MARK: - Helpers
 private extension TapListVModel {
     func store(_ object: TapObject) {
-        dataManager.add(mapper: TapMapper(object))
+        dataManager.add(mapper: TapMapper(object),
+                        requireSave: false)
         enqueueSaveOperation()
     }
     func enqueueSaveOperation() {
@@ -87,8 +97,5 @@ private extension TapListVModel {
         }
 
         saveOperationQueue.addOperation(operation)
-    }
-    func fetchData() {
-        dataManager.fetch(mapper: CompteMapper(modelObject))
     }
 }

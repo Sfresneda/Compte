@@ -86,10 +86,10 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
 
 // MARK: - Preview
 struct BoardList_Previews: PreviewProvider {
-    static var vmodel: BoardListVModel {
+    static var vmodel: BoardListVModel<PersistenceManager> {
         let numberOfItems = 4
         let numberOfTaps = 100
-        let model = BoardListVModel()
+        let model = BoardListVModel<PersistenceManager>()
         model.items = (0..<numberOfItems).map {_ in
             CompteObject(id: UUID(),
                          date: Date().timeIntervalSince1970,
@@ -105,8 +105,8 @@ struct BoardList_Previews: PreviewProvider {
 }
 
 struct EMPTY_Previews: PreviewProvider {
-    static var vmodel: BoardListVModel {
-        let model = BoardListVModel()
+    static var vmodel: BoardListVModel<PersistenceManager> {
+        let model = BoardListVModel<PersistenceManager>()
         model.items = []
         return model
     }

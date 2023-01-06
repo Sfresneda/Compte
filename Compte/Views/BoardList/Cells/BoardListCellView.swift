@@ -11,8 +11,6 @@ import SwiftUI
 struct BoardListCellView: View {
     // MARK: Vars
     @Binding var model: CompteObject
-    var onDelete: ((UUID) -> Void)?
-    var onRename: (() -> Void)?
     let decorator: BoardListCellDecorator = DefaultBoardListCellDecorator()
 
     // MARK: Lifecycle
@@ -47,25 +45,6 @@ struct BoardListCellView: View {
                 }
             }
             .padding()
-            .swipeActions(allowsFullSwipe: true) {
-                Button(role: .destructive) {
-                    withAnimation {
-                        onDelete?(model.id)
-                    }
-                } label: {
-                    Image(systemName: decorator.swipeActionDeleteImageName)
-                }
-                .tint(decorator.swipeActionDeleteColor)
-
-                Button {
-                    withAnimation {
-                        onRename?()
-                    }
-                } label: {
-                    Image(systemName: decorator.swipeActionRenameImageName)
-                }
-                .tint(decorator.swipeActionRenameColor)
-            }
         }
     }
 }

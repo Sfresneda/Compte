@@ -26,17 +26,33 @@ struct BoardScrollView: View {
                     NavigationLink(destination: ViewBuilderCoordinator
                         .shared
                         .buildTapListView(object: item.wrappedValue )) {
-                            BoardListCellView(model: item) { identifier in
-                                delete(identifier)
-                            } onRename: {
-                                rename(item.wrappedValue)
-                            }
+                            BoardListCellView(model: item)
                         }
                         .listRowInsets(EdgeInsets(top: .zero,
                                                   leading: .zero,
                                                   bottom: .zero,
                                                   trailing: 20))
                         .listRowSeparator(.hidden)
+                        .swipeActions(allowsFullSwipe: true) {
+                            Button(role: .destructive) {
+                                withAnimation {
+                                    delete(item.wrappedValue.id)
+                                }
+                            } label: {
+                                Image(systemName: "trash")
+                            }
+                            .tint(Color.warning)
+
+                            Button {
+                                withAnimation {
+                                    rename(item.wrappedValue)
+                                }
+                            } label: {
+                                Image(systemName: "pencil.line")
+                            }
+                            .tint(Color.textSecondary)
+                        }
+
                 }
                 .listRowBackground(Color.suplementaryBackground)
             }
@@ -56,10 +72,12 @@ struct BoardScrollView: View {
 struct BoardScrollView_Previews: PreviewProvider {
     static var previews: some View {
         var items = Array(repeating: CompteObject.defaultImplementation(), count: 50)
-        BoardScrollView(items: .constant(items)) { id in
-            items.removeAll(where: { $0.id == id })
-        } rename: { _ in
-            // Silent is gold
+        NavigationView {
+            BoardScrollView(items: .constant(items)) { id in
+                items.removeAll(where: { $0.id == id })
+            } rename: { _ in
+                // Silent is gold
+            }
         }
     }
 }
