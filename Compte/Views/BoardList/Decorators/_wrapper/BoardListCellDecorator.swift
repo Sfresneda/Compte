@@ -26,11 +26,6 @@ protocol BoardListCellDecorator {
     var lastModificationFormat: Date.FormatStyle { get }
     var lastModificationFont: Font { get }
     var lastModificationForegroundColor: Color { get }
-
-    var swipeActionDeleteImageName: String { get }
-    var swipeActionRenameImageName: String { get }
-    var swipeActionDeleteColor: Color { get }
-    var swipeActionRenameColor: Color { get }
 }
 extension BoardListCellDecorator {
     var tapsIndicatorFont: Font {
@@ -77,17 +72,5 @@ extension BoardListCellDecorator {
     }
     var lastModificationForegroundColor: Color {
         .textSecondary
-    }
-    var swipeActionDeleteImageName: String {
-        "trash"
-    }
-    var swipeActionRenameImageName: String {
-        "pencil.line"
-    }
-    var swipeActionDeleteColor: Color {
-        Color.warning
-    }
-    var swipeActionRenameColor: Color {
-        Color.textSecondary
     }
 }
