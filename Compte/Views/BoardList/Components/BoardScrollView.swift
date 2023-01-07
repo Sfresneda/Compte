@@ -13,7 +13,8 @@ struct BoardScrollView: View {
     @Binding var items: [CompteObject]
     var delete: (UUID) -> Void
     var rename: (CompteObject) -> Void
-    
+    var decorator: BoardScrollDecorator = DefaultBoardScrollDecorator()
+
     private var firstItem: UUID? {
         items.first?.id
     }
@@ -28,10 +29,7 @@ struct BoardScrollView: View {
                         .buildTapListView(object: item.wrappedValue )) {
                             BoardListCellView(model: item)
                         }
-                        .listRowInsets(EdgeInsets(top: .zero,
-                                                  leading: .zero,
-                                                  bottom: .zero,
-                                                  trailing: 20))
+                        .listRowInsets(decorator.listRowInsets)
                         .listRowSeparator(.hidden)
                         .swipeActions(allowsFullSwipe: true) {
                             Button(role: .destructive) {
@@ -39,22 +37,22 @@ struct BoardScrollView: View {
                                     delete(item.wrappedValue.id)
                                 }
                             } label: {
-                                Image(systemName: "trash")
+                                decorator.swipeDeleteActionLabel
                             }
-                            .tint(Color.warning)
+                            .tint(decorator.swipeDeleteTint)
 
                             Button {
                                 withAnimation {
                                     rename(item.wrappedValue)
                                 }
                             } label: {
-                                Image(systemName: "pencil.line")
+                                decorator.swipeRenameActionLabel
                             }
-                            .tint(Color.textSecondary)
+                            .tint(decorator.swipeRenameTint)
                         }
 
                 }
-                .listRowBackground(Color.suplementaryBackground)
+                .listRowBackground(decorator.listRowBackground)
             }
             .listStyle(.plain)
             .onChange(of: items) { newValue in
@@ -64,7 +62,7 @@ struct BoardScrollView: View {
                 }
             }
         }
-        .background(Color.grayBackground)
+        .background(decorator.backgroundColor)
     }
 }
 

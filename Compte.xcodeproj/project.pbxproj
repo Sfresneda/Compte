@@ -61,6 +61,8 @@
 		37E84F21294B29130039BB4F /* CompteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F20294B29130039BB4F /* CompteObject.swift */; };
 		37E84F23294B291B0039BB4F /* TapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F22294B291B0039BB4F /* TapObject.swift */; };
 		37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30517294292BF003AADD6 /* VisualEffectView.swift */; };
+		37F97C0C29696B4F000400D4 /* BoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */; };
+		37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,8 @@
 		37E84F20294B29130039BB4F /* CompteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteObject.swift; sourceTree = "<group>"; };
 		37E84F22294B291B0039BB4F /* TapObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapObject.swift; sourceTree = "<group>"; };
 		37F30517294292BF003AADD6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
+		37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecorator.swift; sourceTree = "<group>"; };
+		37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardScrollDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +513,7 @@
 				37B1B97829549093002B99E0 /* _wrapper */,
 				37B1B97D2954960B002B99E0 /* Cells */,
 				37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */,
+				37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */,
 			);
 			path = Decorators;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 			children = (
 				37B1B979295490D7002B99E0 /* BoardListDecorator.swift */,
 				37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */,
+				37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */,
 			);
 			path = _wrapper;
 			sourceTree = "<group>";
@@ -793,6 +799,7 @@
 				37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */,
 				372D2DC72959C5A3009CF1BE /* Color.swift in Sources */,
 				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
+				37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */,
 				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
 				378572E32950635C005AFE9A /* RenameCardView.swift in Sources */,
@@ -800,6 +807,7 @@
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */,
 				37B1B96F2954825F002B99E0 /* DefaultTapListCellDecorator.swift in Sources */,
+				37F97C0C29696B4F000400D4 /* BoardScrollDecorator.swift in Sources */,
 				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
 				37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */,
 				37327E8D2946348500F19D4E /* BoardListView.swift in Sources */,
