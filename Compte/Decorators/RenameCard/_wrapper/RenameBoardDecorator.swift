@@ -10,6 +10,7 @@ import SwiftUI
 
 protocol RenameBoardDecorator {
     var viewBackgroundColor: Color { get }
+
     var limitChars: Int { get }
     var limitCharsText: String { get }
     var limitCharsMaxWidth: CGFloat { get }
@@ -17,9 +18,9 @@ protocol RenameBoardDecorator {
     var limitCharsSubmitButtonType: SubmitLabel { get }
     var limitCharsForegroundColor: Color { get }
     var limitCharsFont: Font { get }
+
     var textEditorBackgroundColor: Color { get }
     var textEditorCornerRadius: CGFloat { get }
-    
     var viewCornerShadowRadius: CGFloat { get }
     var viewMaxHeight: CGFloat { get }
     var overlayColor: Color { get }

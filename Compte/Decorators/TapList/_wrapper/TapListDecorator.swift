@@ -10,7 +10,6 @@ import SwiftUI
 
 protocol TapListDecorator {
     var viewBackgroundColor: Color { get }
-
     var sectionTitle: String { get }
     var sectionForegroundColor: Color { get }
     var scrollToTopAnimation: Animation { get }
@@ -24,10 +23,8 @@ protocol TapListDecorator {
     var tapButtonFont: Font { get }
     var tapButtonMaxWidth: CGFloat { get }
     var tapButtonBackgroundColor: Color { get }
-
     var counterViewPadding: EdgeInsets { get }
     var counterViewMaxHeight: CGFloat { get }
-
     var trashButtonColor: Color { get }
 }
 
