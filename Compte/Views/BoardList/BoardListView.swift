@@ -83,34 +83,3 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
         }
     }
 }
-
-// MARK: - Preview
-struct BoardList_Previews: PreviewProvider {
-    static var vmodel: BoardListVModel<PersistenceManager> {
-        let numberOfItems = 4
-        let numberOfTaps = 100
-        let model = BoardListVModel<PersistenceManager>()
-        model.items = (0..<numberOfItems).map {_ in
-            CompteObject(id: UUID(),
-                         date: Date().timeIntervalSince1970,
-                         name: String(UUID().uuidString.prefix(Int.random(in: 0..<50))),
-                         taps: Array(repeating: TapObject.defaultImplementation(),
-                                     count: numberOfTaps))
-        }
-        return model
-    }
-    static var previews: some View {
-        BoardListView<BoardListVModel>(vmodel: BoardList_Previews.vmodel)
-    }
-}
-
-struct EMPTY_Previews: PreviewProvider {
-    static var vmodel: BoardListVModel<PersistenceManager> {
-        let model = BoardListVModel<PersistenceManager>()
-        model.items = []
-        return model
-    }
-    static var previews: some View {
-        BoardListView<BoardListVModel>(vmodel: EMPTY_Previews.vmodel)
-    }
-}

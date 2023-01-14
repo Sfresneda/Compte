@@ -52,6 +52,7 @@
 		37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */; };
 		37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */; };
 		37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */; };
+		37D105882972A37600D23ABD /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105872972A37600D23ABD /* Previews.swift */; };
 		37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */; };
 		37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */; };
 		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
@@ -135,6 +136,7 @@
 		37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderDecorator.swift; sourceTree = "<group>"; };
 		37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderWrapper.swift; sourceTree = "<group>"; };
 		37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyTapListDecorator.swift; sourceTree = "<group>"; };
+		37D105872972A37600D23ABD /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
 		37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModelTests.swift; sourceTree = "<group>"; };
 		37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RenameCardView+Components.swift"; sourceTree = "<group>"; };
 		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -193,8 +195,8 @@
 		37327E8029462FEC00F19D4E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				3793DEF229535C9C00C04C30 /* UserDefaults */,
 				3793DEF129535C9300C04C30 /* CoreData */,
+				3793DEF229535C9C00C04C30 /* UserDefaults */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -215,7 +217,6 @@
 				37327E8E294634D000F19D4E /* BoardListVModel.swift */,
 				378572DE29505859005AFE9A /* Cells */,
 				3793DEEE295359AE00C04C30 /* Components */,
-				37B1B97729549083002B99E0 /* Decorators */,
 			);
 			path = BoardList;
 			sourceTree = "<group>";
@@ -262,7 +263,6 @@
 			children = (
 				37830D7A2951A3FE00AEC7D2 /* _wrapper */,
 				37A69E332942641000129FB1 /* Cells */,
-				37B1B96629547FF1002B99E0 /* Decorators */,
 				373A3DA2293F43120083F74C /* TapListView.swift */,
 				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
 			);
@@ -297,9 +297,8 @@
 		378572E129506348005AFE9A /* Rename */ = {
 			isa = PBXGroup;
 			children = (
-				37B1B971295485E7002B99E0 /* Decorators */,
-				378572E22950635C005AFE9A /* RenameCardView.swift */,
 				37D10D29295DE377000ACD80 /* Extensions */,
+				378572E22950635C005AFE9A /* RenameCardView.swift */,
 			);
 			path = Rename;
 			sourceTree = "<group>";
@@ -367,13 +366,13 @@
 		37A69E322942640B00129FB1 /* Shared Components */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DAE293F56200083F74C /* Navbar */,
-				378572E129506348005AFE9A /* Rename */,
 				373A3DA7293F46770083F74C /* CounterView.swift */,
 				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
+				373A3DAE293F56200083F74C /* Navbar */,
+				37BFC25B2955B0B7006AC26B /* Placeholder */,
+				378572E129506348005AFE9A /* Rename */,
 				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
 				373A3DAC293F48B60083F74C /* TapView.swift */,
-				37BFC25B2955B0B7006AC26B /* Placeholder */,
 			);
 			path = "Shared Components";
 			sourceTree = "<group>";
@@ -428,8 +427,10 @@
 			isa = PBXGroup;
 			children = (
 				37B0C072293F427F00317132 /* CompteApp.swift */,
+				37D105892972A57B00D23ABD /* Decorators */,
 				37E84F1F294B29080039BB4F /* Domain */,
 				37F30516294292AC003AADD6 /* Helpers */,
+				37D105862972A36700D23ABD /* Previews */,
 				373A3D9E293F42E50083F74C /* Resources */,
 				37327E7F29462FE900F19D4E /* Services */,
 				37A69E322942640B00129FB1 /* Shared Components */,
@@ -463,14 +464,14 @@
 			path = CompteUITests;
 			sourceTree = "<group>";
 		};
-		37B1B96629547FF1002B99E0 /* Decorators */ = {
+		37B1B96629547FF1002B99E0 /* TapList */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B9692954810D002B99E0 /* _wrapper */,
 				37B1B970295485D0002B99E0 /* Cells */,
 				37B1B96729548000002B99E0 /* DefaultTapListDecorator.swift */,
 			);
-			path = Decorators;
+			path = TapList;
 			sourceTree = "<group>";
 		};
 		37B1B9692954810D002B99E0 /* _wrapper */ = {
@@ -490,13 +491,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		37B1B971295485E7002B99E0 /* Decorators */ = {
+		37B1B971295485E7002B99E0 /* RenameCard */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B972295485EC002B99E0 /* _wrapper */,
 				37B1B97529548608002B99E0 /* DefaultRenameBoardDecorator.swift */,
 			);
-			path = Decorators;
+			path = RenameCard;
 			sourceTree = "<group>";
 		};
 		37B1B972295485EC002B99E0 /* _wrapper */ = {
@@ -507,7 +508,7 @@
 			path = _wrapper;
 			sourceTree = "<group>";
 		};
-		37B1B97729549083002B99E0 /* Decorators */ = {
+		37B1B97729549083002B99E0 /* BoardList */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B97829549093002B99E0 /* _wrapper */,
@@ -515,7 +516,7 @@
 				37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */,
 				37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */,
 			);
-			path = Decorators;
+			path = BoardList;
 			sourceTree = "<group>";
 		};
 		37B1B97829549093002B99E0 /* _wrapper */ = {
@@ -548,20 +549,19 @@
 			isa = PBXGroup;
 			children = (
 				37BFC2622955B637006AC26B /* _wrapper */,
-				37BFC25C2955B0C7006AC26B /* Decorators */,
 				37BFC2592955A6AD006AC26B /* PlaceholderView.swift */,
 			);
 			path = Placeholder;
 			sourceTree = "<group>";
 		};
-		37BFC25C2955B0C7006AC26B /* Decorators */ = {
+		37BFC25C2955B0C7006AC26B /* Placeholder */ = {
 			isa = PBXGroup;
 			children = (
 				37BFC25D2955B0D1006AC26B /* _wrapper */,
 				37BFC25E2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift */,
 				37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */,
 			);
-			path = Decorators;
+			path = Placeholder;
 			sourceTree = "<group>";
 		};
 		37BFC25D2955B0D1006AC26B /* _wrapper */ = {
@@ -578,6 +578,25 @@
 				37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */,
 			);
 			path = _wrapper;
+			sourceTree = "<group>";
+		};
+		37D105862972A36700D23ABD /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				37D105872972A37600D23ABD /* Previews.swift */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		37D105892972A57B00D23ABD /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				37B1B97729549083002B99E0 /* BoardList */,
+				37BFC25C2955B0C7006AC26B /* Placeholder */,
+				37B1B971295485E7002B99E0 /* RenameCard */,
+				37B1B96629547FF1002B99E0 /* TapList */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		37D10D23295DB9A6000ACD80 /* TapList */ = {
@@ -823,6 +842,7 @@
 				37BFC25F2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift in Sources */,
 				37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */,
 				37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */,
+				37D105882972A37600D23ABD /* Previews.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,

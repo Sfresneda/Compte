@@ -56,19 +56,3 @@ private extension BoardListCellView {
         : String(value)
     }
 }
-
-// MARK: - Preview
-struct BoardListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        let numberOfTaps: Int = 100
-        let tapsCollection = Array(repeating: TapObject(date: Date().timeIntervalSince1970,
-                                                        tapNumber: .zero),
-                                   count: numberOfTaps)
-        let model = CompteObject(id: nil,
-                                 date: Date().timeIntervalSince1970,
-                                 name: "test",
-                                 taps: tapsCollection,
-                                 lastModified: Date().timeIntervalSince1970)
-        BoardListCellView(model: .constant(model))
-    }
-}

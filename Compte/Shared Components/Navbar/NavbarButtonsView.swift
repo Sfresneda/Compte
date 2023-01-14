@@ -34,11 +34,3 @@ struct NavbarButtonsView: View {
         }
     }
 }
-
-// MARK: - Preview
-struct MainNavbarButtonsView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavbarButtonsView(items: .constant(NavbarButton.allCases),
-                          action: { _ in /* Silent is golden */ })
-    }
-}

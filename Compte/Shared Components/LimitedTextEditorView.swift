@@ -45,15 +45,3 @@ extension View {
                                        limitReached: limitReached))
     }
 }
-
-// MARK: - Preview
-struct LimitedTextEditorView_Previews: PreviewProvider {
-    static var previews: some View {
-        let text: Binding<String> = .constant("hollla")
-        TextEditor(text: text)
-            .limitCharacters(text,
-                             limit: 50) { _ in
-                fatalError()
-            }
-    }
-}

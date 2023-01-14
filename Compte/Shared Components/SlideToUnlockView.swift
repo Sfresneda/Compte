@@ -42,10 +42,3 @@ private extension SlideToUnlockView {
         sliderValue = .zero
     }
 }
-
-// MARK: - Preview
-struct SlideToUnlockView_Previews: PreviewProvider {
-    static var previews: some View {
-        SlideToUnlockView()
-    }
-}

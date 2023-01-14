@@ -26,16 +26,3 @@ struct CounterView: View {
         .background(Color.suplementaryBackground)
     }
 }
-
-// MARK: - Preview
-struct CounterView_Previews: PreviewProvider {
-    static var previews: some View {
-        ZStack {
-            Image(systemName: "pencil")
-                .resizable()
-                .scaledToFit()
-            CounterView(currentValue: .constant(1))
-        }
-    }
-}
-
