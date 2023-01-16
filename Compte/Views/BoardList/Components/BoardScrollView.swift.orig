@@ -54,7 +54,7 @@ struct BoardScrollView: View {
                         }
 
                 }
-                .listRowBackground(CardCellBackgroundView())
+                .listRowBackground(decorator.listRowBackground)
             }
             .listStyle(.plain)
             .onChange(of: items) { newValue in
@@ -66,4 +66,57 @@ struct BoardScrollView: View {
         }
         .background(decorator.backgroundColor)
     }
+
+    func customView() -> some View {
+        CellBackground()
+    }
 }
+
+struct CellBackground: View {
+    var body: some View {
+        HStack(alignment: .firstTextBaseline) {
+            VStack {
+                Spacer()
+                Text("")
+                    .frame(maxWidth: .infinity)
+                Spacer()
+            }
+            .background(Color.fireOrange)
+            .frame(maxWidth: 100, maxHeight: .infinity)
+            Spacer()
+        }
+        .frame(maxHeight: .infinity)
+    }
+}
+<<<<<<< Updated upstream
+=======
+
+// MARK: - Preview
+struct BoardScrollView_Previews: PreviewProvider {
+    static var previews: some View {
+        var items = Array(repeating: CompteObject.defaultImplementation(), count: 50)
+        BoardScrollView(items: .constant(items), multiSelection: .constant([])) { id in
+            items.removeAll(where: { $0.id == id })
+        } rename: { _ in
+            // Silent is gold
+        }
+    }
+}
+
+// MARK: - Preview
+struct EDITBoardScrollView_Previews: PreviewProvider {
+    static var previews: some View {
+        var items = Array(repeating: CompteObject.defaultImplementation(), count: 50)
+        NavigationView {
+            BoardScrollView(items: .constant(items), multiSelection: .constant(Set(items.reduce([], { $0 + [$1.id]})))) { id in
+                items.removeAll(where: { $0.id == id })
+            } rename: { _ in
+                // Silent is gold
+            }
+            .toolbar {
+                EditButton()
+            }
+        }
+    }
+}
+>>>>>>> Stashed changes

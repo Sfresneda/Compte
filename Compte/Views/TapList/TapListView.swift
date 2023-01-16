@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - TapListView
 struct TapListView<Model>: View where Model: TapListVModelProtocol {
     // MARK: Vars
-    @ObservedObject var vmodel: Model
+    @StateObject var vmodel: Model
     @State private var needsToShowAlert: Bool = false
     let decorator: TapListDecorator = DefaultTapListDecorator()
 

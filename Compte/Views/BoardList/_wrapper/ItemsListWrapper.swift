@@ -24,10 +24,12 @@ protocol BoardListVModelProtocol: ObservableObject {
     var isRenameViewPresented: Bool { get }
 
     var navigationBarItems: [NavbarButton] { get set }
+    var multiSelection: Set<UUID> { get set }
     var firstItemIdentifier: UUID? { get }
     var objectToRename: CompteObject? { get }
     var isAnObjectToRename: Bool { get }
-
+    var isEditMode: Bool { get set }
+    
     func renameViewInvocationAction(_ action: RenameViewPresentingAction)
     func renameViewSubmitAction(_ action: RenameViewSubmitAction)
 

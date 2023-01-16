@@ -58,7 +58,7 @@ struct BoardScrollView_Previews: PreviewProvider {
     static var previews: some View {
         var items = Array(repeating: CompteObject.defaultImplementation(), count: 50)
         NavigationView {
-            BoardScrollView(items: .constant(items)) { id in
+            BoardScrollView(items: .constant(items), multiSelection: .constant([])) { id in
                 items.removeAll(where: { $0.id == id })
             } rename: { _ in
                 // Silent is gold

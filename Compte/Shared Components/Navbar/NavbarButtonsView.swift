@@ -27,7 +27,7 @@ struct NavbarButtonsView: View {
                             Text(button.name)
                         }
                     }
-                    .buttonStyle(.bordered)
+                    .buttonStyle(.automatic)
                 }
             }
             .padding()

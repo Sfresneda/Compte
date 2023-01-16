@@ -30,6 +30,8 @@
 		3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
+		3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */; };
+		37A1CF2C296090170044B23E /* EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1CF2B296090170044B23E /* EditMode.swift */; };
 		37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */; };
 		37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */; };
 		37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */; };
@@ -120,6 +122,8 @@
 		3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreMock.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
+		3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellBackgroundView.swift; sourceTree = "<group>"; };
+		37A1CF2B296090170044B23E /* EditMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMode.swift; sourceTree = "<group>"; };
 		37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorMock.swift; sourceTree = "<group>"; };
 		37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorTests.swift; sourceTree = "<group>"; };
 		37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecoratorMock.swift; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				3793DEEF295359C800C04C30 /* BoardScrollView.swift */,
+				3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -714,6 +719,7 @@
 			children = (
 				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
 				372D2DC62959C5A3009CF1BE /* Color.swift */,
+				37A1CF2B296090170044B23E /* EditMode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -899,6 +905,8 @@
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
 				37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */,
+				3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */,
+				37A1CF2C296090170044B23E /* EditMode.swift in Sources */,
 				37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */,
 				37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */,
 				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,

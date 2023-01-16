@@ -1,6 +1,8 @@
 "reset_counter" = "Resetejar Comptador";
 "add_new_board" = "Afegeix una targeta nova";
 "new_item" = "Article nou";
+"edit_item" = "Editar";
+"done_item" = "Fet";
 "delete_item" = "Suprimeix";
 "limit_characters" = "Màx. %d caràcters";
 "alert_cancel" = "Cancel · lar";

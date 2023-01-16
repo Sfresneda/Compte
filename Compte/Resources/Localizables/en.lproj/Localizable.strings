@@ -1,6 +1,8 @@
 "reset_counter" = "Reset Counter";
 "add_new_board" = "Add New Card";
 "new_item" = "New Item";
+"edit_item" = "Edit";
+"done_item" = "Done";
 "delete_item" = "Delete";
 "limit_characters" = "Max. %d Characters";
 "alert_cancel" = "Cancel";
