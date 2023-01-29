@@ -343,6 +343,7 @@ extension BoardListVModelTests {
         let deleteExpectation = XCTestExpectation(description: "delete action will never be fulfilled")
         deleteExpectation.isInverted = true
         var isDeleteActionLaunched: Bool = false
+        var lastItems: [CompteObject] = []
 
         // when
         sut.add()
@@ -353,13 +354,14 @@ extension BoardListVModelTests {
             .sink(receiveValue: { _ in
                 addExpectation.fulfill()
 
-                let itemIdentifier = self.sut.firstItemIdentifier
-
-                if isDeleteActionLaunched {
+                if isDeleteActionLaunched,
+                    lastItems.count > self.sut.items.count {
                     deleteExpectation.assertForOverFulfill.toggle()
                 }
 
-                if nil != itemIdentifier,
+                lastItems = self.sut.items
+
+                if nil != self.sut.firstItemIdentifier,
                    !isDeleteActionLaunched {
                     isDeleteActionLaunched.toggle()
                     self.sut.delete(UUID())
