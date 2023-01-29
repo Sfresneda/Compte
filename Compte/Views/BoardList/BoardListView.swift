@@ -33,7 +33,6 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                     } rename: { object in
                         vmodel.renameViewInvocationAction(.edit(object))
                     }
-                    .environment(\.editMode, $vmodel.isEditMode.toEditMode)
                     .toolbar {
                         NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
                             withAnimation { vmodel.handleNavbarButton(button) }
@@ -63,6 +62,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
             }
             .navigationViewStyle(.stack)
             .accentColor(decorator.navigationBarAccentColor)
+            .environment(\.editMode,$vmodel.isEditMode.toEditMode)
 
             placeholderview()
             renameCardView()
@@ -81,6 +81,7 @@ private extension BoardListView {
             .frame(maxWidth: .infinity,
                    maxHeight: .infinity,
                    alignment: .center)
+            .background(decorator.viewBackgroundColor)
         }
     }
     @ViewBuilder

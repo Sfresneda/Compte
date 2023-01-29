@@ -33,7 +33,7 @@ struct BoardScrollView: View {
                     .listRowInsets(decorator.listRowInsets)
                     .listRowSeparator(.hidden)
                     .listRowBackground(CardCellBackgroundView())
-                    .swipeActions(allowsFullSwipe: true) {                             
+                    .swipeActions(allowsFullSwipe: false) {
                          Button(role: .destructive) {
                              withAnimation {
                                  delete(item.wrappedValue.id)
