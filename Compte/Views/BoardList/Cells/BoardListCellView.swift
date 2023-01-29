@@ -19,7 +19,6 @@ struct BoardListCellView: View {
             VStack(alignment: .center) {
                 Text(countNumber(for: model.taps.count))
                     .font(decorator.tapsIndicatorFont)
-                    .bold()
                     .foregroundColor(decorator.tapsIndicatorForegroundColor)
                     .multilineTextAlignment(decorator.tapsIndicatorTextAligment)
             }
@@ -29,7 +28,6 @@ struct BoardListCellView: View {
             .padding(decorator.tapsIndicatorPadding)
             .background(decorator.tapsIndicatorBackgroundColor)
             .cornerRadius(decorator.tapsIndicatorCornerRadious)
-
             VStack(alignment: .leading) {
                 Text(model.name)
                     .font(decorator.boardTitleFont)
@@ -57,18 +55,29 @@ private extension BoardListCellView {
     }
 }
 
-// MARK: - Preview
-struct BoardListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        let numberOfTaps: Int = 100
-        let tapsCollection = Array(repeating: TapObject(date: Date().timeIntervalSince1970,
-                                                        tapNumber: .zero),
-                                   count: numberOfTaps)
-        let model = CompteObject(id: nil,
-                                 date: Date().timeIntervalSince1970,
-                                 name: "test",
-                                 taps: tapsCollection,
-                                 lastModified: Date().timeIntervalSince1970)
-        BoardListCellView(model: .constant(model))
+
+struct ContentView: View {
+    let friends = ["Antoine", "Bas", "Curt", "Dave", "Erica"]
+
+    var body: some View {
+        List {
+            ForEach(friends, id: \.self) { friend in
+                Text(friend)
+                    .swipeActions(allowsFullSwipe: false) {
+                        Button {
+                            print("Muting conversation")
+                        } label: {
+                            Label("Mute", systemImage: "bell.slash.fill")
+                        }
+                        .tint(.indigo)
+
+                        Button(role: .destructive) {
+                            print("Deleting conversation")
+                        } label: {
+                            Label("Delete", systemImage: "trash.fill")
+                        }
+                    }
+            }
+        }
     }
 }

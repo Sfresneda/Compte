@@ -1,6 +1,8 @@
 "reset_counter" = "Reiniciar contador";
 "add_new_board" = "Agregar nueva tarjeta";
 "new_item" = "Nuevo elemento";
+"edit_item" = "Editar";
+"done_item" = "Hecho";
 "delete_item" = "Eliminar";
 "limit_characters" = "Máx. %d caracteres";
 "alert_cancel" = "Cancelar";

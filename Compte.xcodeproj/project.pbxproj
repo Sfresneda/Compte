@@ -30,6 +30,16 @@
 		3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */; };
 		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
 		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
+		3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */; };
+		37A1CF2C296090170044B23E /* EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1CF2B296090170044B23E /* EditMode.swift */; };
+		37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */; };
+		37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */; };
+		37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */; };
+		37A36CA12972BC2400CABA10 /* RenameBoardDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */; };
+		37A36CA32972C01E00CABA10 /* TapListCellDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */; };
+		37A36CA52972C07B00CABA10 /* TaplistCellDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */; };
+		37A36CA72972C1AA00CABA10 /* TapListDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */; };
+		37A36CA92972C21700CABA10 /* TapListDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */; };
 		37A69E352942643400129FB1 /* TapListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* TapListCellView.swift */; };
 		37AEA893295C7BE500E12A4F /* BoardListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEA892295C7BE500E12A4F /* BoardListVModelTests.swift */; };
 		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
@@ -52,6 +62,11 @@
 		37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */; };
 		37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */; };
 		37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */; };
+		37D105882972A37600D23ABD /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105872972A37600D23ABD /* Previews.swift */; };
+		37D1058C2972A77100D23ABD /* BoardListDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */; };
+		37D1058F2972A7B700D23ABD /* BoardListDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */; };
+		37D105912972B28500D23ABD /* BoardListCellDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */; };
+		37D105932972B29400D23ABD /* BoardListCellDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */; };
 		37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */; };
 		37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */; };
 		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
@@ -107,6 +122,16 @@
 		3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreMock.swift; sourceTree = "<group>"; };
 		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
 		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
+		3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellBackgroundView.swift; sourceTree = "<group>"; };
+		37A1CF2B296090170044B23E /* EditMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMode.swift; sourceTree = "<group>"; };
+		37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorMock.swift; sourceTree = "<group>"; };
+		37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorTests.swift; sourceTree = "<group>"; };
+		37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecoratorMock.swift; sourceTree = "<group>"; };
+		37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecoratorTests.swift; sourceTree = "<group>"; };
+		37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellDecoratorMock.swift; sourceTree = "<group>"; };
+		37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaplistCellDecoratorTests.swift; sourceTree = "<group>"; };
+		37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListDecoratorMock.swift; sourceTree = "<group>"; };
+		37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListDecoratorTests.swift; sourceTree = "<group>"; };
 		37A69E342942643400129FB1 /* TapListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellView.swift; sourceTree = "<group>"; };
 		37AEA892295C7BE500E12A4F /* BoardListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListVModelTests.swift; sourceTree = "<group>"; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +160,11 @@
 		37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderDecorator.swift; sourceTree = "<group>"; };
 		37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderWrapper.swift; sourceTree = "<group>"; };
 		37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyTapListDecorator.swift; sourceTree = "<group>"; };
+		37D105872972A37600D23ABD /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
+		37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListDecoratorTests.swift; sourceTree = "<group>"; };
+		37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListDecoratorMock.swift; sourceTree = "<group>"; };
+		37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecoratorTests.swift; sourceTree = "<group>"; };
+		37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecoratorMock.swift; sourceTree = "<group>"; };
 		37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModelTests.swift; sourceTree = "<group>"; };
 		37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RenameCardView+Components.swift"; sourceTree = "<group>"; };
 		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
@@ -193,8 +223,8 @@
 		37327E8029462FEC00F19D4E /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
-				3793DEF229535C9C00C04C30 /* UserDefaults */,
 				3793DEF129535C9300C04C30 /* CoreData */,
+				3793DEF229535C9C00C04C30 /* UserDefaults */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -215,7 +245,6 @@
 				37327E8E294634D000F19D4E /* BoardListVModel.swift */,
 				378572DE29505859005AFE9A /* Cells */,
 				3793DEEE295359AE00C04C30 /* Components */,
-				37B1B97729549083002B99E0 /* Decorators */,
 			);
 			path = BoardList;
 			sourceTree = "<group>";
@@ -262,7 +291,6 @@
 			children = (
 				37830D7A2951A3FE00AEC7D2 /* _wrapper */,
 				37A69E332942641000129FB1 /* Cells */,
-				37B1B96629547FF1002B99E0 /* Decorators */,
 				373A3DA2293F43120083F74C /* TapListView.swift */,
 				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
 			);
@@ -297,9 +325,8 @@
 		378572E129506348005AFE9A /* Rename */ = {
 			isa = PBXGroup;
 			children = (
-				37B1B971295485E7002B99E0 /* Decorators */,
-				378572E22950635C005AFE9A /* RenameCardView.swift */,
 				37D10D29295DE377000ACD80 /* Extensions */,
+				378572E22950635C005AFE9A /* RenameCardView.swift */,
 			);
 			path = Rename;
 			sourceTree = "<group>";
@@ -342,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				3793DEEF295359C800C04C30 /* BoardScrollView.swift */,
+				3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -367,13 +395,13 @@
 		37A69E322942640B00129FB1 /* Shared Components */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DAE293F56200083F74C /* Navbar */,
-				378572E129506348005AFE9A /* Rename */,
 				373A3DA7293F46770083F74C /* CounterView.swift */,
 				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
+				373A3DAE293F56200083F74C /* Navbar */,
+				37BFC25B2955B0B7006AC26B /* Placeholder */,
+				378572E129506348005AFE9A /* Rename */,
 				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
 				373A3DAC293F48B60083F74C /* TapView.swift */,
-				37BFC25B2955B0B7006AC26B /* Placeholder */,
 			);
 			path = "Shared Components";
 			sourceTree = "<group>";
@@ -428,8 +456,10 @@
 			isa = PBXGroup;
 			children = (
 				37B0C072293F427F00317132 /* CompteApp.swift */,
+				37D105892972A57B00D23ABD /* Decorators */,
 				37E84F1F294B29080039BB4F /* Domain */,
 				37F30516294292AC003AADD6 /* Helpers */,
+				37D105862972A36700D23ABD /* Previews */,
 				373A3D9E293F42E50083F74C /* Resources */,
 				37327E7F29462FE900F19D4E /* Services */,
 				37A69E322942640B00129FB1 /* Shared Components */,
@@ -449,6 +479,7 @@
 		37B0C082293F428000317132 /* CompteTests */ = {
 			isa = PBXGroup;
 			children = (
+				37D1058A2972A74F00D23ABD /* Decorators */,
 				37D10D27295DE299000ACD80 /* Services */,
 				37AEA890295C7BB100E12A4F /* Views */,
 			);
@@ -463,14 +494,14 @@
 			path = CompteUITests;
 			sourceTree = "<group>";
 		};
-		37B1B96629547FF1002B99E0 /* Decorators */ = {
+		37B1B96629547FF1002B99E0 /* TapList */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B9692954810D002B99E0 /* _wrapper */,
 				37B1B970295485D0002B99E0 /* Cells */,
 				37B1B96729548000002B99E0 /* DefaultTapListDecorator.swift */,
 			);
-			path = Decorators;
+			path = TapList;
 			sourceTree = "<group>";
 		};
 		37B1B9692954810D002B99E0 /* _wrapper */ = {
@@ -490,13 +521,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		37B1B971295485E7002B99E0 /* Decorators */ = {
+		37B1B971295485E7002B99E0 /* RenameCard */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B972295485EC002B99E0 /* _wrapper */,
 				37B1B97529548608002B99E0 /* DefaultRenameBoardDecorator.swift */,
 			);
-			path = Decorators;
+			path = RenameCard;
 			sourceTree = "<group>";
 		};
 		37B1B972295485EC002B99E0 /* _wrapper */ = {
@@ -507,7 +538,7 @@
 			path = _wrapper;
 			sourceTree = "<group>";
 		};
-		37B1B97729549083002B99E0 /* Decorators */ = {
+		37B1B97729549083002B99E0 /* BoardList */ = {
 			isa = PBXGroup;
 			children = (
 				37B1B97829549093002B99E0 /* _wrapper */,
@@ -515,7 +546,7 @@
 				37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */,
 				37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */,
 			);
-			path = Decorators;
+			path = BoardList;
 			sourceTree = "<group>";
 		};
 		37B1B97829549093002B99E0 /* _wrapper */ = {
@@ -548,20 +579,19 @@
 			isa = PBXGroup;
 			children = (
 				37BFC2622955B637006AC26B /* _wrapper */,
-				37BFC25C2955B0C7006AC26B /* Decorators */,
 				37BFC2592955A6AD006AC26B /* PlaceholderView.swift */,
 			);
 			path = Placeholder;
 			sourceTree = "<group>";
 		};
-		37BFC25C2955B0C7006AC26B /* Decorators */ = {
+		37BFC25C2955B0C7006AC26B /* Placeholder */ = {
 			isa = PBXGroup;
 			children = (
 				37BFC25D2955B0D1006AC26B /* _wrapper */,
 				37BFC25E2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift */,
 				37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */,
 			);
-			path = Decorators;
+			path = Placeholder;
 			sourceTree = "<group>";
 		};
 		37BFC25D2955B0D1006AC26B /* _wrapper */ = {
@@ -578,6 +608,52 @@
 				37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */,
 			);
 			path = _wrapper;
+			sourceTree = "<group>";
+		};
+		37D105862972A36700D23ABD /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				37D105872972A37600D23ABD /* Previews.swift */,
+			);
+			path = Previews;
+			sourceTree = "<group>";
+		};
+		37D105892972A57B00D23ABD /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				37B1B97729549083002B99E0 /* BoardList */,
+				37BFC25C2955B0C7006AC26B /* Placeholder */,
+				37B1B971295485E7002B99E0 /* RenameCard */,
+				37B1B96629547FF1002B99E0 /* TapList */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		37D1058A2972A74F00D23ABD /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				37D1058D2972A7A800D23ABD /* Mock */,
+				37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */,
+				37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */,
+				37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */,
+				37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */,
+				37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */,
+				37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */,
+			);
+			path = Decorators;
+			sourceTree = "<group>";
+		};
+		37D1058D2972A7A800D23ABD /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */,
+				37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */,
+				37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */,
+				37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */,
+				37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */,
+				37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		37D10D23295DB9A6000ACD80 /* TapList */ = {
@@ -643,6 +719,7 @@
 			children = (
 				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
 				372D2DC62959C5A3009CF1BE /* Color.swift */,
+				37A1CF2B296090170044B23E /* EditMode.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -823,10 +900,13 @@
 				37BFC25F2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift in Sources */,
 				37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */,
 				37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */,
+				37D105882972A37600D23ABD /* Previews.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
 				37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */,
+				3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */,
+				37A1CF2C296090170044B23E /* EditMode.swift in Sources */,
 				37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */,
 				37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */,
 				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,
@@ -837,10 +917,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A36CA12972BC2400CABA10 /* RenameBoardDecoratorTests.swift in Sources */,
+				37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */,
+				37A36CA32972C01E00CABA10 /* TapListCellDecoratorMock.swift in Sources */,
+				37A36CA52972C07B00CABA10 /* TaplistCellDecoratorTests.swift in Sources */,
+				37D105932972B29400D23ABD /* BoardListCellDecoratorMock.swift in Sources */,
 				3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */,
+				37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */,
+				37A36CA72972C1AA00CABA10 /* TapListDecoratorMock.swift in Sources */,
+				37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */,
 				37AEA893295C7BE500E12A4F /* BoardListVModelTests.swift in Sources */,
 				37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */,
 				3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */,
+				37D1058F2972A7B700D23ABD /* BoardListDecoratorMock.swift in Sources */,
+				37A36CA92972C21700CABA10 /* TapListDecoratorTests.swift in Sources */,
+				37D105912972B28500D23ABD /* BoardListCellDecoratorTests.swift in Sources */,
+				37D1058C2972A77100D23ABD /* BoardListDecoratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

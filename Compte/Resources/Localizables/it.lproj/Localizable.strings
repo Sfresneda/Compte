@@ -1,6 +1,8 @@
 "reset_counter" = "Azzera contatore";
 "add_new_board" = "Aggiungi nuova carta";
 "new_item" = "Nuovo elemento";
+"edit_item" = "Modificare";
+"done_item" = "Fatto";
 "delete_item" = "Elimina";
 "limit_characters" = "Massimo %d caratteri";
 "alert_cancel" = "Annulla";

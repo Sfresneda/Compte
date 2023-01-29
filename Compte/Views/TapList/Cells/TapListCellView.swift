@@ -40,12 +40,3 @@ struct TapListCellView: View {
         }
     }
 }
-
-// MARK: - Preview
-struct MainViewListCell_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = TapObject(date: Date().timeIntervalSince1970,
-                             tapNumber: 1)
-        TapListCellView(model: model)
-    }
-}

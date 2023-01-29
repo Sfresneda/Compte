@@ -30,18 +30,3 @@ struct PlaceholderView<Decorator>: View where Decorator: PlaceholderDecorator {
             }
     }
 }
-
-// MARK: - Preview
-struct PlaceholderEmptyBoardListView_Previews: PreviewProvider {
-    static var previews: some View {
-        let decorator = PlaceholderEmptyBoardListDecorator()
-        PlaceholderView(decorator: decorator)
-    }
-}
-
-struct PlaceholderEmptyTapListView_Previews: PreviewProvider {
-    static var previews: some View {
-        let decorator = PlaceholderEmptyTapListDecorator()
-        PlaceholderView(decorator: decorator)
-    }
-}

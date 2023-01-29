@@ -10,7 +10,7 @@ import SwiftUI
 // MARK: - TapListView
 struct TapListView<Model>: View where Model: TapListVModelProtocol {
     // MARK: Vars
-    @ObservedObject var vmodel: Model
+    @StateObject var vmodel: Model
     @State private var needsToShowAlert: Bool = false
     let decorator: TapListDecorator = DefaultTapListDecorator()
 
@@ -90,33 +90,5 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
         .navigationTitle(vmodel.name)
         .navigationBarTitleDisplayMode(.inline)
         .background(decorator.viewBackgroundColor)
-    }
-}
-
-// MARK: - Preview
-struct TapListView_Previews: PreviewProvider {
-    static var model: TapListVModel<PersistenceManager> {
-        let model = TapListVModel(modelObject: CompteObject.defaultImplementation())
-        model.numberOfTaps = 1
-        model.items = Array<TapObject>
-            .init(repeating: TapObject(date: Date().timeIntervalSince1970,
-                                       tapNumber: 1),
-                  count: 1)
-        return model
-    }
-    static var previews: some View {
-        NavigationView {
-            TapListView(vmodel: model)
-        }
-    }
-}
-
-struct EmptyWTapListView_Previews: PreviewProvider {
-    static let model = TapListVModel(modelObject: CompteObject(date: Date().timeIntervalSince1970,
-                                                               name: "example-name"))
-    static var previews: some View {
-        NavigationView {
-            TapListView(vmodel: model)
-        }
     }
 }

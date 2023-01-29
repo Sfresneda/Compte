@@ -44,32 +44,3 @@ extension RenameCardView {
         isMaxCharactersReached = newValue
     }
 }
-
-// MARK: - Preview
-struct RenameCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = "Compte for testing purposes, Compte for testing"
-        ZStack {
-            Image(systemName: "square.and.arrow.up")
-                .resizable()
-                .scaledToFit()
-                .background(.mint)
-
-            RenameCardView(model: model)
-        }
-    }
-}
-
-struct EmptyRenameCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        let model = ""
-        ZStack {
-            Image(systemName: "square.and.arrow.up")
-                .resizable()
-                .scaledToFit()
-                .background(.mint)
-
-            RenameCardView(model: model)
-        }
-    }
-}

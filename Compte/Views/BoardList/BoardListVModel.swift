@@ -9,19 +9,32 @@ import Foundation
 import Combine
 
 private enum Constants {
-    static let defaultNavbarItems: [NavbarButton] = []
+    static func defaultNavbarItems(isEmpty: Bool)-> [NavbarButton] {
+        isEmpty
+        ? []
+        : [.edit]
+    }
+    static let editingNavbarItems: [NavbarButton] = [.done, .delete]
 }
 
 // MARK: - BoardListVModel
 final class BoardListVModel<DataManager: PersistenceManagerProtocol>: ObservableObject {
     // MARK: Vars
-    @Published var items: [CompteObject] = []
+    @Published var items: [CompteObject] = [] {
+        didSet {
+            updateNavigationBar()
+        }
+    }
     var isItemsEmpty: Bool { items.isEmpty }
     @Published var isRenameViewPresented: Bool = false
-    @Published var navigationBarItems: [NavbarButton] = Constants.defaultNavbarItems
+    @Published var navigationBarItems: [NavbarButton] = []
+    @Published var multiSelection: Set<UUID> = []
     var firstItemIdentifier: UUID? { items.first?.id }
     var objectToRename: CompteObject?
     var isAnObjectToRename: Bool { nil != objectToRename }
+    var isEditMode: Bool = false {
+        didSet { editModeDidChange() }
+    }
 
     private var cancellable: AnyCancellable?
     private var dataManager: DataManager
@@ -41,6 +54,11 @@ final class BoardListVModel<DataManager: PersistenceManagerProtocol>: Observable
 }
 // MARK: - Contract
 extension BoardListVModel: BoardListVModelProtocol {
+    func isTapViewVisible() -> Bool {
+        guard !isItemsEmpty else { return false }
+        guard !isEditMode else { return false }
+        return true
+    }
     func renameViewInvocationAction(_ action: RenameViewPresentingAction) {
         isRenameViewPresented.toggle()
 
@@ -67,8 +85,14 @@ extension BoardListVModel: BoardListVModelProtocol {
         switch button {
         case .new:
             add()
-        default:
-            break
+        case .edit:
+            isEditMode.toggle()
+        case .done:
+            isEditMode.toggle()
+        case .delete:
+            guard !multiSelection.isEmpty else { return }
+            multiSelection.forEach { delete($0) }
+            handleNavbarButton(.done)
         }
     }
     func add(with name: String? = nil) {
@@ -103,5 +127,18 @@ extension BoardListVModel: BoardListVModelProtocol {
 private extension BoardListVModel {
     func fetchData() {
         dataManager.fetch(mapper: CompteMapper())
+    }
+    func editModeDidChange() {
+        if !isEditMode {
+            multiSelection.removeAll()
+        }
+        updateNavigationBar()
+    }
+    func updateNavigationBar() {
+        if isEditMode {
+            navigationBarItems = Constants.editingNavbarItems
+        } else {
+            navigationBarItems = Constants.defaultNavbarItems(isEmpty: isItemsEmpty)
+        }
     }
 }
