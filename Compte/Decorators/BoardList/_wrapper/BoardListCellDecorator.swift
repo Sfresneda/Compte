@@ -30,6 +30,7 @@ protocol BoardListCellDecorator {
 extension BoardListCellDecorator {
     var tapsIndicatorFont: Font {
         .largeTitle
+        .bold()
     }
     var tapsIndicatorForegroundColor: Color {
         .white

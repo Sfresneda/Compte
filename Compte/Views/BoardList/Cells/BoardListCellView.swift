@@ -19,7 +19,6 @@ struct BoardListCellView: View {
             VStack(alignment: .center) {
                 Text(countNumber(for: model.taps.count))
                     .font(decorator.tapsIndicatorFont)
-                    .bold()
                     .foregroundColor(decorator.tapsIndicatorForegroundColor)
                     .multilineTextAlignment(decorator.tapsIndicatorTextAligment)
             }
@@ -29,7 +28,6 @@ struct BoardListCellView: View {
             .padding(decorator.tapsIndicatorPadding)
             .background(decorator.tapsIndicatorBackgroundColor)
             .cornerRadius(decorator.tapsIndicatorCornerRadious)
-
             VStack(alignment: .leading) {
                 Text(model.name)
                     .font(decorator.boardTitleFont)
@@ -54,5 +52,32 @@ private extension BoardListCellView {
         value > 99
         ? "+99"
         : String(value)
+    }
+}
+
+
+struct ContentView: View {
+    let friends = ["Antoine", "Bas", "Curt", "Dave", "Erica"]
+
+    var body: some View {
+        List {
+            ForEach(friends, id: \.self) { friend in
+                Text(friend)
+                    .swipeActions(allowsFullSwipe: false) {
+                        Button {
+                            print("Muting conversation")
+                        } label: {
+                            Label("Mute", systemImage: "bell.slash.fill")
+                        }
+                        .tint(.indigo)
+
+                        Button(role: .destructive) {
+                            print("Deleting conversation")
+                        } label: {
+                            Label("Delete", systemImage: "trash.fill")
+                        }
+                    }
+            }
+        }
     }
 }

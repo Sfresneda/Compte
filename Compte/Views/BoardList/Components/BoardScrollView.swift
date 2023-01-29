@@ -24,37 +24,34 @@ struct BoardScrollView: View {
     // MARK: Lifecycle
     var body: some View {
         ScrollViewReader { proxy in
-            List(selection: $multiSelection) {
-                ForEach($items, id: \.id) { item in
+            List($items, selection: $multiSelection) { item in
                     NavigationLink(destination: ViewBuilderCoordinator
                         .shared
                         .buildTapListView(object: item.wrappedValue )) {
                             BoardListCellView(model: item)
                         }
-                        .listRowInsets(decorator.listRowInsets)
-                        .listRowSeparator(.hidden)
-                        .swipeActions(allowsFullSwipe: true) {
-                            Button(role: .destructive) {
-                                withAnimation {
-                                    delete(item.wrappedValue.id)
-                                }
-                            } label: {
-                                decorator.swipeDeleteActionLabel
-                            }
-                            .tint(decorator.swipeDeleteTint)
+                    .listRowInsets(decorator.listRowInsets)
+                    .listRowSeparator(.hidden)
+                    .listRowBackground(CardCellBackgroundView())
+                    .swipeActions(allowsFullSwipe: true) {                             
+                         Button(role: .destructive) {
+                             withAnimation {
+                                 delete(item.wrappedValue.id)
+                             }
+                         } label: {
+                             decorator.swipeDeleteActionLabel
+                         }
+                         .tint(decorator.swipeDeleteTint)
 
-                            Button {
-                                withAnimation {
-                                    rename(item.wrappedValue)
-                                }
-                            } label: {
-                                decorator.swipeRenameActionLabel
-                            }
-                            .tint(decorator.swipeRenameTint)
-                        }
-
-                }
-                .listRowBackground(CardCellBackgroundView())
+                         Button {
+                             withAnimation {
+                                 rename(item.wrappedValue)
+                             }
+                         } label: {
+                             decorator.swipeRenameActionLabel
+                         }
+                         .tint(decorator.swipeRenameTint)
+                     }
             }
             .listStyle(.plain)
             .onChange(of: items) { newValue in

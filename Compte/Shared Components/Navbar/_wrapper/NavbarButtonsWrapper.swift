@@ -14,6 +14,11 @@ enum NavbarButton: Int, CaseIterable {
     case done
     case delete
 }
+enum NavBarPosition {
+    case right
+    case left
+}
+
 extension NavbarButton {
     var name: String {
         switch self {
@@ -35,6 +40,16 @@ extension NavbarButton {
             return "trash"
         default:
             return nil
+        }
+    }
+    var position: NavBarPosition {
+        switch self {
+        case .edit,
+                .delete,
+                .new:
+            return .right
+        case .done:
+            return .left
         }
     }
 }

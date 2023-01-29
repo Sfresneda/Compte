@@ -54,6 +54,11 @@ final class BoardListVModel<DataManager: PersistenceManagerProtocol>: Observable
 }
 // MARK: - Contract
 extension BoardListVModel: BoardListVModelProtocol {
+    func isTapViewVisible() -> Bool {
+        guard !isItemsEmpty else { return false }
+        guard !isEditMode else { return false }
+        return true
+    }
     func renameViewInvocationAction(_ action: RenameViewPresentingAction) {
         isRenameViewPresented.toggle()
 

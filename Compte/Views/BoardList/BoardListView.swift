@@ -26,24 +26,22 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     var body: some View {
         ZStack {
             NavigationView {
-                VStack {
-                    ZStack {
-                        BoardScrollView(items: $vmodel.items,
-                                        multiSelection: $vmodel.multiSelection) { identifier in
-                            vmodel.delete(identifier)
-                        } rename: { object in
-                            vmodel.renameViewInvocationAction(.edit(object))
+                ZStack {
+                    BoardScrollView(items: $vmodel.items,
+                                    multiSelection: $vmodel.multiSelection) { identifier in
+                        vmodel.delete(identifier)
+                    } rename: { object in
+                        vmodel.renameViewInvocationAction(.edit(object))
+                    }
+                    .environment(\.editMode, $vmodel.isEditMode.toEditMode)
+                    .toolbar {
+                        NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
+                            withAnimation { vmodel.handleNavbarButton(button) }
                         }
-                        .environment(\.editMode, $vmodel.isEditMode.toEditMode)
-                        .toolbar {
-                            NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
-                                withAnimation { vmodel.handleNavbarButton(button) }
-                            }
-                        }
-
+                    }
+                    if vmodel.isTapViewVisible() {
                         VStack {
                             Spacer()
-
                             TapView {
                                 Text(decorator.tapViewTextTitle)
                                     .bold()
@@ -63,24 +61,39 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                 .navigationTitle(decorator.navigationBarTitle)
                 .navigationBarTitleDisplayMode(decorator.navigationBarTitleDisplayMode)
             }
+            .navigationViewStyle(.stack)
             .accentColor(decorator.navigationBarAccentColor)
 
-            if vmodel.isItemsEmpty {
-                PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
-                    if .addNewBoard == action { vmodel.renameViewInvocationAction(.new) }
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            placeholderview()
+            renameCardView()
+        }
+    }
+}
+
+// MARK: - Helpers
+private extension BoardListView {
+    @ViewBuilder
+    func placeholderview() -> some View {
+        if vmodel.isItemsEmpty {
+            PlaceholderView(decorator: PlaceholderEmptyBoardListDecorator()) { action in
+                if .addNewBoard == action { vmodel.renameViewInvocationAction(.new) }
             }
-            if vmodel.isRenameViewPresented {
-                RenameCardView(model: vmodel.objectToRename?.name ?? "") {
-                    vmodel.renameViewInvocationAction(.done)
-                } onSubmit: { newName in
-                    withAnimation(.easeIn) {
-                        if vmodel.isAnObjectToRename {
-                            vmodel.renameViewSubmitAction(.update(newName))
-                        } else {
-                            vmodel.renameViewSubmitAction(.add(newName))
-                        }
+            .frame(maxWidth: .infinity,
+                   maxHeight: .infinity,
+                   alignment: .center)
+        }
+    }
+    @ViewBuilder
+    func renameCardView() -> some View {
+        if vmodel.isRenameViewPresented {
+            RenameCardView(model: vmodel.objectToRename?.name ?? "") {
+                vmodel.renameViewInvocationAction(.done)
+            } onSubmit: { newName in
+                withAnimation(.easeIn) {
+                    if vmodel.isAnObjectToRename {
+                        vmodel.renameViewSubmitAction(.update(newName))
+                    } else {
+                        vmodel.renameViewSubmitAction(.add(newName))
                     }
                 }
             }

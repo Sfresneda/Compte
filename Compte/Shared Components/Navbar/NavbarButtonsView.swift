@@ -16,21 +16,34 @@ struct NavbarButtonsView: View {
     // MARK: Lifecycle
     var body: some View {
         if !items.isEmpty {
-            HStack(alignment: .center) {
-                ForEach(items, id: \.rawValue) { button in
-                    Button {
-                        action?(button)
-                    } label: {
-                        if let imageName = button.imageName {
-                            Image(systemName: imageName)
-                        } else {
-                            Text(button.name)
-                        }
+            HStack(alignment: .center) {}
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    ForEach(items.filter { $0.position == .left },
+                            id: \.rawValue) { button in
+                        itemToButton(button)
                     }
-                    .buttonStyle(.automatic)
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ForEach(items.filter { $0.position == .right },
+                            id: \.rawValue) { button in
+                        itemToButton(button)
+                    }
                 }
             }
-            .padding()
+        }
+    }
+}
+private extension NavbarButtonsView {
+    func itemToButton(_ item: NavbarButton) -> some View {
+        Button {
+            action?(item)
+        } label: {
+            if let imageName = item.imageName {
+                Image(systemName: imageName)
+            } else {
+                Text(item.name)
+            }
         }
     }
 }

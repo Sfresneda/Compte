@@ -27,6 +27,7 @@ struct CompteObject {
         self.lastModified = lastModified
     }
 }
+extension CompteObject: Identifiable {}
 // MARK: - HashableMappedModel
 extension CompteObject: HashableMappedModel {
     var relationIdentifier: UUID? {

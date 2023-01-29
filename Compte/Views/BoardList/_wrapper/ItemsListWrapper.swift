@@ -29,7 +29,8 @@ protocol BoardListVModelProtocol: ObservableObject {
     var objectToRename: CompteObject? { get }
     var isAnObjectToRename: Bool { get }
     var isEditMode: Bool { get set }
-    
+
+    func isTapViewVisible() -> Bool
     func renameViewInvocationAction(_ action: RenameViewPresentingAction)
     func renameViewSubmitAction(_ action: RenameViewSubmitAction)
 
