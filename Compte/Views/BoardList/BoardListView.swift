@@ -38,6 +38,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                             withAnimation { vmodel.handleNavbarButton(button) }
                         }
                     }
+                    .environment(\.editMode, $vmodel.isEditMode.toEditMode)
                     if vmodel.isTapViewVisible() {
                         VStack {
                             Spacer()
@@ -62,8 +63,7 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
             }
             .navigationViewStyle(.stack)
             .accentColor(decorator.navigationBarAccentColor)
-            .environment(\.editMode,$vmodel.isEditMode.toEditMode)
-
+            .environment(\.editMode, $vmodel.isEditMode.toEditMode)
             placeholderview()
             renameCardView()
         }
