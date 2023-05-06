@@ -36,20 +36,9 @@ final class SettingsVModelTests: XCTestCase {
         let expectedValue = true
 
         // when
-        sut.setFocusMode()
+        sut.toggleFocusMode()
 
         // then
         XCTAssertEqual(expectedValue, spy.toogleFocusModeSpy)
-    }
-    func test_setFocusMode_must_toogle_getFocusModeSpy_var() {
-        // given
-        let expectedValue = false
-
-        // when
-        XCTAssertTrue(spy.getFocusModeSpy)
-        sut.setFocusMode()
-
-        // then
-        XCTAssertEqual(expectedValue, spy.getFocusModeSpy)
     }
 }

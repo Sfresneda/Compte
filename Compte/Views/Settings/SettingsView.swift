@@ -11,26 +11,38 @@ struct SettingsView: View {
     @StateObject var vmodel: SettingsVModel
 
     var body: some View {
-        VStack {
-            List {
-                Section {
-                    Toggle("Focus Mode",
-                           isOn: $vmodel.focusMode)
-                    tapListPreview()
-                        .disabled(true)
-                        .frame(minHeight: 350)
-                } footer: {
-                    Text("Explanation about what means this feature")
+        ZStack {
+            VStack {
+                List {
+                    Section {
+                        tapListPreview()
+                        Toggle("Focus Mode",
+                               isOn: $vmodel.focusMode)
+                        
+                    } header: {
+                        Text("Tap List Appearance")
+                    }
                 }
             }
-            Spacer()
-            Text(vmodel.appVersionNumberText)
+            VStack {
+                Spacer()
+                Text(vmodel.appVersionNumberText)
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+            }
         }
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 extension SettingsView {
     func tapListPreview() -> some View {
-        let vmodel = TapListVModel(modelObject: .previewImplementation())
-        return TapListView(vmodel: vmodel)
+        let vmodel = TapListVModel(modelObject: .previewImplementation(name: "Settings"))
+        return TapListView(vmodel: vmodel, isNavBarStyleBlock: true)
+            .disabled(true)
+            .frame(minHeight: 350)
+            .padding(EdgeInsets(top: -10,
+                                leading: -20,
+                                bottom: -10,
+                                trailing: -20))
     }
 }

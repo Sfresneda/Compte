@@ -22,7 +22,8 @@ protocol BoardListVModelProtocol: ObservableObject {
     var items: [CompteObject] { get set }
     var isItemsEmpty: Bool { get }
     var isRenameViewPresented: Bool { get }
-
+    var navigateToSettings: Bool { get set }
+    
     var navigationBarItems: [NavbarButton] { get set }
     var multiSelection: Set<UUID> { get set }
     var firstItemIdentifier: UUID? { get }

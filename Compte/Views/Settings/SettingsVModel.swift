@@ -12,12 +12,16 @@ import Combine
 final class SettingsVModel: ObservableObject {
     // MARK: Vars
     private var persistenceManager: UserDefaultsManagerProtocol
-    @Published var focusMode: Bool = false
+    @Published var focusMode: Bool {
+        didSet {
+            toggleFocusMode()
+        }
+    }
 
     // MARK: Lifecycle
     init(persistenceManager: UserDefaultsManagerProtocol = UserDefaultsManager.shared) {
         self.persistenceManager = persistenceManager
-        observeAndUpdatePersistenceValues()
+        focusMode = persistenceManager.getFocusMode()
     }
 }
 // MARK: - Public
@@ -28,14 +32,7 @@ extension SettingsVModel {
         let buildVersion = bundle.buildVersionNumber
         return "V\(releaseVersion ?? "-")(\(buildVersion ?? "-"))"
     }
-    func setFocusMode() {
+    func toggleFocusMode() {
         persistenceManager.toogleFocusMode()
-        observeAndUpdatePersistenceValues()
-    }
-}
-// MARK: - Private
-private extension SettingsVModel {
-    func observeAndUpdatePersistenceValues() {
-        focusMode = persistenceManager.getFocusMode()
     }
 }

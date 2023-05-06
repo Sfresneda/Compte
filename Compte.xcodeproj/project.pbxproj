@@ -355,6 +355,38 @@
 			path = Spy;
 			sourceTree = "<group>";
 		};
+		375BBC512A06AB2D00B25E33 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DA7293F46770083F74C /* CounterView.swift */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		375BBC522A06AB3300B25E33 /* LimitedTextEditor */ = {
+			isa = PBXGroup;
+			children = (
+				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
+			);
+			path = LimitedTextEditor;
+			sourceTree = "<group>";
+		};
+		375BBC532A06AB4300B25E33 /* SlideToUnlock */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
+			);
+			path = SlideToUnlock;
+			sourceTree = "<group>";
+		};
+		375BBC542A06AB4D00B25E33 /* Tap */ = {
+			isa = PBXGroup;
+			children = (
+				373A3DAC293F48B60083F74C /* TapView.swift */,
+			);
+			path = Tap;
+			sourceTree = "<group>";
+		};
 		37830D7A2951A3FE00AEC7D2 /* _wrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,13 +479,13 @@
 		37A69E322942640B00129FB1 /* Shared Components */ = {
 			isa = PBXGroup;
 			children = (
-				373A3DA7293F46770083F74C /* CounterView.swift */,
-				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
+				375BBC512A06AB2D00B25E33 /* Counter */,
+				375BBC522A06AB3300B25E33 /* LimitedTextEditor */,
 				373A3DAE293F56200083F74C /* Navbar */,
 				37BFC25B2955B0B7006AC26B /* Placeholder */,
 				378572E129506348005AFE9A /* Rename */,
-				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
-				373A3DAC293F48B60083F74C /* TapView.swift */,
+				375BBC532A06AB4300B25E33 /* SlideToUnlock */,
+				375BBC542A06AB4D00B25E33 /* Tap */,
 			);
 			path = "Shared Components";
 			sourceTree = "<group>";

@@ -12,7 +12,7 @@ private enum Constants {
     static func defaultNavbarItems(isEmpty: Bool)-> [NavbarButton] {
         isEmpty
         ? []
-        : [.edit]
+        : [.settings, .edit]
     }
     static let editingNavbarItems: [NavbarButton] = [.done, .delete]
 }
@@ -27,6 +27,7 @@ final class BoardListVModel<DataManager: PersistenceManagerProtocol>: Observable
     }
     var isItemsEmpty: Bool { items.isEmpty }
     @Published var isRenameViewPresented: Bool = false
+    @Published var navigateToSettings: Bool = false
     @Published var navigationBarItems: [NavbarButton] = []
     @Published var multiSelection: Set<UUID> = []
     var firstItemIdentifier: UUID? { items.first?.id }
@@ -93,6 +94,8 @@ extension BoardListVModel: BoardListVModelProtocol {
             guard !multiSelection.isEmpty else { return }
             multiSelection.forEach { delete($0) }
             handleNavbarButton(.done)
+        case .settings:
+            navigateToSettings.toggle()
         }
     }
     func add(with name: String? = nil) {

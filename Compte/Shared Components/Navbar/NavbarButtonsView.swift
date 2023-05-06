@@ -19,13 +19,13 @@ struct NavbarButtonsView: View {
             HStack(alignment: .center) {}
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    ForEach(items.filter { $0.position == .left },
+                    ForEach(buttonsAtPosition(.left),
                             id: \.rawValue) { button in
                         itemToButton(button)
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    ForEach(items.filter { $0.position == .right },
+                    ForEach(buttonsAtPosition(.right),
                             id: \.rawValue) { button in
                         itemToButton(button)
                     }
@@ -35,6 +35,9 @@ struct NavbarButtonsView: View {
     }
 }
 private extension NavbarButtonsView {
+    func buttonsAtPosition(_ position: NavBarPosition) -> [NavbarButton] {
+        items.filter { $0.position == position }
+    }
     func itemToButton(_ item: NavbarButton) -> some View {
         Button {
             action?(item)

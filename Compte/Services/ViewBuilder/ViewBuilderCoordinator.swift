@@ -28,4 +28,8 @@ extension ViewBuilderCoordinator {
         let vmodel = TapListVModel(modelObject: object)
         return TapListView<TapListVModel>(vmodel: vmodel)
     }
+    func buildSettingsView() -> some View {
+        let vmodel = SettingsVModel()
+        return SettingsView(vmodel: vmodel)
+    }
 }

@@ -13,10 +13,10 @@ final class UserDefaultsManagerTests: XCTestCase {
 
     override func setUpWithError() throws {
         sut = UserDefaultsManager.shared as? UserDefaultsManager
+        sut.purgue()
     }
 
     override func tearDownWithError() throws {
-        sut.purgue()
         sut = nil
     }
 

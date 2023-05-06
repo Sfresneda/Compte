@@ -11,6 +11,7 @@ import SwiftUI
 struct TapListView<Model>: View where Model: TapListVModelProtocol {
     // MARK: Vars
     @StateObject var vmodel: Model
+    @State var isNavBarStyleBlock: Bool = false
     @State private var needsToShowAlert: Bool = false
     let decorator: TapListDecorator = DefaultTapListDecorator()
 
@@ -88,7 +89,15 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
             }
         }
         .navigationTitle(vmodel.name)
-        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(navigationBarDisplayMode)
         .background(decorator.viewBackgroundColor)
+    }
+}
+private extension TapListView {
+    var navigationBarDisplayMode: NavigationBarItem.TitleDisplayMode {
+        guard !isNavBarStyleBlock else { return .automatic }
+        return vmodel.numberOfTaps > .zero
+        ? .inline
+        : .large
     }
 }

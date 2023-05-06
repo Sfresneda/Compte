@@ -53,9 +53,9 @@ extension CompteObject {
                      name: nil,
                      lastModified: Date().timeIntervalSince1970)
     }
-    static func previewImplementation() -> Self {
+    static func previewImplementation(name: String) -> Self {
         CompteObject(date: Date().timeIntervalSince1970,
-                     name: nil,
+                     name: name,
                      taps: [TapObject.defaultImplementation()],
                      lastModified: Date().timeIntervalSince1970)
     }

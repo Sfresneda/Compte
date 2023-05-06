@@ -11,6 +11,7 @@ import SwiftUI
 struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
     // MARK: Vars
     @ObservedObject var vmodel: Model
+    @State var navigateToSettings: Bool = false
     let decorator: BoardListDecorator = DefaultBoardListDecorator()
 
     // MARK: Lifecycle
@@ -27,6 +28,11 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
         ZStack {
             NavigationView {
                 ZStack {
+                    NavigationLink(destination: ViewBuilderCoordinator.shared.buildSettingsView(),
+                                   isActive: $vmodel.navigateToSettings) {
+                        EmptyView()
+                    }
+
                     BoardScrollView(items: $vmodel.items,
                                     multiSelection: $vmodel.multiSelection) { identifier in
                         vmodel.delete(identifier)
@@ -35,7 +41,9 @@ struct BoardListView<Model>: View where Model: BoardListVModelProtocol {
                     }
                     .toolbar {
                         NavbarButtonsView(items: $vmodel.navigationBarItems) { button in
-                            withAnimation { vmodel.handleNavbarButton(button) }
+                            withAnimation {
+                                vmodel.handleNavbarButton(button)
+                            }
                         }
                     }
                     .environment(\.editMode, $vmodel.isEditMode.toEditMode)

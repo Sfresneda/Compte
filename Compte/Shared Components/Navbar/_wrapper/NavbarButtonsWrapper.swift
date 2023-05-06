@@ -13,6 +13,7 @@ enum NavbarButton: Int, CaseIterable {
     case edit
     case done
     case delete
+    case settings
 }
 enum NavBarPosition {
     case right
@@ -30,6 +31,8 @@ extension NavbarButton {
             return NSLocalizedString("done_item", comment: "Done button")
         case .delete:
             return NSLocalizedString("delete_item", comment: "Delete Item Button")
+        case .settings:
+            return NSLocalizedString("settings_item", comment: "Settings Item Button")
         }
     }
     var imageName: String? {
@@ -38,6 +41,8 @@ extension NavbarButton {
             return "square.and.pencil"
         case .delete:
             return "trash"
+        case .settings:
+            return "slider.horizontal.3"
         default:
             return nil
         }
@@ -48,8 +53,16 @@ extension NavbarButton {
                 .delete,
                 .new:
             return .right
-        case .done:
+        case .done, .settings:
             return .left
+        }
+    }
+    var launchNavigation: Bool {
+        switch self {
+        case .settings:
+            return true
+        default:
+            return false
         }
     }
 }
