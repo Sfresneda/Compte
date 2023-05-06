@@ -217,3 +217,11 @@ struct PlaceholderEmptyTapListView_Previews: PreviewProvider {
         PlaceholderView(decorator: decorator)
     }
 }
+
+// MARK: - SettingsView
+struct SettingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        let vm = SettingsVModel()
+        SettingsView(vmodel: vm)
+    }
+}

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370464D1295DB6FE00BEFF34 /* CompteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370464D0295DB6FE00BEFF34 /* CompteUITests.swift */; };
 		372D2DC72959C5A3009CF1BE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372D2DC62959C5A3009CF1BE /* Color.swift */; };
 		37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8129462FF900F19D4E /* PersistenceManager.swift */; };
 		37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37327E842946310300F19D4E /* CompteModel.xcdatamodeld */; };
@@ -21,6 +20,14 @@
 		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
 		373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* NavbarButtonsView.swift */; };
 		373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */; };
+		373DA7312A064F5300E8B3B9 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA7302A064F5300E8B3B9 /* SettingsView.swift */; };
+		373DA7332A064F7500E8B3B9 /* SettingsVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA7322A064F7500E8B3B9 /* SettingsVModel.swift */; };
+		373DA7352A0654E900E8B3B9 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA7342A0654E900E8B3B9 /* Bundle.swift */; };
+		373DA7382A06574500E8B3B9 /* SettingsVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA7372A06574500E8B3B9 /* SettingsVModelTests.swift */; };
+		373DA73B2A0657D300E8B3B9 /* UserDefaultsManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA73A2A0657D300E8B3B9 /* UserDefaultsManagerProtocol.swift */; };
+		373DA73E2A06588900E8B3B9 /* UserDefaultsSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373DA73D2A06588900E8B3B9 /* UserDefaultsSpy.swift */; };
+		3764EDC02A064AC800CB0CA3 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764EDBF2A064AC800CB0CA3 /* UserDefaultsManager.swift */; };
+		3764EDC22A064C0B00CB0CA3 /* UserDefaultsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3764EDC12A064C0B00CB0CA3 /* UserDefaultsManagerTests.swift */; };
 		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
@@ -98,7 +105,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370464D0295DB6FE00BEFF34 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
 		372D2DC62959C5A3009CF1BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		37327E8129462FF900F19D4E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
 		37327E852946310300F19D4E /* CompteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompteModel.xcdatamodel; sourceTree = "<group>"; };
@@ -112,7 +118,15 @@
 		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
 		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
+		373DA7302A064F5300E8B3B9 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		373DA7322A064F7500E8B3B9 /* SettingsVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVModel.swift; sourceTree = "<group>"; };
+		373DA7342A0654E900E8B3B9 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		373DA7372A06574500E8B3B9 /* SettingsVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVModelTests.swift; sourceTree = "<group>"; };
+		373DA73A2A0657D300E8B3B9 /* UserDefaultsManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerProtocol.swift; sourceTree = "<group>"; };
+		373DA73D2A06588900E8B3B9 /* UserDefaultsSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsSpy.swift; sourceTree = "<group>"; };
 		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3764EDBF2A064AC800CB0CA3 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		3764EDC12A064C0B00CB0CA3 /* UserDefaultsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManagerTests.swift; sourceTree = "<group>"; };
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
@@ -280,6 +294,7 @@
 		373A3DA0293F42FB0083F74C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				373DA72F2A064F3D00E8B3B9 /* Settings */,
 				37327E8B2946347300F19D4E /* BoardList */,
 				373A3DA1293F43020083F74C /* TapList */,
 			);
@@ -304,6 +319,40 @@
 				373A3DAF293F56300083F74C /* NavbarButtonsView.swift */,
 			);
 			path = Navbar;
+			sourceTree = "<group>";
+		};
+		373DA72F2A064F3D00E8B3B9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				373DA7302A064F5300E8B3B9 /* SettingsView.swift */,
+				373DA7322A064F7500E8B3B9 /* SettingsVModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		373DA7362A06572C00E8B3B9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				373DA73C2A06587E00E8B3B9 /* Spy */,
+				373DA7372A06574500E8B3B9 /* SettingsVModelTests.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		373DA7392A0657C600E8B3B9 /* _wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				373DA73A2A0657D300E8B3B9 /* UserDefaultsManagerProtocol.swift */,
+			);
+			path = _wrapper;
+			sourceTree = "<group>";
+		};
+		373DA73C2A06587E00E8B3B9 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				373DA73D2A06588900E8B3B9 /* UserDefaultsSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		37830D7A2951A3FE00AEC7D2 /* _wrapper */ = {
@@ -336,6 +385,7 @@
 			children = (
 				3791D4E1295B69FE00DAB251 /* Mocks */,
 				3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */,
+				3764EDC12A064C0B00CB0CA3 /* UserDefaultsManagerTests.swift */,
 			);
 			path = Persistence;
 			sourceTree = "<group>";
@@ -388,6 +438,8 @@
 		3793DEF229535C9C00C04C30 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
+				373DA7392A0657C600E8B3B9 /* _wrapper */,
+				3764EDBF2A064AC800CB0CA3 /* UserDefaultsManager.swift */,
 			);
 			path = UserDefaults;
 			sourceTree = "<group>";
@@ -417,8 +469,9 @@
 		37AEA890295C7BB100E12A4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37D10D26295DE292000ACD80 /* Decorators */,
 				37AEA891295C7BB400E12A4F /* BoardList */,
+				37D10D26295DE292000ACD80 /* Decorators */,
+				373DA7362A06572C00E8B3B9 /* Settings */,
 				37D10D23295DB9A6000ACD80 /* TapList */,
 			);
 			path = Views;
@@ -437,7 +490,6 @@
 			children = (
 				37B0C071293F427F00317132 /* Compte */,
 				37B0C082293F428000317132 /* CompteTests */,
-				37B0C08C293F428000317132 /* CompteUITests */,
 				37B0C070293F427F00317132 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -484,14 +536,6 @@
 				37AEA890295C7BB100E12A4F /* Views */,
 			);
 			path = CompteTests;
-			sourceTree = "<group>";
-		};
-		37B0C08C293F428000317132 /* CompteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				370464D0295DB6FE00BEFF34 /* CompteUITests.swift */,
-			);
-			path = CompteUITests;
 			sourceTree = "<group>";
 		};
 		37B1B96629547FF1002B99E0 /* TapList */ = {
@@ -720,6 +764,7 @@
 				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
 				372D2DC62959C5A3009CF1BE /* Color.swift */,
 				37A1CF2B296090170044B23E /* EditMode.swift */,
+				373DA7342A0654E900E8B3B9 /* Bundle.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -867,6 +912,7 @@
 				37E84F21294B29130039BB4F /* CompteObject.swift in Sources */,
 				37B1B96D29548233002B99E0 /* TapListCellDecorator.swift in Sources */,
 				37B1B984295496B0002B99E0 /* DefaultBoardListCellDecorator.swift in Sources */,
+				373DA7352A0654E900E8B3B9 /* Bundle.swift in Sources */,
 				37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */,
 				37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */,
 				37B1B974295485FB002B99E0 /* RenameBoardDecorator.swift in Sources */,
@@ -874,6 +920,7 @@
 				378572E029505874005AFE9A /* BoardListCellView.swift in Sources */,
 				3791D4E0295B68ED00DAB251 /* DataSourceWrapper.swift in Sources */,
 				37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */,
+				373DA73B2A0657D300E8B3B9 /* UserDefaultsManagerProtocol.swift in Sources */,
 				372D2DC72959C5A3009CF1BE /* Color.swift in Sources */,
 				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
 				37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */,
@@ -901,11 +948,14 @@
 				37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */,
 				37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */,
 				37D105882972A37600D23ABD /* Previews.swift in Sources */,
+				3764EDC02A064AC800CB0CA3 /* UserDefaultsManager.swift in Sources */,
 				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
 				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
+				373DA7332A064F7500E8B3B9 /* SettingsVModel.swift in Sources */,
 				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
 				37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */,
 				3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */,
+				373DA7312A064F5300E8B3B9 /* SettingsView.swift in Sources */,
 				37A1CF2C296090170044B23E /* EditMode.swift in Sources */,
 				37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */,
 				37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */,
@@ -917,9 +967,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3764EDC22A064C0B00CB0CA3 /* UserDefaultsManagerTests.swift in Sources */,
 				37A36CA12972BC2400CABA10 /* RenameBoardDecoratorTests.swift in Sources */,
 				37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */,
 				37A36CA32972C01E00CABA10 /* TapListCellDecoratorMock.swift in Sources */,
+				373DA73E2A06588900E8B3B9 /* UserDefaultsSpy.swift in Sources */,
 				37A36CA52972C07B00CABA10 /* TaplistCellDecoratorTests.swift in Sources */,
 				37D105932972B29400D23ABD /* BoardListCellDecoratorMock.swift in Sources */,
 				3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */,
@@ -933,6 +985,7 @@
 				37A36CA92972C21700CABA10 /* TapListDecoratorTests.swift in Sources */,
 				37D105912972B28500D23ABD /* BoardListCellDecoratorTests.swift in Sources */,
 				37D1058C2972A77100D23ABD /* BoardListDecoratorTests.swift in Sources */,
+				373DA7382A06574500E8B3B9 /* SettingsVModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,7 +993,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370464D1295DB6FE00BEFF34 /* CompteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
