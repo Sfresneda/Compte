@@ -49,7 +49,7 @@ extension BoardListVModelTests {
     }
     func test_renameViewInvocationAction_edit_action_isRenameViewPresented_should_succeed() {
         // given
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let action = RenameViewPresentingAction.edit(object)
 
         // when

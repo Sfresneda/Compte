@@ -23,7 +23,7 @@ final class TapListVModelTests: XCTestCase {
     override func setUpWithError() throws {
         try super.setUpWithError()
         let persistenceManager = PersistenceManager(dataStore: DataStoreMock())
-        object = CompteObject.defaultImplementation()
+        object = CompteObject.defaultImplementation
         sut = TapListVModel(modelObject: object,
                             dataManager: persistenceManager)
         persistenceManager.add(mapper: CompteMapper(object))

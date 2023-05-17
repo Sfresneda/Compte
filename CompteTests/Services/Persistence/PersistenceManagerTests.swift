@@ -36,7 +36,7 @@ final class PersistenceManagerTests: XCTestCase {
 extension PersistenceManagerTests {
     func test_create_new_item_should_succeed() {
         // given
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
         let expectation = XCTestExpectation(description: "insert item and wait until change")
 
@@ -79,7 +79,7 @@ extension PersistenceManagerTests {
 extension PersistenceManagerTests {
     func test_read_existing_item_should_succeed() {
         // given
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
         let expectation = XCTestExpectation(description: "fetch items and wait until receive two changes")
         expectation.expectedFulfillmentCount = 2
@@ -126,7 +126,7 @@ extension PersistenceManagerTests {
         // given
         let newName = "updated-object"
 
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
 
         let updatedObject = CompteObject(id: object.id, date: object.date, name: newName)
@@ -166,7 +166,7 @@ extension PersistenceManagerTests {
         // given
         let newName = "updated-object"
 
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
 
         let updatedObject = CompteObject(date: Date().timeIntervalSince1970, name: newName)
@@ -206,7 +206,7 @@ extension PersistenceManagerTests {
 extension PersistenceManagerTests {
     func test_delete_existing_should_succeed(){
         // given
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
 
         var isExpectationTriggered = false
@@ -234,9 +234,9 @@ extension PersistenceManagerTests {
     }
     func test_delete_existing_should_fail(){
         // given
-        let object = CompteObject.defaultImplementation()
+        let object = CompteObject.defaultImplementation
         let mapper = CompteMapper(object)
-        let otherObject = CompteObject.defaultImplementation()
+        let otherObject = CompteObject.defaultImplementation
         let otherMapper = CompteMapper(otherObject)
 
         let expectation = XCTestExpectation(description: "insert and delete item receive two changes")
@@ -265,7 +265,7 @@ extension PersistenceManagerTests {
         // given
         let numberOfItemsToInsert = 5
         let mappers = Array(repeating: false, count: numberOfItemsToInsert)
-            .map { _ in CompteMapper(CompteObject.defaultImplementation()) }
+            .map { _ in CompteMapper(CompteObject.defaultImplementation) }
 
         let expectation = XCTestExpectation(description: "insert and clear items receive two changes")
         expectation.expectedFulfillmentCount = 2

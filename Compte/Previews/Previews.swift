@@ -17,7 +17,7 @@ struct BoardList_Previews: PreviewProvider {
             CompteObject(id: UUID(),
                          date: Date().timeIntervalSince1970,
                          name: String(UUID().uuidString.prefix(Int.random(in: 0..<50))),
-                         taps: Array(repeating: TapObject.defaultImplementation(),
+                         taps: Array(repeating: TapObject.defaultImplementation,
                                      count: numberOfTaps))
         }
         return model
@@ -56,7 +56,7 @@ struct BoardListCell_Previews: PreviewProvider {
 // MARK: - BoardScrollView
 struct BoardScrollView_Previews: PreviewProvider {
     static var previews: some View {
-        var items = Array(repeating: CompteObject.defaultImplementation(), count: 50)
+        var items = Array(repeating: CompteObject.defaultImplementation, count: 50)
         NavigationView {
             BoardScrollView(items: .constant(items), multiSelection: .constant([])) { id in
                 items.removeAll(where: { $0.id == id })
@@ -79,7 +79,7 @@ struct TapListCellView_Previews: PreviewProvider {
 // MARK: - TapListView
 struct TapListView_Previews: PreviewProvider {
     static var model: TapListVModel<PersistenceManager> {
-        let model = TapListVModel(modelObject: CompteObject.defaultImplementation())
+        let model = TapListVModel(modelObject: CompteObject.defaultImplementation)
         model.numberOfTaps = 1
         model.items = Array<TapObject>
             .init(repeating: TapObject(date: Date().timeIntervalSince1970,

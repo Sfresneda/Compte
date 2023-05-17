@@ -12,6 +12,7 @@ import Combine
 final class SettingsVModel: ObservableObject {
     // MARK: Vars
     private var persistenceManager: UserDefaultsManagerProtocol
+    var sections: [SettingsSection] = SettingsSection.allCases
     @Published var focusMode: Bool {
         didSet {
             toggleFocusMode()

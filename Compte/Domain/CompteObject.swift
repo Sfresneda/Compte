@@ -48,16 +48,15 @@ extension CompteObject {
 }
 // MARK: - Statics
 extension CompteObject {
-    static func defaultImplementation() -> Self {
+    static var defaultImplementation: Self {
         CompteObject(date: Date().timeIntervalSince1970,
                      name: nil,
                      lastModified: Date().timeIntervalSince1970)
     }
-    static func previewImplementation(name: String) -> Self {
+    static var previewImplementation: Self {
         CompteObject(date: Date().timeIntervalSince1970,
-                     name: name,
-                     taps: [TapObject.defaultImplementation()],
+                     name: "",
+                     taps: [TapObject.defaultImplementation],
                      lastModified: Date().timeIntervalSince1970)
     }
-
 }

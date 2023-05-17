@@ -38,7 +38,7 @@ extension TapObject {
 }
 // MARK: - Statics
 extension TapObject {
-    static func defaultImplementation() -> Self {
+    static var defaultImplementation: Self {
         TapObject(date: Date().timeIntervalSince1970, tapNumber: .zero)
     }
 }
