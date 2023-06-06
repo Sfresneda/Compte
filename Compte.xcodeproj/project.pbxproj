@@ -21,6 +21,18 @@
 		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
 		373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* NavbarButtonsView.swift */; };
 		373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */; };
+		377738AE2A2F8CD0009DF8A0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377738AD2A2F8CD0009DF8A0 /* WidgetKit.framework */; };
+		377738B02A2F8CD0009DF8A0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377738AF2A2F8CD0009DF8A0 /* SwiftUI.framework */; };
+		377738B32A2F8CD0009DF8A0 /* CompteWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377738B22A2F8CD0009DF8A0 /* CompteWidgetBundle.swift */; };
+		377738B52A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377738B42A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift */; };
+		377738B72A2F8CD0009DF8A0 /* CompteWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377738B62A2F8CD0009DF8A0 /* CompteWidget.swift */; };
+		377738BA2A2F8CD1009DF8A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 377738B92A2F8CD1009DF8A0 /* Assets.xcassets */; };
+		377738BC2A2F8CD1009DF8A0 /* CompteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 377738B82A2F8CD0009DF8A0 /* CompteWidget.intentdefinition */; };
+		377738BD2A2F8CD1009DF8A0 /* CompteWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 377738B82A2F8CD0009DF8A0 /* CompteWidget.intentdefinition */; };
+		377738C02A2F8CD1009DF8A0 /* CompteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 377738AB2A2F8CD0009DF8A0 /* CompteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		377738CD2A2F9E36009DF8A0 /* CompteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F20294B29130039BB4F /* CompteObject.swift */; };
+		377738CE2A2F9E3C009DF8A0 /* TapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F22294B291B0039BB4F /* TapObject.swift */; };
+		377738CF2A2F9E42009DF8A0 /* ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1B294B27120039BB4F /* ModelMapper.swift */; };
 		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
 		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
 		378572E029505874005AFE9A /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
@@ -81,6 +93,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		377738BE2A2F8CD1009DF8A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37B0C067293F427F00317132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 377738AA2A2F8CD0009DF8A0;
+			remoteInfo = CompteWidgetExtension;
+		};
 		37B0C080293F428000317132 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37B0C067293F427F00317132 /* Project object */;
@@ -96,6 +115,20 @@
 			remoteInfo = Compte;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		377738C12A2F8CD1009DF8A0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				377738C02A2F8CD1009DF8A0 /* CompteWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		370464D0295DB6FE00BEFF34 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
@@ -113,6 +146,17 @@
 		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
 		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
 		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377738AB2A2F8CD0009DF8A0 /* CompteWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CompteWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		377738AD2A2F8CD0009DF8A0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		377738AF2A2F8CD0009DF8A0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		377738B22A2F8CD0009DF8A0 /* CompteWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteWidgetBundle.swift; sourceTree = "<group>"; };
+		377738B42A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		377738B62A2F8CD0009DF8A0 /* CompteWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteWidget.swift; sourceTree = "<group>"; };
+		377738B82A2F8CD0009DF8A0 /* CompteWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = CompteWidget.intentdefinition; sourceTree = "<group>"; };
+		377738B92A2F8CD1009DF8A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		377738BB2A2F8CD1009DF8A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		377738C52A2F8EEF009DF8A0 /* Compte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Compte.entitlements; sourceTree = "<group>"; };
+		377738C62A2F9279009DF8A0 /* CompteWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CompteWidgetExtension.entitlements; sourceTree = "<group>"; };
 		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
 		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
 		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
@@ -179,6 +223,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		377738A82A2F8CD0009DF8A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377738B02A2F8CD0009DF8A0 /* SwiftUI.framework in Frameworks */,
+				377738AE2A2F8CD0009DF8A0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06C293F427F00317132 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -260,6 +313,7 @@
 		373A3D9E293F42E50083F74C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				377738C52A2F8EEF009DF8A0 /* Compte.entitlements */,
 				373A3D9F293F42F10083F74C /* Assets */,
 				37327E83294630E800F19D4E /* Data */,
 				37BFC24F295597A5006AC26B /* Localizables */,
@@ -304,6 +358,53 @@
 				373A3DAF293F56300083F74C /* NavbarButtonsView.swift */,
 			);
 			path = Navbar;
+			sourceTree = "<group>";
+		};
+		377738AC2A2F8CD0009DF8A0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				377738AD2A2F8CD0009DF8A0 /* WidgetKit.framework */,
+				377738AF2A2F8CD0009DF8A0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		377738B12A2F8CD0009DF8A0 /* CompteWidget */ = {
+			isa = PBXGroup;
+			children = (
+				377738B22A2F8CD0009DF8A0 /* CompteWidgetBundle.swift */,
+				377738C82A2F99F7009DF8A0 /* LiveActivity */,
+				377738CA2A2F9A0F009DF8A0 /* Resources */,
+				377738C92A2F9A00009DF8A0 /* Widgets */,
+			);
+			path = CompteWidget;
+			sourceTree = "<group>";
+		};
+		377738C82A2F99F7009DF8A0 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				377738B42A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift */,
+			);
+			path = LiveActivity;
+			sourceTree = "<group>";
+		};
+		377738C92A2F9A00009DF8A0 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				377738B62A2F8CD0009DF8A0 /* CompteWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		377738CA2A2F9A0F009DF8A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				377738B92A2F8CD1009DF8A0 /* Assets.xcassets */,
+				377738B82A2F8CD0009DF8A0 /* CompteWidget.intentdefinition */,
+				377738C62A2F9279009DF8A0 /* CompteWidgetExtension.entitlements */,
+				377738BB2A2F8CD1009DF8A0 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		37830D7A2951A3FE00AEC7D2 /* _wrapper */ = {
@@ -438,6 +539,8 @@
 				37B0C071293F427F00317132 /* Compte */,
 				37B0C082293F428000317132 /* CompteTests */,
 				37B0C08C293F428000317132 /* CompteUITests */,
+				377738B12A2F8CD0009DF8A0 /* CompteWidget */,
+				377738AC2A2F8CD0009DF8A0 /* Frameworks */,
 				37B0C070293F427F00317132 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -448,6 +551,7 @@
 				37B0C06F293F427F00317132 /* Compte.app */,
 				37B0C07F293F428000317132 /* CompteTests.xctest */,
 				37B0C089293F428000317132 /* CompteUITests.xctest */,
+				377738AB2A2F8CD0009DF8A0 /* CompteWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -727,6 +831,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		377738AA2A2F8CD0009DF8A0 /* CompteWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 377738C42A2F8CD1009DF8A0 /* Build configuration list for PBXNativeTarget "CompteWidgetExtension" */;
+			buildPhases = (
+				377738A72A2F8CD0009DF8A0 /* Sources */,
+				377738A82A2F8CD0009DF8A0 /* Frameworks */,
+				377738A92A2F8CD0009DF8A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CompteWidgetExtension;
+			productName = CompteWidgetExtension;
+			productReference = 377738AB2A2F8CD0009DF8A0 /* CompteWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		37B0C06E293F427F00317132 /* Compte */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37B0C093293F428000317132 /* Build configuration list for PBXNativeTarget "Compte" */;
@@ -734,10 +855,12 @@
 				37B0C06B293F427F00317132 /* Sources */,
 				37B0C06C293F427F00317132 /* Frameworks */,
 				37B0C06D293F427F00317132 /* Resources */,
+				377738C12A2F8CD1009DF8A0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				377738BF2A2F8CD1009DF8A0 /* PBXTargetDependency */,
 			);
 			name = Compte;
 			productName = Compte;
@@ -787,9 +910,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
+					377738AA2A2F8CD0009DF8A0 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					37B0C06E293F427F00317132 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -823,11 +949,20 @@
 				37B0C06E293F427F00317132 /* Compte */,
 				37B0C07E293F428000317132 /* CompteTests */,
 				37B0C088293F428000317132 /* CompteUITests */,
+				377738AA2A2F8CD0009DF8A0 /* CompteWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		377738A92A2F8CD0009DF8A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377738BA2A2F8CD1009DF8A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06D293F427F00317132 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -855,6 +990,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		377738A72A2F8CD0009DF8A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				377738CF2A2F9E42009DF8A0 /* ModelMapper.swift in Sources */,
+				377738CE2A2F9E3C009DF8A0 /* TapObject.swift in Sources */,
+				377738CD2A2F9E36009DF8A0 /* CompteObject.swift in Sources */,
+				377738B52A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift in Sources */,
+				377738B32A2F8CD0009DF8A0 /* CompteWidgetBundle.swift in Sources */,
+				377738BC2A2F8CD1009DF8A0 /* CompteWidget.intentdefinition in Sources */,
+				377738B72A2F8CD0009DF8A0 /* CompteWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06B293F427F00317132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -881,6 +1030,7 @@
 				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
 				378572E32950635C005AFE9A /* RenameCardView.swift in Sources */,
 				373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */,
+				377738BD2A2F8CD1009DF8A0 /* CompteWidget.intentdefinition in Sources */,
 				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
 				37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */,
 				37B1B96F2954825F002B99E0 /* DefaultTapListCellDecorator.swift in Sources */,
@@ -947,6 +1097,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		377738BF2A2F8CD1009DF8A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 377738AA2A2F8CD0009DF8A0 /* CompteWidgetExtension */;
+			targetProxy = 377738BE2A2F8CD1009DF8A0 /* PBXContainerItemProxy */;
+		};
 		37B0C081293F428000317132 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37B0C06E293F427F00317132 /* Compte */;
@@ -974,6 +1129,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		377738C22A2F8CD1009DF8A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CompteWidget/Resources/CompteWidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CompteWidget/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CompteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sergiofresneda.compte.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "development-compte-widget";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		377738C32A2F8CD1009DF8A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = CompteWidget/Resources/CompteWidgetExtension.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CompteWidget/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CompteWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sergiofresneda.compte.widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "development-compte-widget";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		37B0C091293F428000317132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1091,10 +1312,12 @@
 		37B0C094293F428000317132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Compte/Resources/Compte.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
@@ -1130,10 +1353,12 @@
 		37B0C095293F428000317132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Compte/Resources/Compte.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 0;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Compte/Resources/Assets/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 6B4M252GN4;
@@ -1171,6 +1396,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B4M252GN4;
@@ -1179,6 +1405,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.CompteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1191,6 +1418,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6B4M252GN4;
@@ -1199,6 +1427,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fresneda.CompteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1260,6 +1489,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		377738C42A2F8CD1009DF8A0 /* Build configuration list for PBXNativeTarget "CompteWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				377738C22A2F8CD1009DF8A0 /* Debug */,
+				377738C32A2F8CD1009DF8A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37B0C06A293F427F00317132 /* Build configuration list for PBXProject "Compte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
