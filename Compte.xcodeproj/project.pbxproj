@@ -90,6 +90,12 @@
 		37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30517294292BF003AADD6 /* VisualEffectView.swift */; };
 		37F97C0C29696B4F000400D4 /* BoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */; };
 		37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */; };
+		BF917DF32A65B175008DAD45 /* PlaceholderEmptyBoardListDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF917DF22A65B175008DAD45 /* PlaceholderEmptyBoardListDecoratorTests.swift */; };
+		BF9AD5E52A6290570071F36C /* BoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */; };
+		BF9AD5E62A62905D0071F36C /* DefaultBoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */; };
+		BF9AD5E72A6290600071F36C /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
+		BF9AD5E82A62906B0071F36C /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372D2DC62959C5A3009CF1BE /* Color.swift */; };
+		BF9AD5E92A6292B40071F36C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -220,6 +226,7 @@
 		37F30517294292BF003AADD6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecorator.swift; sourceTree = "<group>"; };
 		37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardScrollDecorator.swift; sourceTree = "<group>"; };
+		BF917DF22A65B175008DAD45 /* PlaceholderEmptyBoardListDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyBoardListDecoratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -518,7 +525,6 @@
 		37AEA890295C7BB100E12A4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				37D10D26295DE292000ACD80 /* Decorators */,
 				37AEA891295C7BB400E12A4F /* BoardList */,
 				37D10D23295DB9A6000ACD80 /* TapList */,
 			);
@@ -743,6 +749,7 @@
 				37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */,
 				37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */,
 				37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */,
+				BF917DF22A65B175008DAD45 /* PlaceholderEmptyBoardListDecoratorTests.swift */,
 			);
 			path = Decorators;
 			sourceTree = "<group>";
@@ -766,13 +773,6 @@
 				37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */,
 			);
 			path = TapList;
-			sourceTree = "<group>";
-		};
-		37D10D26295DE292000ACD80 /* Decorators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Decorators;
 			sourceTree = "<group>";
 		};
 		37D10D27295DE299000ACD80 /* Services */ = {
@@ -921,6 +921,7 @@
 					};
 					37B0C07E293F428000317132 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1430;
 						TestTargetID = 37B0C06E293F427F00317132;
 					};
 					37B0C088293F428000317132 = {
@@ -959,6 +960,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9AD5E92A6292B40071F36C /* Assets.xcassets in Resources */,
 				377738BA2A2F8CD1009DF8A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -996,11 +998,15 @@
 			files = (
 				377738CF2A2F9E42009DF8A0 /* ModelMapper.swift in Sources */,
 				377738CE2A2F9E3C009DF8A0 /* TapObject.swift in Sources */,
+				BF9AD5E82A62906B0071F36C /* Color.swift in Sources */,
 				377738CD2A2F9E36009DF8A0 /* CompteObject.swift in Sources */,
+				BF9AD5E62A62905D0071F36C /* DefaultBoardListCellDecorator.swift in Sources */,
 				377738B52A2F8CD0009DF8A0 /* CompteWidgetLiveActivity.swift in Sources */,
 				377738B32A2F8CD0009DF8A0 /* CompteWidgetBundle.swift in Sources */,
 				377738BC2A2F8CD1009DF8A0 /* CompteWidget.intentdefinition in Sources */,
+				BF9AD5E52A6290570071F36C /* BoardListCellDecorator.swift in Sources */,
 				377738B72A2F8CD0009DF8A0 /* CompteWidget.swift in Sources */,
+				BF9AD5E72A6290600071F36C /* BoardListCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1076,6 +1082,7 @@
 				37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */,
 				37A36CA72972C1AA00CABA10 /* TapListDecoratorMock.swift in Sources */,
 				37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */,
+				BF917DF32A65B175008DAD45 /* PlaceholderEmptyBoardListDecoratorTests.swift in Sources */,
 				37AEA893295C7BE500E12A4F /* BoardListVModelTests.swift in Sources */,
 				37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */,
 				3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */,
@@ -1396,6 +1403,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1407,6 +1415,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Compte.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Compte";
@@ -1418,6 +1427,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

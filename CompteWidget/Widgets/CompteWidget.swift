@@ -50,18 +50,29 @@ struct SimpleEntry: TimelineEntry {
 
 struct CompteWidgetEntryView : View {
     var entry: Provider.Entry
+    @Environment(\.widgetFamily) var family
 
     var body: some View {
-        HStack {
-            Text(entry.compte.name)
-            Text(entry.compte.dateFormatted, style: .date)
-            Text(String(entry.compte.taps.count))
+        switch family {
+        case .systemSmall:
+            BoardListCellView(model: .constant(entry.compte))
+        case .systemMedium:
+            BoardListCellView(model: .constant(entry.compte))
+        case .systemLarge:
+            Text("large")
+        case .systemExtraLarge:
+            Text("extralarge")
+        @unknown default:
+            Text("Unknown Widget Size")
         }
     }
 }
 
 struct CompteWidget: Widget {
-    let kind: String = "CompteWidget"
+
+    let kind: String = {
+        String(describing: CompteWidget.self)
+    }()
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
