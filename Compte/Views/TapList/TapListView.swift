@@ -92,3 +92,16 @@ struct TapListView<Model>: View where Model: TapListVModelProtocol {
         .background(decorator.viewBackgroundColor)
     }
 }
+
+#Preview {
+    let model = TapListVModel(
+        modelObject: CompteObject(
+            date: Date().timeIntervalSince1970,
+            name: "example-name"
+        )
+    )
+
+    TapListView(
+        vmodel: model
+    )
+}

@@ -18,22 +18,29 @@ struct SlideToUnlockView: View {
     var body: some View {
         Slider(value: $sliderValue,
                in: .zero...maxValue,
-               step: 5) {
-            Text(NSLocalizedString("reset_counter",
-                                   comment: "Reset Counter"))
-        } onEditingChanged: { editing in
-            guard !editing else { return }
-            let value = sliderValue
-
-            withAnimation {
-                sliderValue = .zero
-            }
-
-            if value >= maxValue {
+               step: 5)
+        {}.onChange(of: sliderValue) { newValue in
+            if newValue >= maxValue {
                 action?()
+                withAnimation {
+                    sliderValue = .zero
+                }
             }
-        }
+        }.accessibilityLabel(
+            Text(
+                NSLocalizedString(
+                    "reset_counter",
+                    comment: "Reset Counter"
+                )
+            )
+        )
         .tint(Color.suplementaryBackground)
         .foregroundColor(.red)
     }
 }
+
+#Preview {
+    SlideToUnlockView(action: nil)
+        .padding()
+}
+
