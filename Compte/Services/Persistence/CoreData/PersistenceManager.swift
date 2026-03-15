@@ -13,12 +13,12 @@ import Combine
 final class PersistenceManager: NSObject, ObservableObject {
     static var shared: PersistenceManager = PersistenceManager()
     
-    @Published var compteModelCollection: Set<CompteObject> = [] {
-        didSet {
-            objectWillChange.send()
-        }
+    @Published var compteModelCollection: Set<CompteObject> = []
+
+    var compteModelPublisher: AnyPublisher<Set<CompteObject>, Never> {
+        $compteModelCollection.eraseToAnyPublisher()
     }
-    
+
     fileprivate var managedObjectContext: NSManagedObjectContext
     private let entityRequestController: NSFetchedResultsController<CompteEntity>
     private var dataStore: DataStoreProtocol

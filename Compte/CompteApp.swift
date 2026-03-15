@@ -11,6 +11,11 @@ import CoreData
 @main
 struct CompteApp: App {
     @Environment(\.scenePhase) var scenePhase
+
+    init() {
+        PhoneSyncService.shared.start()
+    }
+
     var body: some Scene {
         WindowGroup {
             ViewBuilderCoordinator

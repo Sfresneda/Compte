@@ -63,6 +63,17 @@
 			);
 			target = 37B0C06E293F427F00317132 /* Compte */;
 		};
+		26C7F1292F6713D90088139C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WatchSync/BoardSnapshot.swift,
+				WatchSync/Domain/WCCodecError.swift,
+				WatchSync/WatchCommand.swift,
+				WatchSync/WatchPayload.swift,
+				WatchSync/WCCodec.swift,
+			);
+			target = 26C7F0472F66DB640088139C /* Compte Watch Watch App */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -70,6 +81,7 @@
 		26C7F0B72F66DBBA0088139C /* Compte */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (26C7F0F02F66DBBA0088139C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Compte; sourceTree = "<group>"; };
 		26C7F0F22F66DBF50088139C /* CompteUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CompteUITests; sourceTree = "<group>"; };
 		26C7F10C2F66DBF50088139C /* CompteTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CompteTests; sourceTree = "<group>"; };
+		26C7F1252F6713C00088139C /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (26C7F1292F6713D90088139C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Shared; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 		37B0C066293F427F00317132 = {
 			isa = PBXGroup;
 			children = (
+				26C7F1252F6713C00088139C /* Shared */,
 				26C7F0B72F66DBBA0088139C /* Compte */,
 				26C7F10C2F66DBF50088139C /* CompteTests */,
 				26C7F0F22F66DBF50088139C /* CompteUITests */,
@@ -167,6 +180,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				26C7F0B72F66DBBA0088139C /* Compte */,
+				26C7F1252F6713C00088139C /* Shared */,
 			);
 			name = Compte;
 			productName = Compte;
@@ -355,7 +369,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
@@ -392,7 +406,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6B4M252GN4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;

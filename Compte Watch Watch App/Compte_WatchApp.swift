@@ -9,9 +9,16 @@ import SwiftUI
 
 @main
 struct Compte_Watch_Watch_AppApp: App {
+
+    @StateObject private var syncStore = WatchSyncStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
+                .environmentObject(syncStore)
+                .onAppear {
+                    syncStore.start()
+                }
         }
     }
 }

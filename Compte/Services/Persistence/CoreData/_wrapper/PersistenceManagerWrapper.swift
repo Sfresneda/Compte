@@ -16,6 +16,7 @@ enum PersistenceManagerError: LocalizedError {
 // MARK: - PersistenceManagerProtocol
 protocol PersistenceManagerProtocol: ObservableObject {
     var compteModelCollection: Set<CompteObject> { get }
+    var compteModelPublisher: AnyPublisher<Set<CompteObject>, Never> { get }
 
     func fetch(mapper: some ModelMapper)
     func add(mapper: any ModelMapper, requireSave: Bool)
