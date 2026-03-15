@@ -3,84 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2656AE902E09BB9A00A2FAFC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2656AE8F2E09BB9A00A2FAFC /* Localizable.xcstrings */; };
-		370464D1295DB6FE00BEFF34 /* CompteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370464D0295DB6FE00BEFF34 /* CompteUITests.swift */; };
-		372D2DC72959C5A3009CF1BE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372D2DC62959C5A3009CF1BE /* Color.swift */; };
-		37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8129462FF900F19D4E /* PersistenceManager.swift */; };
-		37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37327E842946310300F19D4E /* CompteModel.xcdatamodeld */; };
-		37327E8D2946348500F19D4E /* BoardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8C2946348500F19D4E /* BoardListView.swift */; };
-		37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E8E294634D000F19D4E /* BoardListVModel.swift */; };
-		37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37327E992946475E00F19D4E /* ViewBuilderCoordinator.swift */; };
-		373A3DA3293F43120083F74C /* TapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA2293F43120083F74C /* TapListView.swift */; };
-		373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA4293F44FD0083F74C /* TapListVModel.swift */; };
-		373A3DA8293F46770083F74C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA7293F46770083F74C /* CounterView.swift */; };
-		373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */; };
-		373A3DAD293F48B60083F74C /* TapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAC293F48B60083F74C /* TapView.swift */; };
-		373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DAF293F56300083F74C /* NavbarButtonsView.swift */; };
-		373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */; };
-		37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7829519C9600AEC7D2 /* TapMapper.swift */; };
-		37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */; };
-		378572E029505874005AFE9A /* BoardListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572DF29505874005AFE9A /* BoardListCellView.swift */; };
-		378572E32950635C005AFE9A /* RenameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378572E22950635C005AFE9A /* RenameCardView.swift */; };
-		3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */; };
-		3791D4E0295B68ED00DAB251 /* DataSourceWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */; };
-		3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */; };
-		3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */; };
-		3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3793DEEF295359C800C04C30 /* BoardScrollView.swift */; };
-		3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */; };
-		37A1CF2C296090170044B23E /* EditMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A1CF2B296090170044B23E /* EditMode.swift */; };
-		37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */; };
-		37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */; };
-		37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */; };
-		37A36CA12972BC2400CABA10 /* RenameBoardDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */; };
-		37A36CA32972C01E00CABA10 /* TapListCellDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */; };
-		37A36CA52972C07B00CABA10 /* TaplistCellDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */; };
-		37A36CA72972C1AA00CABA10 /* TapListDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */; };
-		37A36CA92972C21700CABA10 /* TapListDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */; };
-		37A69E352942643400129FB1 /* TapListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A69E342942643400129FB1 /* TapListCellView.swift */; };
-		37AEA893295C7BE500E12A4F /* BoardListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AEA892295C7BE500E12A4F /* BoardListVModelTests.swift */; };
-		37B0C073293F427F00317132 /* CompteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B0C072293F427F00317132 /* CompteApp.swift */; };
-		37B0C077293F428000317132 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C076293F428000317132 /* Assets.xcassets */; };
-		37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37B0C079293F428000317132 /* Preview Assets.xcassets */; };
-		37B1B96529545D6B002B99E0 /* LimitedTextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */; };
-		37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96729548000002B99E0 /* DefaultTapListDecorator.swift */; };
-		37B1B96B2954811B002B99E0 /* TapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96A2954811B002B99E0 /* TapListDecorator.swift */; };
-		37B1B96D29548233002B99E0 /* TapListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96C29548233002B99E0 /* TapListCellDecorator.swift */; };
-		37B1B96F2954825F002B99E0 /* DefaultTapListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B96E2954825F002B99E0 /* DefaultTapListCellDecorator.swift */; };
-		37B1B974295485FB002B99E0 /* RenameBoardDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B973295485FB002B99E0 /* RenameBoardDecorator.swift */; };
-		37B1B97629548608002B99E0 /* DefaultRenameBoardDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B97529548608002B99E0 /* DefaultRenameBoardDecorator.swift */; };
-		37B1B97A295490D7002B99E0 /* BoardListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B979295490D7002B99E0 /* BoardListDecorator.swift */; };
-		37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */; };
-		37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */; };
-		37B1B984295496B0002B99E0 /* DefaultBoardListCellDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */; };
-		37BFC25A2955A6AD006AC26B /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2592955A6AD006AC26B /* PlaceholderView.swift */; };
-		37BFC25F2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC25E2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift */; };
-		37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */; };
-		37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */; };
-		37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */; };
-		37D105882972A37600D23ABD /* Previews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105872972A37600D23ABD /* Previews.swift */; };
-		37D1058C2972A77100D23ABD /* BoardListDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */; };
-		37D1058F2972A7B700D23ABD /* BoardListDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */; };
-		37D105912972B28500D23ABD /* BoardListCellDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */; };
-		37D105932972B29400D23ABD /* BoardListCellDecoratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */; };
-		37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */; };
-		37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */; };
-		37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F15294B1B3F0039BB4F /* DataStore.swift */; };
-		37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */; };
-		37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1B294B27120039BB4F /* ModelMapper.swift */; };
-		37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F1D294B27230039BB4F /* CompteMapper.swift */; };
-		37E84F21294B29130039BB4F /* CompteObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F20294B29130039BB4F /* CompteObject.swift */; };
-		37E84F23294B291B0039BB4F /* TapObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E84F22294B291B0039BB4F /* TapObject.swift */; };
-		37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F30517294292BF003AADD6 /* VisualEffectView.swift */; };
-		37F97C0C29696B4F000400D4 /* BoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */; };
-		37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */; };
+		26C7F0522F66DB650088139C /* Compte Watch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 26C7F0482F66DB640088139C /* Compte Watch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		26C7F0502F66DB650088139C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37B0C067293F427F00317132 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26C7F0472F66DB640088139C;
+			remoteInfo = "Compte Watch Watch App";
+		};
 		37B0C080293F428000317132 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 37B0C067293F427F00317132 /* Project object */;
@@ -97,85 +34,52 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		26C7F0532F66DB650088139C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				26C7F0522F66DB650088139C /* Compte Watch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		2656AE8F2E09BB9A00A2FAFC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		370464D0295DB6FE00BEFF34 /* CompteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteUITests.swift; sourceTree = "<group>"; };
-		372D2DC62959C5A3009CF1BE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		37327E8129462FF900F19D4E /* PersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManager.swift; sourceTree = "<group>"; };
-		37327E852946310300F19D4E /* CompteModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CompteModel.xcdatamodel; sourceTree = "<group>"; };
-		37327E8C2946348500F19D4E /* BoardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListView.swift; sourceTree = "<group>"; };
-		37327E8E294634D000F19D4E /* BoardListVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListVModel.swift; sourceTree = "<group>"; };
-		37327E992946475E00F19D4E /* ViewBuilderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderCoordinator.swift; sourceTree = "<group>"; };
-		373A3DA2293F43120083F74C /* TapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListView.swift; sourceTree = "<group>"; };
-		373A3DA4293F44FD0083F74C /* TapListVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModel.swift; sourceTree = "<group>"; };
-		373A3DA7293F46770083F74C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideToUnlockView.swift; sourceTree = "<group>"; };
-		373A3DAC293F48B60083F74C /* TapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapView.swift; sourceTree = "<group>"; };
-		373A3DAF293F56300083F74C /* NavbarButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsView.swift; sourceTree = "<group>"; };
-		373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarButtonsWrapper.swift; sourceTree = "<group>"; };
-		374252B82954A41700E35A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37830D7829519C9600AEC7D2 /* TapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapMapper.swift; sourceTree = "<group>"; };
-		37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListWrapper.swift; sourceTree = "<group>"; };
-		378572DF29505874005AFE9A /* BoardListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellView.swift; sourceTree = "<group>"; };
-		378572E22950635C005AFE9A /* RenameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameCardView.swift; sourceTree = "<group>"; };
-		3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerTests.swift; sourceTree = "<group>"; };
-		3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceWrapper.swift; sourceTree = "<group>"; };
-		3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreMock.swift; sourceTree = "<group>"; };
-		3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListWrapper.swift; sourceTree = "<group>"; };
-		3793DEEF295359C800C04C30 /* BoardScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollView.swift; sourceTree = "<group>"; };
-		3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCellBackgroundView.swift; sourceTree = "<group>"; };
-		37A1CF2B296090170044B23E /* EditMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMode.swift; sourceTree = "<group>"; };
-		37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorMock.swift; sourceTree = "<group>"; };
-		37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecoratorTests.swift; sourceTree = "<group>"; };
-		37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecoratorMock.swift; sourceTree = "<group>"; };
-		37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecoratorTests.swift; sourceTree = "<group>"; };
-		37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellDecoratorMock.swift; sourceTree = "<group>"; };
-		37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaplistCellDecoratorTests.swift; sourceTree = "<group>"; };
-		37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListDecoratorMock.swift; sourceTree = "<group>"; };
-		37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListDecoratorTests.swift; sourceTree = "<group>"; };
-		37A69E342942643400129FB1 /* TapListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellView.swift; sourceTree = "<group>"; };
-		37AEA892295C7BE500E12A4F /* BoardListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListVModelTests.swift; sourceTree = "<group>"; };
+		26C7F0482F66DB640088139C /* Compte Watch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Compte Watch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C06F293F427F00317132 /* Compte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Compte.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		37B0C072293F427F00317132 /* CompteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteApp.swift; sourceTree = "<group>"; };
-		37B0C076293F428000317132 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		37B0C079293F428000317132 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37B0C07F293F428000317132 /* CompteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37B0C089293F428000317132 /* CompteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LimitedTextEditorView.swift; sourceTree = "<group>"; };
-		37B1B96729548000002B99E0 /* DefaultTapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTapListDecorator.swift; sourceTree = "<group>"; };
-		37B1B96A2954811B002B99E0 /* TapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListDecorator.swift; sourceTree = "<group>"; };
-		37B1B96C29548233002B99E0 /* TapListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListCellDecorator.swift; sourceTree = "<group>"; };
-		37B1B96E2954825F002B99E0 /* DefaultTapListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTapListCellDecorator.swift; sourceTree = "<group>"; };
-		37B1B973295485FB002B99E0 /* RenameBoardDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameBoardDecorator.swift; sourceTree = "<group>"; };
-		37B1B97529548608002B99E0 /* DefaultRenameBoardDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRenameBoardDecorator.swift; sourceTree = "<group>"; };
-		37B1B979295490D7002B99E0 /* BoardListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListDecorator.swift; sourceTree = "<group>"; };
-		37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardListDecorator.swift; sourceTree = "<group>"; };
-		37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecorator.swift; sourceTree = "<group>"; };
-		37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardListCellDecorator.swift; sourceTree = "<group>"; };
-		37BFC2592955A6AD006AC26B /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
-		37BFC25E2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyBoardListDecorator.swift; sourceTree = "<group>"; };
-		37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderDecorator.swift; sourceTree = "<group>"; };
-		37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderWrapper.swift; sourceTree = "<group>"; };
-		37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderEmptyTapListDecorator.swift; sourceTree = "<group>"; };
-		37D105872972A37600D23ABD /* Previews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Previews.swift; sourceTree = "<group>"; };
-		37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListDecoratorTests.swift; sourceTree = "<group>"; };
-		37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListDecoratorMock.swift; sourceTree = "<group>"; };
-		37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecoratorTests.swift; sourceTree = "<group>"; };
-		37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardListCellDecoratorMock.swift; sourceTree = "<group>"; };
-		37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapListVModelTests.swift; sourceTree = "<group>"; };
-		37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RenameCardView+Components.swift"; sourceTree = "<group>"; };
-		37E84F15294B1B3F0039BB4F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceManagerWrapper.swift; sourceTree = "<group>"; };
-		37E84F1B294B27120039BB4F /* ModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMapper.swift; sourceTree = "<group>"; };
-		37E84F1D294B27230039BB4F /* CompteMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteMapper.swift; sourceTree = "<group>"; };
-		37E84F20294B29130039BB4F /* CompteObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompteObject.swift; sourceTree = "<group>"; };
-		37E84F22294B291B0039BB4F /* TapObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapObject.swift; sourceTree = "<group>"; };
-		37F30517294292BF003AADD6 /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
-		37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardScrollDecorator.swift; sourceTree = "<group>"; };
-		37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBoardScrollDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		26C7F0F02F66DBBA0088139C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Assets/Info.plist,
+			);
+			target = 37B0C06E293F427F00317132 /* Compte */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		26C7F0492F66DB640088139C /* Compte Watch Watch App */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Compte Watch Watch App"; sourceTree = "<group>"; };
+		26C7F0B72F66DBBA0088139C /* Compte */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (26C7F0F02F66DBBA0088139C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Compte; sourceTree = "<group>"; };
+		26C7F0F22F66DBF50088139C /* CompteUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CompteUITests; sourceTree = "<group>"; };
+		26C7F10C2F66DBF50088139C /* CompteTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = CompteTests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		26C7F0452F66DB640088139C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06C293F427F00317132 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,240 +104,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		370FCFE22950AD8300C3DDAC /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				373A3DB3293F5C060083F74C /* NavbarButtonsWrapper.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37327E7F29462FE900F19D4E /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				37327E8029462FEC00F19D4E /* Persistence */,
-				37327E982946474C00F19D4E /* ViewBuilder */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		37327E8029462FEC00F19D4E /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				3793DEF129535C9300C04C30 /* CoreData */,
-				3793DEF229535C9C00C04C30 /* UserDefaults */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		37327E83294630E800F19D4E /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				37327E842946310300F19D4E /* CompteModel.xcdatamodeld */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		37327E8B2946347300F19D4E /* BoardList */ = {
-			isa = PBXGroup;
-			children = (
-				3793DEEA29531F2A00C04C30 /* _wrapper */,
-				37327E8C2946348500F19D4E /* BoardListView.swift */,
-				37327E8E294634D000F19D4E /* BoardListVModel.swift */,
-				378572DE29505859005AFE9A /* Cells */,
-				3793DEEE295359AE00C04C30 /* Components */,
-			);
-			path = BoardList;
-			sourceTree = "<group>";
-		};
-		37327E982946474C00F19D4E /* ViewBuilder */ = {
-			isa = PBXGroup;
-			children = (
-				37327E992946475E00F19D4E /* ViewBuilderCoordinator.swift */,
-			);
-			path = ViewBuilder;
-			sourceTree = "<group>";
-		};
-		373A3D9E293F42E50083F74C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				373A3D9F293F42F10083F74C /* Assets */,
-				37327E83294630E800F19D4E /* Data */,
-				37BFC24F295597A5006AC26B /* Localizables */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		373A3D9F293F42F10083F74C /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				37B0C076293F428000317132 /* Assets.xcassets */,
-				374252B82954A41700E35A95 /* Info.plist */,
-				37B0C078293F428000317132 /* Preview Content */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		373A3DA0293F42FB0083F74C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				37327E8B2946347300F19D4E /* BoardList */,
-				373A3DA1293F43020083F74C /* TapList */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		373A3DA1293F43020083F74C /* TapList */ = {
-			isa = PBXGroup;
-			children = (
-				37830D7A2951A3FE00AEC7D2 /* _wrapper */,
-				37A69E332942641000129FB1 /* Cells */,
-				373A3DA2293F43120083F74C /* TapListView.swift */,
-				373A3DA4293F44FD0083F74C /* TapListVModel.swift */,
-			);
-			path = TapList;
-			sourceTree = "<group>";
-		};
-		373A3DAE293F56200083F74C /* Navbar */ = {
-			isa = PBXGroup;
-			children = (
-				370FCFE22950AD8300C3DDAC /* _wrapper */,
-				373A3DAF293F56300083F74C /* NavbarButtonsView.swift */,
-			);
-			path = Navbar;
-			sourceTree = "<group>";
-		};
-		37830D7A2951A3FE00AEC7D2 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37830D7B2951A41300AEC7D2 /* TapListWrapper.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		378572DE29505859005AFE9A /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				378572DF29505874005AFE9A /* BoardListCellView.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		378572E129506348005AFE9A /* Rename */ = {
-			isa = PBXGroup;
-			children = (
-				37D10D29295DE377000ACD80 /* Extensions */,
-				378572E22950635C005AFE9A /* RenameCardView.swift */,
-			);
-			path = Rename;
-			sourceTree = "<group>";
-		};
-		3791D4DB295B683000DAB251 /* Persistence */ = {
-			isa = PBXGroup;
-			children = (
-				3791D4E1295B69FE00DAB251 /* Mocks */,
-				3791D4DC295B685500DAB251 /* PersistenceManagerTests.swift */,
-			);
-			path = Persistence;
-			sourceTree = "<group>";
-		};
-		3791D4DE295B68E000DAB251 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				3791D4DF295B68ED00DAB251 /* DataSourceWrapper.swift */,
-				37E84F18294B263F0039BB4F /* PersistenceManagerWrapper.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		3791D4E1295B69FE00DAB251 /* Mocks */ = {
-			isa = PBXGroup;
-			children = (
-				3791D4E2295B6A0C00DAB251 /* DataStoreMock.swift */,
-			);
-			path = Mocks;
-			sourceTree = "<group>";
-		};
-		3793DEEA29531F2A00C04C30 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				3793DEEB29531F4000C04C30 /* ItemsListWrapper.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		3793DEEE295359AE00C04C30 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				3793DEEF295359C800C04C30 /* BoardScrollView.swift */,
-				3797DE072975BFF400041B28 /* CardCellBackgroundView.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		3793DEF129535C9300C04C30 /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				3791D4DE295B68E000DAB251 /* _wrapper */,
-				37E84F15294B1B3F0039BB4F /* DataStore.swift */,
-				37E84F1A294B27050039BB4F /* Mapper */,
-				37327E8129462FF900F19D4E /* PersistenceManager.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
-		3793DEF229535C9C00C04C30 /* UserDefaults */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserDefaults;
-			sourceTree = "<group>";
-		};
-		37A69E322942640B00129FB1 /* Shared Components */ = {
-			isa = PBXGroup;
-			children = (
-				373A3DA7293F46770083F74C /* CounterView.swift */,
-				37B1B96429545D6B002B99E0 /* LimitedTextEditorView.swift */,
-				373A3DAE293F56200083F74C /* Navbar */,
-				37BFC25B2955B0B7006AC26B /* Placeholder */,
-				378572E129506348005AFE9A /* Rename */,
-				373A3DA9293F46B70083F74C /* SlideToUnlockView.swift */,
-				373A3DAC293F48B60083F74C /* TapView.swift */,
-			);
-			path = "Shared Components";
-			sourceTree = "<group>";
-		};
-		37A69E332942641000129FB1 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				37A69E342942643400129FB1 /* TapListCellView.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		37AEA890295C7BB100E12A4F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				37AEA891295C7BB400E12A4F /* BoardList */,
-				37D10D23295DB9A6000ACD80 /* TapList */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		37AEA891295C7BB400E12A4F /* BoardList */ = {
-			isa = PBXGroup;
-			children = (
-				37AEA892295C7BE500E12A4F /* BoardListVModelTests.swift */,
-			);
-			path = BoardList;
-			sourceTree = "<group>";
-		};
 		37B0C066293F427F00317132 = {
 			isa = PBXGroup;
 			children = (
-				37B0C071293F427F00317132 /* Compte */,
-				37B0C082293F428000317132 /* CompteTests */,
-				37B0C08C293F428000317132 /* CompteUITests */,
+				26C7F0B72F66DBBA0088139C /* Compte */,
+				26C7F10C2F66DBF50088139C /* CompteTests */,
+				26C7F0F22F66DBF50088139C /* CompteUITests */,
+				26C7F0492F66DB640088139C /* Compte Watch Watch App */,
 				37B0C070293F427F00317132 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -444,278 +121,36 @@
 				37B0C06F293F427F00317132 /* Compte.app */,
 				37B0C07F293F428000317132 /* CompteTests.xctest */,
 				37B0C089293F428000317132 /* CompteUITests.xctest */,
+				26C7F0482F66DB640088139C /* Compte Watch Watch App.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		37B0C071293F427F00317132 /* Compte */ = {
-			isa = PBXGroup;
-			children = (
-				37B0C072293F427F00317132 /* CompteApp.swift */,
-				37D105892972A57B00D23ABD /* Decorators */,
-				37E84F1F294B29080039BB4F /* Domain */,
-				37F30516294292AC003AADD6 /* Helpers */,
-				37D105862972A36700D23ABD /* Previews */,
-				373A3D9E293F42E50083F74C /* Resources */,
-				37327E7F29462FE900F19D4E /* Services */,
-				37A69E322942640B00129FB1 /* Shared Components */,
-				373A3DA0293F42FB0083F74C /* Views */,
-			);
-			path = Compte;
-			sourceTree = "<group>";
-		};
-		37B0C078293F428000317132 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				37B0C079293F428000317132 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		37B0C082293F428000317132 /* CompteTests */ = {
-			isa = PBXGroup;
-			children = (
-				37D1058A2972A74F00D23ABD /* Decorators */,
-				37D10D27295DE299000ACD80 /* Services */,
-				37AEA890295C7BB100E12A4F /* Views */,
-			);
-			path = CompteTests;
-			sourceTree = "<group>";
-		};
-		37B0C08C293F428000317132 /* CompteUITests */ = {
-			isa = PBXGroup;
-			children = (
-				370464D0295DB6FE00BEFF34 /* CompteUITests.swift */,
-			);
-			path = CompteUITests;
-			sourceTree = "<group>";
-		};
-		37B1B96629547FF1002B99E0 /* TapList */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B9692954810D002B99E0 /* _wrapper */,
-				37B1B970295485D0002B99E0 /* Cells */,
-				37B1B96729548000002B99E0 /* DefaultTapListDecorator.swift */,
-			);
-			path = TapList;
-			sourceTree = "<group>";
-		};
-		37B1B9692954810D002B99E0 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B96C29548233002B99E0 /* TapListCellDecorator.swift */,
-				37B1B96A2954811B002B99E0 /* TapListDecorator.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37B1B970295485D0002B99E0 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B96E2954825F002B99E0 /* DefaultTapListCellDecorator.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		37B1B971295485E7002B99E0 /* RenameCard */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B972295485EC002B99E0 /* _wrapper */,
-				37B1B97529548608002B99E0 /* DefaultRenameBoardDecorator.swift */,
-			);
-			path = RenameCard;
-			sourceTree = "<group>";
-		};
-		37B1B972295485EC002B99E0 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B973295485FB002B99E0 /* RenameBoardDecorator.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37B1B97729549083002B99E0 /* BoardList */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B97829549093002B99E0 /* _wrapper */,
-				37B1B97D2954960B002B99E0 /* Cells */,
-				37B1B97B295490F2002B99E0 /* DefaultBoardListDecorator.swift */,
-				37F97C0D29696C14000400D4 /* DefaultBoardScrollDecorator.swift */,
-			);
-			path = BoardList;
-			sourceTree = "<group>";
-		};
-		37B1B97829549093002B99E0 /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B979295490D7002B99E0 /* BoardListDecorator.swift */,
-				37B1B9812954967F002B99E0 /* BoardListCellDecorator.swift */,
-				37F97C0B29696B4F000400D4 /* BoardScrollDecorator.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37B1B97D2954960B002B99E0 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B983295496B0002B99E0 /* DefaultBoardListCellDecorator.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		37BFC24F295597A5006AC26B /* Localizables */ = {
-			isa = PBXGroup;
-			children = (
-				2656AE8F2E09BB9A00A2FAFC /* Localizable.xcstrings */,
-			);
-			path = Localizables;
-			sourceTree = "<group>";
-		};
-		37BFC25B2955B0B7006AC26B /* Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				37BFC2622955B637006AC26B /* _wrapper */,
-				37BFC2592955A6AD006AC26B /* PlaceholderView.swift */,
-			);
-			path = Placeholder;
-			sourceTree = "<group>";
-		};
-		37BFC25C2955B0C7006AC26B /* Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				37BFC25D2955B0D1006AC26B /* _wrapper */,
-				37BFC25E2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift */,
-				37C3D6732955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift */,
-			);
-			path = Placeholder;
-			sourceTree = "<group>";
-		};
-		37BFC25D2955B0D1006AC26B /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37BFC2602955B0FE006AC26B /* PlaceholderDecorator.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37BFC2622955B637006AC26B /* _wrapper */ = {
-			isa = PBXGroup;
-			children = (
-				37BFC2632955B641006AC26B /* PlaceholderWrapper.swift */,
-			);
-			path = _wrapper;
-			sourceTree = "<group>";
-		};
-		37D105862972A36700D23ABD /* Previews */ = {
-			isa = PBXGroup;
-			children = (
-				37D105872972A37600D23ABD /* Previews.swift */,
-			);
-			path = Previews;
-			sourceTree = "<group>";
-		};
-		37D105892972A57B00D23ABD /* Decorators */ = {
-			isa = PBXGroup;
-			children = (
-				37B1B97729549083002B99E0 /* BoardList */,
-				37BFC25C2955B0C7006AC26B /* Placeholder */,
-				37B1B971295485E7002B99E0 /* RenameCard */,
-				37B1B96629547FF1002B99E0 /* TapList */,
-			);
-			path = Decorators;
-			sourceTree = "<group>";
-		};
-		37D1058A2972A74F00D23ABD /* Decorators */ = {
-			isa = PBXGroup;
-			children = (
-				37D1058D2972A7A800D23ABD /* Mock */,
-				37D1058B2972A77100D23ABD /* BoardListDecoratorTests.swift */,
-				37D105902972B28500D23ABD /* BoardListCellDecoratorTests.swift */,
-				37A36C982972B61900CABA10 /* BoardScrollDecoratorTests.swift */,
-				37A36CA02972BC2400CABA10 /* RenameBoardDecoratorTests.swift */,
-				37A36CA42972C07B00CABA10 /* TaplistCellDecoratorTests.swift */,
-				37A36CA82972C21700CABA10 /* TapListDecoratorTests.swift */,
-			);
-			path = Decorators;
-			sourceTree = "<group>";
-		};
-		37D1058D2972A7A800D23ABD /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				37D1058E2972A7B700D23ABD /* BoardListDecoratorMock.swift */,
-				37D105922972B29400D23ABD /* BoardListCellDecoratorMock.swift */,
-				37A36C962972B5CE00CABA10 /* BoardScrollDecoratorMock.swift */,
-				37A36C9E2972BC0100CABA10 /* RenameBoardDecoratorMock.swift */,
-				37A36CA22972C01E00CABA10 /* TapListCellDecoratorMock.swift */,
-				37A36CA62972C1AA00CABA10 /* TapListDecoratorMock.swift */,
-			);
-			path = Mock;
-			sourceTree = "<group>";
-		};
-		37D10D23295DB9A6000ACD80 /* TapList */ = {
-			isa = PBXGroup;
-			children = (
-				37D10D24295DB9C8000ACD80 /* TapListVModelTests.swift */,
-			);
-			path = TapList;
-			sourceTree = "<group>";
-		};
-		37D10D27295DE299000ACD80 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3791D4DB295B683000DAB251 /* Persistence */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		37D10D29295DE377000ACD80 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				37D10D2A295DE387000ACD80 /* RenameCardView+Components.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		37E84F1A294B27050039BB4F /* Mapper */ = {
-			isa = PBXGroup;
-			children = (
-				37E84F24294B29510039BB4F /* Concrete */,
-				37E84F1B294B27120039BB4F /* ModelMapper.swift */,
-			);
-			path = Mapper;
-			sourceTree = "<group>";
-		};
-		37E84F1F294B29080039BB4F /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				37E84F20294B29130039BB4F /* CompteObject.swift */,
-				37E84F22294B291B0039BB4F /* TapObject.swift */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		37E84F24294B29510039BB4F /* Concrete */ = {
-			isa = PBXGroup;
-			children = (
-				37E84F1D294B27230039BB4F /* CompteMapper.swift */,
-				37830D7829519C9600AEC7D2 /* TapMapper.swift */,
-			);
-			path = Concrete;
-			sourceTree = "<group>";
-		};
-		37F30516294292AC003AADD6 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				37F30517294292BF003AADD6 /* VisualEffectView.swift */,
-				372D2DC62959C5A3009CF1BE /* Color.swift */,
-				37A1CF2B296090170044B23E /* EditMode.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		26C7F0472F66DB640088139C /* Compte Watch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26C7F0562F66DB650088139C /* Build configuration list for PBXNativeTarget "Compte Watch Watch App" */;
+			buildPhases = (
+				26C7F0442F66DB640088139C /* Sources */,
+				26C7F0452F66DB640088139C /* Frameworks */,
+				26C7F0462F66DB640088139C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				26C7F0492F66DB640088139C /* Compte Watch Watch App */,
+			);
+			name = "Compte Watch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "Compte Watch Watch App";
+			productReference = 26C7F0482F66DB640088139C /* Compte Watch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		37B0C06E293F427F00317132 /* Compte */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37B0C093293F428000317132 /* Build configuration list for PBXNativeTarget "Compte" */;
@@ -723,10 +158,15 @@
 				37B0C06B293F427F00317132 /* Sources */,
 				37B0C06C293F427F00317132 /* Frameworks */,
 				37B0C06D293F427F00317132 /* Resources */,
+				26C7F0532F66DB650088139C /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				26C7F0512F66DB650088139C /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				26C7F0B72F66DBBA0088139C /* Compte */,
 			);
 			name = Compte;
 			productName = Compte;
@@ -746,6 +186,9 @@
 			dependencies = (
 				37B0C081293F428000317132 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				26C7F10C2F66DBF50088139C /* CompteTests */,
+			);
 			name = CompteTests;
 			productName = CompteTests;
 			productReference = 37B0C07F293F428000317132 /* CompteTests.xctest */;
@@ -764,6 +207,9 @@
 			dependencies = (
 				37B0C08B293F428000317132 /* PBXTargetDependency */,
 			);
+			fileSystemSynchronizedGroups = (
+				26C7F0F22F66DBF50088139C /* CompteUITests */,
+			);
 			name = CompteUITests;
 			productName = CompteUITests;
 			productReference = 37B0C089293F428000317132 /* CompteUITests.xctest */;
@@ -776,9 +222,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
+					26C7F0472F66DB640088139C = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
 					37B0C06E293F427F00317132 = {
 						CreatedOnToolsVersion = 14.1;
 					};
@@ -812,18 +261,23 @@
 				37B0C06E293F427F00317132 /* Compte */,
 				37B0C07E293F428000317132 /* CompteTests */,
 				37B0C088293F428000317132 /* CompteUITests */,
+				26C7F0472F66DB640088139C /* Compte Watch Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		26C7F0462F66DB640088139C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06D293F427F00317132 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37B0C07A293F428000317132 /* Preview Assets.xcassets in Resources */,
-				2656AE902E09BB9A00A2FAFC /* Localizable.xcstrings in Resources */,
-				37B0C077293F428000317132 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,61 +298,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		26C7F0442F66DB640088139C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37B0C06B293F427F00317132 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				373A3DA3293F43120083F74C /* TapListView.swift in Sources */,
-				37E84F16294B1B3F0039BB4F /* DataStore.swift in Sources */,
-				3793DEF0295359C800C04C30 /* BoardScrollView.swift in Sources */,
-				37B1B96B2954811B002B99E0 /* TapListDecorator.swift in Sources */,
-				37BFC25A2955A6AD006AC26B /* PlaceholderView.swift in Sources */,
-				37E84F21294B29130039BB4F /* CompteObject.swift in Sources */,
-				37B1B96D29548233002B99E0 /* TapListCellDecorator.swift in Sources */,
-				37B1B984295496B0002B99E0 /* DefaultBoardListCellDecorator.swift in Sources */,
-				37D10D2B295DE387000ACD80 /* RenameCardView+Components.swift in Sources */,
-				37E84F1C294B27120039BB4F /* ModelMapper.swift in Sources */,
-				37B1B974295485FB002B99E0 /* RenameBoardDecorator.swift in Sources */,
-				37327E9A2946475E00F19D4E /* ViewBuilderCoordinator.swift in Sources */,
-				378572E029505874005AFE9A /* BoardListCellView.swift in Sources */,
-				3791D4E0295B68ED00DAB251 /* DataSourceWrapper.swift in Sources */,
-				37B1B96829548000002B99E0 /* DefaultTapListDecorator.swift in Sources */,
-				372D2DC72959C5A3009CF1BE /* Color.swift in Sources */,
-				37B1B9822954967F002B99E0 /* BoardListCellDecorator.swift in Sources */,
-				37F97C0E29696C14000400D4 /* DefaultBoardScrollDecorator.swift in Sources */,
-				3793DEEC29531F4000C04C30 /* ItemsListWrapper.swift in Sources */,
-				37B0C073293F427F00317132 /* CompteApp.swift in Sources */,
-				378572E32950635C005AFE9A /* RenameCardView.swift in Sources */,
-				373A3DB4293F5C070083F74C /* NavbarButtonsWrapper.swift in Sources */,
-				373A3DAD293F48B60083F74C /* TapView.swift in Sources */,
-				37BFC2642955B641006AC26B /* PlaceholderWrapper.swift in Sources */,
-				37B1B96F2954825F002B99E0 /* DefaultTapListCellDecorator.swift in Sources */,
-				37F97C0C29696B4F000400D4 /* BoardScrollDecorator.swift in Sources */,
-				37327E862946310300F19D4E /* CompteModel.xcdatamodeld in Sources */,
-				37327E8229462FF900F19D4E /* PersistenceManager.swift in Sources */,
-				37327E8D2946348500F19D4E /* BoardListView.swift in Sources */,
-				37F30518294292BF003AADD6 /* VisualEffectView.swift in Sources */,
-				37E84F19294B263F0039BB4F /* PersistenceManagerWrapper.swift in Sources */,
-				37B1B97629548608002B99E0 /* DefaultRenameBoardDecorator.swift in Sources */,
-				37A69E352942643400129FB1 /* TapListCellView.swift in Sources */,
-				373A3DB0293F56300083F74C /* NavbarButtonsView.swift in Sources */,
-				37B1B97A295490D7002B99E0 /* BoardListDecorator.swift in Sources */,
-				373A3DAA293F46B70083F74C /* SlideToUnlockView.swift in Sources */,
-				37E84F23294B291B0039BB4F /* TapObject.swift in Sources */,
-				37B1B96529545D6B002B99E0 /* LimitedTextEditorView.swift in Sources */,
-				37BFC25F2955B0EE006AC26B /* PlaceholderEmptyBoardListDecorator.swift in Sources */,
-				37BFC2612955B0FE006AC26B /* PlaceholderDecorator.swift in Sources */,
-				37C3D6742955BE7B00ED66C3 /* PlaceholderEmptyTapListDecorator.swift in Sources */,
-				37D105882972A37600D23ABD /* Previews.swift in Sources */,
-				373A3DA5293F44FD0083F74C /* TapListVModel.swift in Sources */,
-				37830D7929519C9600AEC7D2 /* TapMapper.swift in Sources */,
-				37E84F1E294B27230039BB4F /* CompteMapper.swift in Sources */,
-				37327E8F294634D000F19D4E /* BoardListVModel.swift in Sources */,
-				3797DE082975BFF400041B28 /* CardCellBackgroundView.swift in Sources */,
-				37A1CF2C296090170044B23E /* EditMode.swift in Sources */,
-				37830D7C2951A41300AEC7D2 /* TapListWrapper.swift in Sources */,
-				37B1B97C295490F2002B99E0 /* DefaultBoardListDecorator.swift in Sources */,
-				373A3DA8293F46770083F74C /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -906,22 +316,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A36CA12972BC2400CABA10 /* RenameBoardDecoratorTests.swift in Sources */,
-				37A36C972972B5CE00CABA10 /* BoardScrollDecoratorMock.swift in Sources */,
-				37A36CA32972C01E00CABA10 /* TapListCellDecoratorMock.swift in Sources */,
-				37A36CA52972C07B00CABA10 /* TaplistCellDecoratorTests.swift in Sources */,
-				37D105932972B29400D23ABD /* BoardListCellDecoratorMock.swift in Sources */,
-				3791D4DD295B685500DAB251 /* PersistenceManagerTests.swift in Sources */,
-				37A36C992972B61900CABA10 /* BoardScrollDecoratorTests.swift in Sources */,
-				37A36CA72972C1AA00CABA10 /* TapListDecoratorMock.swift in Sources */,
-				37A36C9F2972BC0100CABA10 /* RenameBoardDecoratorMock.swift in Sources */,
-				37AEA893295C7BE500E12A4F /* BoardListVModelTests.swift in Sources */,
-				37D10D25295DB9C8000ACD80 /* TapListVModelTests.swift in Sources */,
-				3791D4E3295B6A0C00DAB251 /* DataStoreMock.swift in Sources */,
-				37D1058F2972A7B700D23ABD /* BoardListDecoratorMock.swift in Sources */,
-				37A36CA92972C21700CABA10 /* TapListDecoratorTests.swift in Sources */,
-				37D105912972B28500D23ABD /* BoardListCellDecoratorTests.swift in Sources */,
-				37D1058C2972A77100D23ABD /* BoardListDecoratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,13 +323,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				370464D1295DB6FE00BEFF34 /* CompteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		26C7F0512F66DB650088139C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26C7F0472F66DB640088139C /* Compte Watch Watch App */;
+			targetProxy = 26C7F0502F66DB650088139C /* PBXContainerItemProxy */;
+		};
 		37B0C081293F428000317132 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 37B0C06E293F427F00317132 /* Compte */;
@@ -949,10 +347,84 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		26C7F0542F66DB650088139C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Compte Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sergiofresneda.compte;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sergiofresneda.compte.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Debug;
+		};
+		26C7F0552F66DB650088139C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Compte Watch";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.sergiofresneda.compte;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sergiofresneda.compte.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.1;
+			};
+			name = Release;
+		};
 		37B0C091293F428000317132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1005,6 +477,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1015,6 +488,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1060,6 +534,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1148,7 +623,6 @@
 		37B0C097293F428000317132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1168,7 +642,6 @@
 		37B0C098293F428000317132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1188,7 +661,6 @@
 		37B0C09A293F428000317132 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1214,7 +686,6 @@
 		37B0C09B293F428000317132 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1239,6 +710,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		26C7F0562F66DB650088139C /* Build configuration list for PBXNativeTarget "Compte Watch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26C7F0542F66DB650088139C /* Debug */,
+				26C7F0552F66DB650088139C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37B0C06A293F427F00317132 /* Build configuration list for PBXProject "Compte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1276,19 +756,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		37327E842946310300F19D4E /* CompteModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				37327E852946310300F19D4E /* CompteModel.xcdatamodel */,
-			);
-			currentVersion = 37327E852946310300F19D4E /* CompteModel.xcdatamodel */;
-			path = CompteModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 37B0C067293F427F00317132 /* Project object */;
 }
